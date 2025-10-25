@@ -35,10 +35,10 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
             </div>
           </div>
         </div>
-        <div className="row gx-xxl-5">
+        <div className="row gx-xxl-5 gy-4 mt-40">
           {content.items.map((item, index) => (
             <div key={item.title} className="col-lg-4 col-md-6">
-              <div className="card-style-eleven h-100">
+              <div className="card-style-eleven h-100" style={{ marginTop: 0 }}>
                 <Image src={icons[index % icons.length]} alt={item.title} />
                 <h4>{item.title}</h4>
                 <p className="m0 text-white-50">{item.description}</p>
@@ -47,11 +47,11 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
           ))}
         </div>
         {smart.bullets?.length ? (
-          <div className="row mt-60">
-            <div className="col-xl-9 col-lg-10 m-auto">
-              <ul className="style-none d-flex flex-wrap justify-content-center gap-3 text-white-50 fw-500">
+          <div className="row justify-content-center mt-80">
+            <div className="col-xl-8 col-lg-9">
+              <ul className="style-none d-flex flex-column gap-3 align-items-center align-items-md-start text-white-50 fw-500">
                 {smart.bullets.map((bullet) => (
-                  <li key={bullet} className="d-flex align-items-center gap-2">
+                  <li key={bullet} className="d-flex align-items-center gap-2 text-center text-md-start">
                     <Image src={btn_icon} alt="Highlight" width={18} height={18} />
                     <span>{bullet}</span>
                   </li>
@@ -60,7 +60,7 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
             </div>
           </div>
         ) : null}
-        <div className="trusted-by text-center mt-70">
+        <div className="trusted-by text-center mt-80">
           <p className="text-white-50 mb-4">{smart.subtitle}</p>
           <div className="d-flex justify-content-center justify-content-md-between flex-wrap logos">
             {[brand_1, brand_2, brand_3, brand_4, brand_5].map((brand, idx) => (
