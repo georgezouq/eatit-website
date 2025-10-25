@@ -1,5 +1,5 @@
 import Wrapper from "@/layouts/Wrapper";
-import HomeSix from "@/components/homes/home-6";
+import HomeNine from "@/components/homes/home-9";
 import { getDictionary } from "@/i18n/dictionaries";
 import type { Locale } from "@/i18n/config";
 import { locales } from "@/i18n/config";
@@ -18,17 +18,17 @@ export async function generateMetadata({
 
   if (!locales.includes(locale)) {
     return createMetadata({
-      title: "Hairwow Multilingual Experience",
+      title: "EatIt Multilingual Experience",
       description:
-        "Explore Hairwow's localized salon experience featuring translated content, regional offers, and culturally tailored hair care guidance.",
+        "Discover localized nutrition coaching, allergy insights, and personalised meal guidance from EatIt in your preferred language.",
       path: "/",
     });
   }
 
   return createMetadata({
-    title: `Hairwow ${locale.toUpperCase()} | Personalized Salon Experience`,
+    title: `EatIt ${locale.toUpperCase()} | Personalised Nutrition Assistant`,
     description:
-      "Browse Hairwow's localized homepage with services, pricing, and stylist insights tailored to your language and region.",
+      "Explore EatIt's localized homepage with smart meal scanning, allergy protection, and pricing tailored to your language and goals.",
     path: `/${locale}`,
   });
 }
@@ -45,7 +45,7 @@ const HairwowPage = async ({ params }: { params: Promise<{ locale: string }> }) 
 
   return (
     <Wrapper>
-      <HomeSix dictionary={dictionary} locale={locale} />
+      <HomeNine dictionary={dictionary} locale={locale} />
     </Wrapper>
   );
 };

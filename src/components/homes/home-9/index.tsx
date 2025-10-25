@@ -1,29 +1,63 @@
-import FooterEight from "@/layouts/footers/FooterEight"
-import BlockFeatureOne from "./BlockFeatureOne"
-import BlockFeatureThree from "./BlockFeatureThree"
-import BlockFeatureTwo from "./BlockFeatureTwo"
-import FancyBanner from "./FancyBanner"
-import FAQ from "./FAQ"
-import Feedback from "./Feedback"
-import Hero from "./Hero"
-import Pricing from "./Pricing"
-import HeaderNine from "@/layouts/headers/HeaderNine"
+import FooterEight from "@/layouts/footers/FooterEight";
+import BlockFeatureOne from "./BlockFeatureOne";
+import BlockFeatureThree from "./BlockFeatureThree";
+import BlockFeatureTwo from "./BlockFeatureTwo";
+import FancyBanner from "./FancyBanner";
+import FAQ from "./FAQ";
+import Feedback from "./Feedback";
+import Hero from "./Hero";
+import Pricing from "./Pricing";
+import HeaderNine from "@/layouts/headers/HeaderNine";
 
-const HomeNine = () => {
-   return (
-      <div className="main-page-wrapper dark-bg-five">
-         <HeaderNine />
-         <Hero />
-         <BlockFeatureOne />
-         <Pricing />
-         <BlockFeatureThree />
-         <BlockFeatureTwo />
-         <Feedback />
-         <FancyBanner />
-         <FAQ />
-         <FooterEight />
-      </div>
-   )
-}
+import type { LocaleDictionary } from "@/i18n/dictionaries/types";
+import type { Locale } from "@/i18n/config";
 
-export default HomeNine
+type HomeNineProps = {
+  dictionary: LocaleDictionary;
+  locale: Locale;
+};
+
+const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
+  const anchors = {
+    home: "home",
+    features: dictionary.sections.why.id,
+    tracking: dictionary.sections.core.id,
+    pricing: dictionary.sections.pricing.id,
+    download: "download",
+    faq: dictionary.sections.faq?.id ?? "faq",
+  } as const;
+
+  return (
+    <div className="main-page-wrapper dark-bg-five" id={anchors.home}>
+      <HeaderNine
+        locale={locale}
+        nav={dictionary.nav}
+        auth={dictionary.auth}
+        anchors={anchors}
+        blogHref={dictionary.nav.blog.href}
+      />
+      <main>
+        <Hero hero={dictionary.hero} nav={dictionary.nav} anchors={anchors} />
+        <BlockFeatureOne content={dictionary.sections.why} smart={dictionary.sections.smart} />
+        <Pricing pricing={dictionary.sections.pricing} />
+        <BlockFeatureThree
+          assist={dictionary.sections.assist}
+          smart={dictionary.sections.smart}
+        />
+        <BlockFeatureTwo core={dictionary.sections.core} reviews={dictionary.sections.reviews} />
+        <Feedback reviews={dictionary.sections.reviews} />
+        <FancyBanner privacy={dictionary.sections.privacy} nav={dictionary.nav} />
+        {dictionary.sections.faq ? <FAQ faq={dictionary.sections.faq} /> : null}
+      </main>
+      <FooterEight
+        footer={dictionary.footer}
+        nav={dictionary.nav}
+        locale={locale}
+        anchors={anchors}
+        blogHref={dictionary.nav.blog.href}
+      />
+    </div>
+  );
+};
+
+export default HomeNine;

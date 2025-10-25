@@ -14,6 +14,17 @@ export type PricingPlan = {
   popular?: boolean;
 };
 
+export type ReviewItem = {
+  quote: string;
+  author: string;
+  role: string;
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
 export type LocaleDictionary = {
   metadata: {
     title: string;
@@ -25,6 +36,7 @@ export type LocaleDictionary = {
     features: string;
     pricing: string;
     download: string;
+    faq: string;
     blog: {
       label: string;
       href: string;
@@ -33,6 +45,10 @@ export type LocaleDictionary = {
     menuLabel: string;
     menuIntro: string;
     closeMenu: string;
+  };
+  auth: {
+    login: string;
+    signup: string;
   };
   hero: {
     badge: string;
@@ -100,6 +116,17 @@ export type LocaleDictionary = {
       quote: string;
       author: string;
       role: string;
+      stats?: {
+        value: string;
+        label: string;
+      };
+      items?: ReviewItem[];
+    };
+    faq?: {
+      id: string;
+      title: string;
+      subtitle: string;
+      items: FaqItem[];
     };
   };
   footer: {
@@ -108,5 +135,23 @@ export type LocaleDictionary = {
     socialsLabel: string;
     supportLabel: string;
     supportEmail: string;
+    faqLabel: string;
+    supportChannels?: {
+      type: string;
+      label: string;
+      value: string;
+    }[];
+    socialLinks?: {
+      icon: string;
+      href: string;
+      label: string;
+    }[];
+    navGroups?: {
+      title: string;
+      links: {
+        label: string;
+        href: string;
+      }[];
+    }[];
   };
 };

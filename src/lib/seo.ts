@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  siteName: "Hairwow",
-  siteUrl: "https://hairwow.org",
+  siteName: "EatIt",
+  siteUrl: "https://eatit.app",
   defaultDescription:
-    "Hairwow delivers premium hair care solutions, styling expertise, and salon-grade treatments designed to help clients look and feel confident every day.",
+    "EatIt is the AI nutrition assistant that instantly analyses meals and ingredient labels, highlights allergens and additives, and delivers privacy-first coaching tailored to your goals.",
   defaultKeywords: [
-    "hair care",
-    "hair styling",
-    "salon",
-    "beauty services",
-    "Hairwow",
+    "EatIt",
+    "nutrition app",
+    "calorie tracker",
+    "AI diet coach",
+    "allergen scanner",
   ],
   socialImage: "/assets/images/media/img_07.jpg",
 };
