@@ -22,11 +22,11 @@ const icons = [icon_1, icon_2, icon_3];
 
 const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
   return (
-    <section className="block-feature-twentyFour pb-80 lg-pb-40" id={content.id}>
+    <section className="block-feature-twentyFour pb-120 lg-pb-80" id={content.id}>
       <div className="container lg">
-        <div className="row mb-40">
-          <div className="col-lg-8">
-            <div className="title-eleven text-lg-start text-center">
+        <div className="row">
+          <div className="col-xxl-7 col-xl-8 col-lg-9 m-auto">
+            <div className="title-eleven text-center mb-60">
               <p className="text-uppercase text-white-50 letter-spacing-2 mb-20">
                 {smart.title}
               </p>
@@ -42,20 +42,24 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
                 <Image src={icons[index % icons.length]} alt={item.title} />
                 <h4>{item.title}</h4>
                 <p className="m0 text-white-50">{item.description}</p>
-                {item.bullets && item.bullets.length > 0 ? (
-                  <ul className="style-none text-start mt-3">
-                    {item.bullets.map((bullet) => (
-                      <li key={bullet} className="text-white-50 d-flex align-items-start gap-2">
-                        <Image src={btn_icon} alt="Bullet" width={20} height={20} />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                ) : null}
               </div>
             </div>
           ))}
         </div>
+        {smart.bullets?.length ? (
+          <div className="row mt-60">
+            <div className="col-xl-9 col-lg-10 m-auto">
+              <ul className="style-none d-flex flex-wrap justify-content-center gap-3 text-white-50 fw-500">
+                {smart.bullets.map((bullet) => (
+                  <li key={bullet} className="d-flex align-items-center gap-2">
+                    <Image src={btn_icon} alt="Highlight" width={18} height={18} />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ) : null}
         <div className="trusted-by text-center mt-70">
           <p className="text-white-50 mb-4">{smart.subtitle}</p>
           <div className="d-flex justify-content-center justify-content-md-between flex-wrap logos">

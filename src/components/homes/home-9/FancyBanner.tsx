@@ -3,37 +3,68 @@ import Link from "next/link";
 
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 
-import fancy_thumb from "@/assets/images/assets/ils_25.svg";
+import shape from "@/assets/images/shape/shape_59.svg";
+import appleIcon from "@/assets/images/icon/apple.svg";
+import googleIcon from "@/assets/images/icon/playstore.svg";
 
 type FancyBannerProps = {
-  privacy: LocaleDictionary["sections"]["privacy"];
-  nav: LocaleDictionary["nav"];
+  download: LocaleDictionary["sections"]["download"];
 };
 
-const FancyBanner = ({ privacy, nav }: FancyBannerProps) => {
+const FancyBanner = ({ download }: FancyBannerProps) => {
   return (
-    <section className="fancy-banner-ten mt-250 xl-mt-200 md-mt-130" id="download">
-      <div className="container lg">
-        <div className="wrapper">
-          <Image src={fancy_thumb} alt={privacy.title} className="illustration" />
-          <div className="row">
-            <div className="col-xl-7 col-lg-6">
-              <div className="d-flex flex-wrap align-items-center">
-                <Link
-                  className="video-btn tran3s rounded-circle d-flex align-items-center justify-content-center"
-                  data-fancybox=""
-                  href="https://www.youtube.com/embed/aXFSJTjVjw0"
-                  aria-label={privacy.title}
-                >
-                  <i className="fa-sharp fa-solid fa-play"></i>
-                </Link>
-                <h2>{privacy.title}</h2>
-              </div>
+    <section
+      className="fancy-banner-seven position-relative z-1 mt-200 xl-mt-170 lg-mt-100"
+      id={download.id}
+    >
+      <div className="container">
+        <Image src={shape} alt="Vibrant gradient shape" className="m-auto shape_01" />
+        <div className="row">
+          <div className="col-xxl-9 col-lg-8 m-auto text-center">
+            {download.badge ? (
+              <p className="text-uppercase text-white-50 letter-spacing-2 mb-20">
+                {download.badge}
+              </p>
+            ) : null}
+            <div className="title-four mt-40 lg-mt-20">
+              <h2>{download.title}</h2>
             </div>
-            <div className="col-xl-5 col-lg-6">
-              <p className="fs-24 text-white md-mt-30">{privacy.description}</p>
-              <Link href={privacy.cta} className="btn-eighteen mt-30">
-                {nav.download}
+            <p className="fs-28 mt-40 lg-mt-30 mb-40 lg-mb-30 text-white opacity-75">
+              {download.subtitle}
+            </p>
+            {download.highlights?.length ? (
+              <ul className="style-none ps-0 mb-40 text-white-50">
+                {download.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : null}
+            <div className="d-flex align-items-center justify-content-center flex-wrap platform-button-group gap-3">
+              <Link
+                href={download.apple.href}
+                className="d-flex align-items-center ios-button"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={download.apple.label}
+              >
+                <Image src={appleIcon} alt="Download on the App Store" className="icon" />
+                <div>
+                  <span>{download.storeLabel}</span>
+                  <strong>{download.apple.label}</strong>
+                </div>
+              </Link>
+              <Link
+                href={download.google.href}
+                className="d-flex align-items-center windows-button"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={download.google.label}
+              >
+                <Image src={googleIcon} alt="Get it on Google Play" className="icon" />
+                <div>
+                  <span>{download.storeLabel}</span>
+                  <strong>{download.google.label}</strong>
+                </div>
               </Link>
             </div>
           </div>

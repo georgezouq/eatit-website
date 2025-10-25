@@ -23,7 +23,7 @@ const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
     features: dictionary.sections.why.id,
     tracking: dictionary.sections.core.id,
     pricing: dictionary.sections.pricing.id,
-    download: "download",
+    download: dictionary.sections.download.id,
     faq: dictionary.sections.faq?.id ?? "faq",
   } as const;
 
@@ -37,7 +37,7 @@ const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
         blogHref={dictionary.nav.blog.href}
       />
       <main>
-        <Hero hero={dictionary.hero} nav={dictionary.nav} anchors={anchors} />
+        <Hero hero={dictionary.hero} anchors={anchors} />
         <BlockFeatureOne content={dictionary.sections.why} smart={dictionary.sections.smart} />
         <Pricing pricing={dictionary.sections.pricing} />
         <BlockFeatureThree
@@ -46,7 +46,7 @@ const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
         />
         <BlockFeatureTwo core={dictionary.sections.core} reviews={dictionary.sections.reviews} />
         <Feedback reviews={dictionary.sections.reviews} />
-        <FancyBanner privacy={dictionary.sections.privacy} nav={dictionary.nav} />
+        <FancyBanner download={dictionary.sections.download} />
         {dictionary.sections.faq ? <FAQ faq={dictionary.sections.faq} /> : null}
       </main>
       <FooterEight

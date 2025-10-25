@@ -96,6 +96,22 @@ export type LocaleDictionary = {
       subtitle: string;
       bullets: string[];
     };
+    download: {
+      id: string;
+      badge?: string;
+      title: string;
+      subtitle: string;
+      highlights: string[];
+      storeLabel: string;
+      apple: {
+        href: string;
+        label: string;
+      };
+      google: {
+        href: string;
+        label: string;
+      };
+    };
     pricing: {
       id: string;
       title: string;
