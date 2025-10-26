@@ -1,109 +1,93 @@
-"use client"
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Navigation } from 'swiper/modules';
-import Image, { StaticImageData } from "next/image";
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import Image from "next/image";
 
-import logo_1 from "@/assets/images/logo/p_logo_65.png"
-import logo_2 from "@/assets/images/logo/p_logo_66.png"
-import icon from "@/assets/images/icon/icon_56.svg"
-import shape from "@/assets/images/shape/shape_81.svg"
+import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 
-interface DataType {
-   id: number;
-   logo: StaticImageData;
-   name: JSX.Element;
-   desc: JSX.Element;
-}
-
-const testi_data: DataType[] = [
-   {
-      id: 1,
-      logo: logo_1,
-      name: (<><span className="fw-500">Adul Kashem,</span> Engineer</>),
-      desc: (<>&quot;Best decision ever, smooth hosting experience!&quot;</>),
-   },
-   {
-      id: 2,
-      logo: logo_2,
-      name: (<><span className="fw-500">Rashed Ka,</span> Engineer</>),
-      desc: (<>&quot;Best decision ever, smooth hosting experience!&quot;</>),
-   },
-   {
-      id: 3,
-      logo: logo_1,
-      name: (<><span className="fw-500">Adul Kashem,</span> Engineer</>),
-      desc: (<>&quot;Best decision ever, smooth hosting experience!&quot;</>),
-   },
-   {
-      id: 4,
-      logo: logo_2,
-      name: (<><span className="fw-500">Rashed Ka,</span> Engineer</>),
-      desc: (<>&quot;Best decision ever, smooth hosting experience!&quot;</>),
-   },
-];
+import icon from "@/assets/images/icon/icon_56.svg";
+import shape from "@/assets/images/shape/shape_81.svg";
 
 const setting = {
-   slidesPerView: 3,
-   spaceBetween: 30,
-   loop: true,
-   centeredSlides: true,
-   autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-   },
-   pagination: {
-      clickable: true,
-   },
-   navigation: {
-      nextEl: '.next_b',
-      prevEl: '.prev_b',
-   },
-   breakpoints: {
-      '768': {
-         slidesPerView: 3,
-      },
-      '576': {
-         slidesPerView: 2,
-      },
-      '0': {
-         slidesPerView: 1,
-      },
-   },
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  centeredSlides: true,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".next_b",
+    prevEl: ".prev_b",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    0: {
+      slidesPerView: 1,
+    },
+  },
 };
 
-const Feedback = () => {
-   return (
-      <div className="feedback-section-nine position-relative z-1 pt-120 xl-pt-100 lg-pt-70 pb-130 lg-pb-80 mt-180 lg-mt-80">
-         <div className="container">
-            <div className="text-center mb-70 lg-mb-30">
-               <h2><span className="counter">12,0000</span>+</h2>
-               <p className="fs-28 text-white opacity-75">Customer love our product with more 20+ years reparation</p>
-            </div>
-         </div>
-         <div className="wrapper">
-            <Swiper {...setting} modules={[Autoplay, Navigation]} className="feedback-slider-six">
-               {testi_data.map((item) => (
-                  <SwiperSlide key={item.id} className="item">
-                     <div className="feedback-block">
-                        <Image src={item.logo} alt="Decorative graphic" className="logo" />
-                        <blockquote>{item.desc}</blockquote>
-                        <div className="d-flex align-items-center justify-content-between">
-                           <div className="name text-white">{item.name}</div>
-                           <Image src={icon} alt="Decorative graphic" className="icon" />
-                        </div>
-                     </div>
-                  </SwiperSlide>
-               ))}
-            </Swiper>
+type FeedbackProps = {
+  reviews: LocaleDictionary["sections"]["reviews"];
+};
 
-            <ul className="slider-arrows slick-arrow-one d-flex justify-content-center style-none mt-50">
-               <li className="prev_b slick-arrow"><i className="fa-solid fa-arrow-left-long"></i></li>
-               <li className="next_b slick-arrow"><i className="fa-solid fa-arrow-right-long"></i></li>
-            </ul>
-         </div>
-         <Image src={shape} alt="Decorative graphic" className="shapes shape_01" />
+const Feedback = ({ reviews }: FeedbackProps) => {
+  const items = reviews.items ?? [
+    {
+      quote: reviews.quote,
+      author: reviews.author,
+      role: reviews.role,
+    },
+  ];
+
+  return (
+    <section
+      className="feedback-section-nine position-relative z-1 pt-120 xl-pt-100 lg-pt-70 pb-130 lg-pb-80 mt-180 lg-mt-80"
+      id={reviews.id}
+    >
+      <div className="container">
+        <div className="text-center mb-70 lg-mb-30">
+          <h2>{reviews.stats?.value}</h2>
+          <p className="fs-28 text-white opacity-75">{reviews.stats?.label ?? reviews.subtitle}</p>
+        </div>
       </div>
-   )
-}
+      <div className="wrapper">
+        <Swiper {...setting} modules={[Autoplay, Navigation]} className="feedback-slider-six">
+          {items.map((item) => (
+            <SwiperSlide key={`${item.author}-${item.quote}`} className="item">
+              <div className="feedback-block">
+                <blockquote>“{item.quote}”</blockquote>
+                <div className="d-flex align-items-center justify-content-between">
+                  <div className="name text-white">
+                    <div className="fw-500">{item.author}</div>
+                    <div className="small text-white-50">{item.role}</div>
+                  </div>
+                  <Image src={icon} alt="Quote icon" className="icon" />
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-export default Feedback
+        <ul className="slider-arrows slick-arrow-one d-flex justify-content-center style-none mt-50">
+          <li className="prev_b slick-arrow" aria-label="Previous">
+            <i className="fa-solid fa-arrow-left-long"></i>
+          </li>
+          <li className="next_b slick-arrow" aria-label="Next">
+            <i className="fa-solid fa-arrow-right-long"></i>
+          </li>
+        </ul>
+      </div>
+      <Image src={shape} alt="Decorative background" className="shapes shape_01" />
+    </section>
+  );
+};
+
+export default Feedback;

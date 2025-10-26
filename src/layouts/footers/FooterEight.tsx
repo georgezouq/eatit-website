@@ -1,113 +1,118 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
-import logo_1 from "@/assets/images/logo/logo_10.svg"
-import icon_1 from "@/assets/images/icon/icon_57.svg"
-import icon_2 from "@/assets/images/icon/icon_58.svg"
-import icon_3 from "@/assets/images/icon/icon_59.svg"
-import shape from "@/assets/images/shape/shape_82.svg"
+import LanguageSwitcher from "@/components/hairwow/LanguageSwitcher";
 
-const FooterEight = () => {
-   return (
-      <div className="footer-three dark-version">
-         <div className="container lg">
-            <div className="address-wrapper">
-               <h2>Need Some Help?</h2>
+import logo_1 from "@/assets/images/logo/logo_10.svg";
+import icon_1 from "@/assets/images/icon/icon_57.svg";
+import icon_2 from "@/assets/images/icon/icon_58.svg";
+import icon_3 from "@/assets/images/icon/icon_59.svg";
+import shape from "@/assets/images/shape/shape_82.svg";
 
-               <div className="row gx-xxl-5">
-                  <div className="col-lg-4 d-flex">
-                     <div className="block d-flex w-100 align-items-center mt-25">
-                        <div className="icon d-flex align-items-center justify-content-center rounded-circle"><Image src={icon_1} alt="Support email icon" /></div>
-                        <div className="text">
-                           <div className="title">We’r always happy to help</div>
-                           <span className="fs-20">ask@homy.com</span>
-                        </div>
-                     </div>
+import type { Locale } from "@/i18n/config";
+import type { LocaleDictionary } from "@/i18n/dictionaries/types";
+
+type FooterEightProps = {
+  footer: LocaleDictionary["footer"];
+  nav: LocaleDictionary["nav"];
+  locale: Locale;
+  anchors: {
+    home: string;
+    features: string;
+    pricing: string;
+    download: string;
+    faq: string;
+  };
+  blogHref: string;
+};
+
+const supportIconMap: Record<string, typeof icon_1> = {
+  email: icon_1,
+  phone: icon_2,
+  chat: icon_3,
+};
+
+const FooterEight = ({ footer, nav, locale, anchors, blogHref }: FooterEightProps) => {
+  const navLinks = [
+    { label: nav.home, href: `#${anchors.home}` },
+    { label: nav.blog.label, href: blogHref, external: true },
+  ];
+
+  return (
+    <footer className="footer-three dark-version">
+      <div className="container lg">
+        <div className="address-wrapper">
+          <h2>{footer.supportLabel}</h2>
+          <div className="row gx-xxl-5">
+            {footer.supportChannels?.map((channel) => {
+              const iconSrc = supportIconMap[channel.type] ?? icon_1;
+              return (
+                <div key={channel.label} className="col-lg-4 d-flex">
+                  <div className="block d-flex w-100 align-items-center mt-25">
+                    <div className="icon d-flex align-items-center justify-content-center rounded-circle">
+                      <Image src={iconSrc} alt={`${channel.label} icon`} />
+                    </div>
+                    <div className="text">
+                      <div className="title">{channel.label}</div>
+                      <span className="fs-20">{channel.value}</span>
+                    </div>
                   </div>
-                  <div className="col-lg-4 d-flex">
-                     <div className="block d-flex w-100 align-items-center mt-25">
-                        <div className="d-flex align-items-center">
-                           <div className="icon d-flex align-items-center justify-content-center rounded-circle"><Image src={icon_2} alt="Customer hotline icon" /></div>
-                           <div className="text">
-                              <div className="title">Our Hotline Number</div>
-                              <span className="fs-20">+757 699 4478,  +991 377 9731</span>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div className="col-lg-4 d-flex">
-                     <div className="block d-flex w-100 align-items-center mt-25">
-                        <div className="icon d-flex align-items-center justify-content-center rounded-circle"><Image src={icon_3} alt="Live chat headset icon" /></div>
-                        <div className="text">
-                           <div className="title">Live chat</div>
-                           <span className="fs-20">www.lvesupport.com</span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+        <div className="position-relative">
+          <div className="row align-items-center mb-40 mt-50">
+            <div className="col-lg-3 col-md-4 mb-4 mb-md-0">
+              <div className="logo">
+                <Link href={`/${locale}`}>
+                  <Image src={logo_1} alt="EatIt footer logo" height={60} />
+                </Link>
+              </div>
             </div>
-            <div className="position-relative">
-               <div className="row justify-content-between">
-                  <div className="col-lg-2 order-lg-0 md-mb-40">
-                     <div className="logo mt-15">
-                        <Link href="/">
-                           <Image src={logo_1} alt="Hairwow footer logo" />
-                        </Link>
-                     </div>
-                     <div className="fs-6 text-white mt-40 mb-15">Connect with us</div>
-                     <ul className="style-none d-flex align-items-center social-icon">
-                        <li><Link href="#"><i className="fa-brands fa-facebook"></i></Link></li>
-                        <li><Link href="#"><i className="fa-brands fa-twitter"></i></Link></li>
-                        <li><Link href="#"><i className="fa-brands fa-instagram"></i></Link></li>
-                     </ul>
-                  </div>
-                  <div className="col-lg-2 col-6 order-lg-1">
-                     <div className="footer-nav">
-                        <ul className="footer-nav-link style-none">
-                           <li><Link href="/about-us-v1">About </Link></li>
-                           <li><Link href="/project-v4">Work Gallery</Link></li>
-                           <li><Link href="/pricing-v2">Pricing</Link></li>
-                           <li><Link href="/blog-v2">Blog</Link></li>
-                           <li><Link href="/contact-v1">Contact</Link></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div className="col-lg-2 col-6 order-lg-3">
-                     <div className="footer-nav">
-                        <ul className="footer-nav-link style-none">
-                           <li><Link href="/faq-v1">​​Take the tour</Link></li>
-                           <li><Link href="/faq-v1">Live chat</Link></li>
-                           <li><Link href="/contact-v1">Self-service</Link></li>
-                           <li><Link href="/faq-v1">Social</Link></li>
-                           <li><Link href="/faq-v1">Mobile</Link></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div className="col-lg-2 col-6 order-lg-2">
-                     <div className="footer-nav mb-20">
-                        <ul className="footer-nav-link style-none">
-                           <li><Link href="/faq-v1">Faq’s</Link></li>
-                           <li><Link href="/faq-v2">Privacy Policy</Link></li>
-                           <li><Link href="/faq-v1">Terms</Link></li>
-                        </ul>
-                     </div>
-                  </div>
-                  <div className="col-lg-2 col-6 order-lg-4">
-                     <div className="footer-nav mb-20">
-                        <ul className="footer-nav-link style-none">
-                           <li><Link href="/faq-v1">Help Docs</Link></li>
-                           <li><Link href="/faq-v2">Chat</Link></li>
-                           <li><Link href="/faq-v1">Developer</Link></li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-               <p className="copyright-text text-center m0"><span className="text-white fw-500">@2024.</span> All Right Reserved</p>
+            <div className="col-lg-9 col-md-8">
+              <div className="d-flex flex-wrap align-items-center justify-content-md-end gap-4 gap-lg-5">
+                <nav className="footer-nav">
+                  <ul className="footer-nav-link style-none d-flex gap-4 m-0">
+                    {navLinks.map((item) => (
+                      <li key={item.href}>
+                        {item.external ? (
+                          <a href={item.href} target="_blank" rel="noreferrer">
+                            {item.label}
+                          </a>
+                        ) : (
+                          <a href={item.href}>{item.label}</a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <div className="d-flex align-items-center gap-3">
+                  <span className="fs-6 text-white">{footer.socialsLabel}:</span>
+                  <ul className="style-none d-flex align-items-center social-icon m-0 gap-2">
+                    {footer.socialLinks?.map((link) => (
+                      <li key={link.href}>
+                        <a href={link.href} target="_blank" rel="noreferrer">
+                          <i className={link.icon}></i>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <LanguageSwitcher currentLocale={locale} label={nav.language} />
+              </div>
             </div>
-         </div>
-         <Image src={shape} alt="Decorative footer background shape" className="shapes shape_01" />
+          </div>
+          <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 pt-4 border-top border-secondary">
+            <p className="fs-6 text-white m-0">{footer.tagline}</p>
+            <p className="copyright-text m-0">{footer.rights}</p>
+          </div>
+        </div>
       </div>
-   )
-}
+      <Image src={shape} alt="Decorative footer background shape" className="shapes shape_01" />
+    </footer>
+  );
+};
 
-export default FooterEight
+export default FooterEight;

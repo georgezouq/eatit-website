@@ -1,59 +1,51 @@
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
-import icon_1 from "@/assets/images/icon/icon_50.svg"
-import icon_2 from "@/assets/images/icon/icon_51.svg"
-import icon_3 from "@/assets/images/icon/icon_52.svg"
+import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 
-interface DataType {
-   id: number;
-   icon: StaticImageData;
-   title: string;
-   desc: JSX.Element;
-}
+import icon_1 from "@/assets/images/icon/icon_50.svg";
+import icon_2 from "@/assets/images/icon/icon_51.svg";
+import icon_3 from "@/assets/images/icon/icon_52.svg";
 
-const feature_data: DataType[] = [
-   {
-      id: 1,
-      icon: icon_1,
-      title: "24/7 Support",
-      desc: (<>Our team will seamlessly transfer your websites to the new server, free of charge.</>),
-   },
-   {
-      id: 2,
-      icon: icon_2,
-      title: "Free domain & easy set up",
-      desc: (<>Our team will seamlessly transfer your websites to the new server, free of charge.</>),
-   },
-   {
-      id: 3,
-      icon: icon_3,
-      title: "Free SSL Security",
-      desc: (<>Our team will seamlessly transfer your websites to the new server, free of charge.</>),
-   },
-];
+type BlockFeatureThreeProps = {
+  assist: LocaleDictionary["sections"]["assist"];
+  smart: LocaleDictionary["sections"]["smart"];
+};
 
-const BlockFeatureThree = () => {
-   return (
-      <div className="block-feature-twentyFive mt-180 lg-mt-80">
-         <div className="container lg">
-            <div className="border-top border-bottom border-white border-2 pt-90 lg-pt-40 pb-90 lg-pb-40">
+const icons = [icon_1, icon_2, icon_3];
 
-
-               <div className="row gx-xxl-5">
-                  {feature_data.map((item) => (
-                     <div key={item.id} className="col-lg-4">
-                        <div className="card-style-twelve text-center mt-20">
-                           <Image src={item.icon} alt="Decorative graphic" className="m-auto" />
-                           <h4>{item.title}</h4>
-                           <p className="pe-xxl-4 ps-xxl-4">{item.desc}</p>
-                        </div>
-                     </div>
-                  ))}
-               </div>
+const BlockFeatureThree = ({ assist, smart }: BlockFeatureThreeProps) => {
+  return (
+    <section className="block-feature-twentyFive mt-180 lg-mt-80" id={assist.id}>
+      <div className="container lg">
+        <div className="border-top border-bottom border-white border-2 pt-90 lg-pt-40 pb-90 lg-pb-40">
+          <div className="row">
+            <div className="col-lg-8 mx-auto text-center">
+              <p className="text-uppercase text-white-50 letter-spacing-2 mb-20">
+                {smart.title}
+              </p>
+              <h2>{assist.title}</h2>
+              <p className="fs-20 text-white-50">{assist.subtitle}</p>
             </div>
-         </div>
+          </div>
+          <div className="row gx-xxl-5 mt-40">
+            {assist.items.map((item, index) => (
+              <div key={item.title} className="col-lg-4 col-md-6">
+                <div className="card-style-twelve text-center mt-20 h-100">
+                  <Image
+                    src={icons[index % icons.length]}
+                    alt={item.title}
+                    className="m-auto"
+                  />
+                  <h4>{item.title}</h4>
+                  <p className="pe-xxl-4 ps-xxl-4 text-white-50">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-   )
-}
+    </section>
+  );
+};
 
-export default BlockFeatureThree
+export default BlockFeatureThree;

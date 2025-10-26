@@ -1,30 +1,77 @@
-import Image from "next/image"
+import Image from "next/image";
+import Link from "next/link";
 
-import fancy_thumb from "@/assets/images/assets/ils_25.svg"
+import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 
-const FancyBanner = () => {
-   return (
-      <>
-         <div className="fancy-banner-ten mt-250 xl-mt-200 md-mt-130">
-            <div className="container lg">
-               <div className="wrapper">
-                  <Image src={fancy_thumb} alt="Decorative graphic" className="illustration" />
-                  <div className="row">
-                     <div className="col-xl-7 col-lg-6">
-                        <div className="d-flex flex-wrap align-items-center">
-                           <a className="video-btn tran3s rounded-circle d-flex align-items-center justify-content-center" data-fancybox="" href="https://www.youtube.com/embed/aXFSJTjVjw0"><i className="fa-sharp fa-solid fa-play"></i></a>
-                           <h2>Win online business with piku.</h2>
-                        </div>
-                     </div>
-                     <div className="col-xl-5 col-lg-6">
-                        <p className="fs-24 text-white md-mt-30">Elevate your online business success with our expert guidance & reliable hosting services. Let&apos;s win together!&quot;</p>
-                     </div>
-                  </div>
-               </div>
+import shape from "@/assets/images/shape/shape_59.svg";
+import appleIcon from "@/assets/images/icon/apple.svg";
+import googleIcon from "@/assets/images/icon/playstore.svg";
+
+type FancyBannerProps = {
+  download: LocaleDictionary["sections"]["download"];
+};
+
+const FancyBanner = ({ download }: FancyBannerProps) => {
+  return (
+    <section
+      className="fancy-banner-seven position-relative z-1 mt-200 xl-mt-170 lg-mt-100"
+      id={download.id}
+    >
+      <div className="container">
+        <Image src={shape} alt="Vibrant gradient shape" className="m-auto shape_01" />
+        <div className="row">
+          <div className="col-xxl-9 col-lg-8 m-auto text-center">
+            {download.badge ? (
+              <p className="text-uppercase text-white-50 letter-spacing-2 mb-20">
+                {download.badge}
+              </p>
+            ) : null}
+            <div className="title-four mt-40 lg-mt-20">
+              <h2>{download.title}</h2>
             </div>
-         </div>
-      </>
-   )
-}
+            <p className="fs-28 mt-40 lg-mt-30 mb-40 lg-mb-30 text-white opacity-75">
+              {download.subtitle}
+            </p>
+            {download.highlights?.length ? (
+              <ul className="style-none ps-0 mb-40 text-white-50">
+                {download.highlights.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            ) : null}
+            <div className="d-flex align-items-center justify-content-center flex-wrap platform-button-group gap-3">
+              <Link
+                href={download.apple.href}
+                className="d-flex align-items-center ios-button"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={download.apple.label}
+              >
+                <Image src={appleIcon} alt="Download on the App Store" className="icon" />
+                <div>
+                  <span>{download.storeLabel}</span>
+                  <strong>{download.apple.label}</strong>
+                </div>
+              </Link>
+              <Link
+                href={download.google.href}
+                className="d-flex align-items-center windows-button"
+                target="_blank"
+                rel="noreferrer"
+                aria-label={download.google.label}
+              >
+                <Image src={googleIcon} alt="Get it on Google Play" className="icon" />
+                <div>
+                  <span>{download.storeLabel}</span>
+                  <strong>{download.google.label}</strong>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default FancyBanner
+export default FancyBanner;

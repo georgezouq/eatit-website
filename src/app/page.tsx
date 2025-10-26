@@ -5,9 +5,9 @@ import { defaultLocale } from "@/i18n/config";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Hairwow | Salon Excellence for Every Hair Journey",
+  title: "EatIt | AI Nutrition Coach for Smarter Eating",
   description:
-    "Hairwow delivers professional hair services, innovative treatments, and stylist expertise that empower you to express your best self.",
+    "EatIt instantly analyses meals, ingredients and nutrition labels so you always know the calories, macros, allergens and health risks that matter to you.",
   path: "/",
 });
 
