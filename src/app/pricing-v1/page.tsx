@@ -1,5 +1,7 @@
 import PricingOne from "@/components/pages/pricing/pricing-1";
 import Wrapper from "@/layouts/Wrapper";
+import { getDictionary } from "@/i18n/dictionaries";
+import { defaultLocale } from "@/i18n/config";
 
 import { createMetadata } from "@/lib/seo";
 
@@ -15,10 +17,13 @@ export const metadata = createMetadata({
   ],
   path: "/pricing-v1",
 });
+
 const page = () => {
+  const dictionary = getDictionary(defaultLocale);
+  
   return (
     <Wrapper>
-      <PricingOne />
+      <PricingOne dictionary={dictionary} locale={defaultLocale} />
     </Wrapper>
   )
 }

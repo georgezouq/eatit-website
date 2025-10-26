@@ -1,5 +1,7 @@
 import HomeNine from "@/components/homes/home-9";
 import Wrapper from "@/layouts/Wrapper";
+import { getDictionary } from "@/i18n/dictionaries";
+import { defaultLocale } from "@/i18n/config";
 
 import { createMetadata } from "@/lib/seo";
 
@@ -15,10 +17,13 @@ export const metadata = createMetadata({
   ],
   path: "/home-nine",
 });
+
 const page = () => {
+  const dictionary = getDictionary(defaultLocale);
+  
   return (
     <Wrapper>
-      <HomeNine />
+      <HomeNine dictionary={dictionary} locale={defaultLocale} />
     </Wrapper>
   )
 }
