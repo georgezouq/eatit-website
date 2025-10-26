@@ -110,7 +110,7 @@ const FooterEight = ({ footer, nav, locale, anchors, blogHref }: FooterEightProp
           </div>
         </div>
       </div>
-      <Image src={shape} alt="Decorative footer background shape" className="shapes shape_01" />
+      {/* <Image src={shape} alt="Decorative footer background shape" className="shapes shape_01" /> */}
     </footer>
   );
 };

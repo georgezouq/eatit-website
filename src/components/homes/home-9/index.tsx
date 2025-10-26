@@ -32,7 +32,6 @@ const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
       <HeaderNine
         locale={locale}
         nav={dictionary.nav}
-        auth={dictionary.auth}
         anchors={anchors}
         blogHref={dictionary.nav.blog.href}
       />

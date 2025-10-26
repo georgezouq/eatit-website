@@ -28,7 +28,6 @@ const PricingOne = ({ dictionary, locale }: PricingOneProps) => {
          <HeaderNine
             locale={locale}
             nav={dictionary.nav}
-            auth={dictionary.auth}
             anchors={anchors}
             blogHref={dictionary.nav.blog.href}
          />

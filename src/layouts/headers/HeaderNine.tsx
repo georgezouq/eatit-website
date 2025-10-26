@@ -7,7 +7,6 @@ import UseSticky from "@/hooks/UseSticky";
 import LanguageSwitcher from "@/components/hairwow/LanguageSwitcher";
 
 import logo_1 from "@/assets/images/logo/logo_09.svg";
-import icon from "@/assets/images/icon/icon_18.svg";
 
 import type { Locale } from "@/i18n/config";
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
@@ -15,7 +14,6 @@ import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 type HeaderNineProps = {
   locale: Locale;
   nav: LocaleDictionary["nav"];
-  auth: LocaleDictionary["auth"];
   anchors: {
     home: string;
     features: string;
@@ -27,7 +25,7 @@ type HeaderNineProps = {
   blogHref: string;
 };
 
-const HeaderNine = ({ locale, nav, auth, anchors, blogHref }: HeaderNineProps) => {
+const HeaderNine = ({ locale, nav, anchors, blogHref }: HeaderNineProps) => {
   const { sticky } = UseSticky();
 
   const navLinks = [
@@ -89,19 +87,9 @@ const HeaderNine = ({ locale, nav, auth, anchors, blogHref }: HeaderNineProps) =
             </nav>
             <div className="right-widget ms-auto order-lg-3 d-flex align-items-center gap-3">
               <LanguageSwitcher currentLocale={locale} label={nav.language} />
-              <ul className="d-flex align-items-center style-none m-0">
-                <li>
-                  <Link href="/login" className="login-btn-one fw-500 d-flex align-items-center tran3s">
-                    <Image src={icon} alt="Login icon" className="me-2" />
-                    <span>{auth.login}</span>
-                  </Link>
-                </li>
-                <li className="d-none d-md-inline-block ms-3">
-                  <Link href="/signup" className="btn-eighteen">
-                    {auth.signup}
-                  </Link>
-                </li>
-              </ul>
+              <a href={`#${anchors.download}`} className="btn-eighteen">
+                {nav.download}
+              </a>
             </div>
           </div>
         </div>
