@@ -7,7 +7,7 @@ import logo_1 from "@/assets/images/logo/logo_10.svg";
 import icon_1 from "@/assets/images/icon/icon_57.svg";
 import icon_2 from "@/assets/images/icon/icon_58.svg";
 import icon_3 from "@/assets/images/icon/icon_59.svg";
-import shape from "@/assets/images/shape/shape_82.svg";
+// import shape from "@/assets/images/shape/shape_82.svg";
 
 import type { Locale } from "@/i18n/config";
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
