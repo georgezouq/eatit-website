@@ -268,12 +268,12 @@ const zhTW: LocaleDictionary = {
     rights: "© 2024 EatIt. 版權所有。",
     socialsLabel: "關注 EatIt",
     supportLabel: "需要協助嗎？",
-    supportEmail: "hello@eatit.app",
+    supportEmail: "cs@clearcrowds.com",
     faqLabel: "常見問題",
     supportChannels: [
-      { type: "email", label: "電子郵件", value: "hello@eatit.app" },
-      { type: "phone", label: "營養顧問專線", value: "+886 2-5550-1234" },
-      { type: "chat", label: "線上即時客服", value: "app.eatit.app/support" },
+      { type: "email", label: "電子郵件", value: "cs@clearcrowds.com" },
+      { type: "phone", label: "營養顧問專線", value: "+1(305)4621683" },
+      { type: "chat", label: "線上即時客服", value: "geteatit.com" },
     ],
     socialLinks: [
       { icon: "fa-brands fa-facebook", href: "https://facebook.com/eatitapp", label: "Facebook" },

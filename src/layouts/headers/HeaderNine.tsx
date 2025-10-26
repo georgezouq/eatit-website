@@ -45,7 +45,7 @@ const HeaderNine = ({ locale, nav, auth, anchors, blogHref }: HeaderNineProps) =
           <div className="d-flex align-items-center w-100">
             <div className="logo order-lg-0 me-lg-5">
               <Link href={`/${locale}`} className="d-flex align-items-center">
-                <Image src={logo_1} alt="EatIt logo" />
+                <Image src={logo_1} alt="EatIt logo" height={60} />
               </Link>
             </div>
             <nav className="navbar navbar-expand-lg p0 order-lg-2 ms-lg-5 ms-3">

@@ -274,12 +274,12 @@ const ja: LocaleDictionary = {
     rights: "© 2024 EatIt. All rights reserved.",
     socialsLabel: "EatIt とつながる",
     supportLabel: "サポートが必要ですか？",
-    supportEmail: "support@eatit.app",
+    supportEmail: "cs@clearcrowds.com",
     faqLabel: "FAQ",
     supportChannels: [
-      { type: "email", label: "メールサポート", value: "support@eatit.app" },
-      { type: "phone", label: "栄養ホットライン", value: "+81 50-3188-3321" },
-      { type: "chat", label: "ライブチャット", value: "app.eatit.app/support" },
+      { type: "email", label: "メールサポート", value: "cs@clearcrowds.com" },
+      { type: "phone", label: "栄養ホットライン", value: "+1(305)4621683" },
+      { type: "chat", label: "ライブチャット", value: "geteatit.com" },
     ],
     socialLinks: [
       { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatitapp", label: "X / Twitter" },

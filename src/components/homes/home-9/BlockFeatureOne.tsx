@@ -22,7 +22,7 @@ const icons = [icon_1, icon_2, icon_3];
 
 const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
   return (
-    <section className="block-feature-twentyFour pb-120 lg-pb-80" id={content.id}>
+    <section className="block-feature-twentyFour pt-120 lg-pt-80 pb-120 lg-pb-80" id={content.id}>
       <div className="container lg">
         <div className="row">
           <div className="col-xxl-7 col-xl-8 col-lg-9 m-auto">

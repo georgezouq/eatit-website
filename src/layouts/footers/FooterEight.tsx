@@ -35,10 +35,6 @@ const supportIconMap: Record<string, typeof icon_1> = {
 const FooterEight = ({ footer, nav, locale, anchors, blogHref }: FooterEightProps) => {
   const navLinks = [
     { label: nav.home, href: `#${anchors.home}` },
-    { label: nav.features, href: `#${anchors.features}` },
-    { label: nav.pricing, href: `#${anchors.pricing}` },
-    { label: nav.download, href: `#${anchors.download}` },
-    { label: footer.faqLabel, href: `#${anchors.faq}` },
     { label: nav.blog.label, href: blogHref, external: true },
   ];
 
@@ -67,63 +63,51 @@ const FooterEight = ({ footer, nav, locale, anchors, blogHref }: FooterEightProp
           </div>
         </div>
         <div className="position-relative">
-          <div className="row justify-content-between">
-            <div className="col-lg-3 order-lg-0 md-mb-40">
-              <div className="logo mt-15">
+          <div className="row align-items-center mb-40 mt-50">
+            <div className="col-lg-3 col-md-4 mb-4 mb-md-0">
+              <div className="logo">
                 <Link href={`/${locale}`}>
-                  <Image src={logo_1} alt="EatIt footer logo" />
+                  <Image src={logo_1} alt="EatIt footer logo" height={60} />
                 </Link>
               </div>
-              <p className="fs-6 text-white mt-40 mb-15">{footer.tagline}</p>
-              <LanguageSwitcher currentLocale={locale} label={nav.language} />
-              <div className="fs-6 text-white mt-30 mb-15">{footer.socialsLabel}</div>
-              <ul className="style-none d-flex align-items-center social-icon">
-                {footer.socialLinks?.map((link) => (
-                  <li key={link.href}>
-                    <a href={link.href} target="_blank" rel="noreferrer">
-                      <i className={link.icon}></i>
-                    </a>
-                  </li>
-                ))}
-              </ul>
             </div>
-            <div className="col-lg-7 order-lg-1">
-              <div className="row g-4">
-                {footer.navGroups?.map((group) => (
-                  <div key={group.title} className="col-sm-4">
-                    <div className="footer-nav">
-                      <h6 className="text-white mb-3">{group.title}</h6>
-                      <ul className="footer-nav-link style-none">
-                        {group.links.map((link) => (
-                          <li key={link.href}>
-                            <Link href={link.href}>{link.label}</Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="col-lg-2 order-lg-3 d-none d-lg-flex flex-column align-items-end">
-              <div className="footer-nav mb-20 text-lg-end">
-                <ul className="footer-nav-link style-none text-lg-end">
-                  {navLinks.map((item) => (
-                    <li key={item.href}>
-                      {item.external ? (
-                        <a href={item.href} target="_blank" rel="noreferrer">
-                          {item.label}
+            <div className="col-lg-9 col-md-8">
+              <div className="d-flex flex-wrap align-items-center justify-content-md-end gap-4 gap-lg-5">
+                <nav className="footer-nav">
+                  <ul className="footer-nav-link style-none d-flex gap-4 m-0">
+                    {navLinks.map((item) => (
+                      <li key={item.href}>
+                        {item.external ? (
+                          <a href={item.href} target="_blank" rel="noreferrer">
+                            {item.label}
+                          </a>
+                        ) : (
+                          <a href={item.href}>{item.label}</a>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+                <div className="d-flex align-items-center gap-3">
+                  <span className="fs-6 text-white">{footer.socialsLabel}:</span>
+                  <ul className="style-none d-flex align-items-center social-icon m-0 gap-2">
+                    {footer.socialLinks?.map((link) => (
+                      <li key={link.href}>
+                        <a href={link.href} target="_blank" rel="noreferrer">
+                          <i className={link.icon}></i>
                         </a>
-                      ) : (
-                        <a href={item.href}>{item.label}</a>
-                      )}
-                    </li>
-                  ))}
-                </ul>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <LanguageSwitcher currentLocale={locale} label={nav.language} />
               </div>
             </div>
           </div>
-          <p className="copyright-text text-center m0">{footer.rights}</p>
+          <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3 pt-4 border-top border-secondary">
+            <p className="fs-6 text-white m-0">{footer.tagline}</p>
+            <p className="copyright-text m-0">{footer.rights}</p>
+          </div>
         </div>
       </div>
       <Image src={shape} alt="Decorative footer background shape" className="shapes shape_01" />

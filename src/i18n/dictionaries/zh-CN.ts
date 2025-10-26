@@ -268,12 +268,12 @@ const zhCN: LocaleDictionary = {
     rights: "© 2024 EatIt. 保留所有权利。",
     socialsLabel: "关注 EatIt",
     supportLabel: "需要帮助？",
-    supportEmail: "hello@eatit.app",
+    supportEmail: "cs@clearcrowds.com",
     faqLabel: "常见问题",
     supportChannels: [
-      { type: "email", label: "邮件支持", value: "hello@eatit.app" },
-      { type: "phone", label: "营养顾问热线", value: "+86 400-800-1234" },
-      { type: "chat", label: "在线客服", value: "app.eatit.app/support" },
+      { type: "email", label: "邮件支持", value: "cs@clearcrowds.com" },
+      { type: "phone", label: "营养顾问热线", value: "+1(305)4621683" },
+      { type: "chat", label: "在线客服", value: "geteatit.com" },
     ],
     socialLinks: [
       { icon: "fa-brands fa-weibo", href: "https://weibo.com/eatit", label: "微博" },

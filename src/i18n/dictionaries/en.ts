@@ -287,23 +287,23 @@ const en: LocaleDictionary = {
     rights: "© 2024 EatIt. All rights reserved.",
     socialsLabel: "Connect with EatIt",
     supportLabel: "Need some help?",
-    supportEmail: "hello@eatit.app",
+    supportEmail: "cs@clearcrowds.com",
     faqLabel: "FAQ",
     supportChannels: [
       {
         type: "email",
         label: "Email support",
-        value: "hello@eatit.app",
+        value: "cs@clearcrowds.com",
       },
       {
         type: "phone",
         label: "Nutrition hotline",
-        value: "+1 (888) 555-3284",
+        value: "+1(305)4621683",
       },
       {
         type: "chat",
         label: "Live chat",
-        value: "app.eatit.app/support",
+        value: "geteatit.com",
       },
     ],
     socialLinks: [

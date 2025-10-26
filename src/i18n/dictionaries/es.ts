@@ -286,12 +286,12 @@ const es: LocaleDictionary = {
     rights: "© 2024 EatIt. Todos los derechos reservados.",
     socialsLabel: "Conecta con EatIt",
     supportLabel: "¿Necesitas ayuda?",
-    supportEmail: "hola@eatit.app",
+    supportEmail: "cs@clearcrowds.com",
     faqLabel: "Preguntas",
     supportChannels: [
-      { type: "email", label: "Soporte por correo", value: "hola@eatit.app" },
-      { type: "phone", label: "Línea nutricional", value: "+34 900 123 456" },
-      { type: "chat", label: "Chat en vivo", value: "app.eatit.app/support" },
+      { type: "email", label: "Soporte por correo", value: "cs@clearcrowds.com" },
+      { type: "phone", label: "Línea nutricional", value: "+1(305)4621683" },
+      { type: "chat", label: "Chat en vivo", value: "geteatit.com" },
     ],
     socialLinks: [
       { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatitapp", label: "Instagram" },

@@ -275,12 +275,12 @@ const ko: LocaleDictionary = {
     rights: "© 2024 EatIt. All rights reserved.",
     socialsLabel: "EatIt과 연결하기",
     supportLabel: "도움이 필요하신가요?",
-    supportEmail: "support@eatit.app",
+    supportEmail: "cs@clearcrowds.com",
     faqLabel: "FAQ",
     supportChannels: [
-      { type: "email", label: "이메일 지원", value: "support@eatit.app" },
-      { type: "phone", label: "영양 헬프라인", value: "+82 2-123-4567" },
-      { type: "chat", label: "라이브 챗", value: "app.eatit.app/support" },
+      { type: "email", label: "이메일 지원", value: "cs@clearcrowds.com" },
+      { type: "phone", label: "영양 헬프라인", value: "+1(305)4621683" },
+      { type: "chat", label: "라이브 챗", value: "geteatit.com" },
     ],
     socialLinks: [
       { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatitapp", label: "Instagram" },
