@@ -1,26 +1,28 @@
-import NotFound from "@/components/pages/error";
+import { NotFoundProvider } from "@/components/pages/error/NotFoundProvider";
 import Wrapper from "@/layouts/Wrapper";
+import { defaultLocale } from "@/i18n/config";
 
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "Hairwow 404 | Page Not Found",
+  title: "EatIt 404 | Page Not Found",
   description:
-    "The page you are looking for does not exist. Explore Hairwow services, treatments, and stylist resources from our homepage.",
+    "The page you are looking for does not exist. Explore EatIt's AI nutrition coaching and meal tracking features from our homepage.",
   keywords: [
-    "Hairwow 404",
+    "EatIt 404",
     "page not found",
-    "hairwow error",
-    "salon homepage",
+    "eatit error",
+    "nutrition app",
   ],
   path: "/404",
 });
+
 const page = () => {
   return (
     <Wrapper>
-      <NotFound />
+      <NotFoundProvider initialLocale={defaultLocale} />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default page
+export default page;

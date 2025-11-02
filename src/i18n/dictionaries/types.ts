@@ -170,4 +170,9 @@ export type LocaleDictionary = {
       }[];
     }[];
   };
+  notFound: {
+    title: string;
+    description: string;
+    backButton: string;
+  };
 };

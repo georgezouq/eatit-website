@@ -83,14 +83,14 @@ const BlogThreeArea = () => {
                         </div>
                         <div className="post-meta position-relative z-1">
                            <div className="date">17 apr, 2024</div>
-                           <Link href="/blog-details" className="blog-title d-block"><h4>How to become a web designer in 2021</h4></Link>
+                           <Link href="/blogs" className="blog-title d-block"><h4>How to become a web designer in 2021</h4></Link>
                            <div className="d-lg-flex justify-content-between align-items-center">
                               <ul className="style-none tags d-flex flex-wrap">
                                  {item.tags?.map((tag, i) => (
                                     <li key={i}><Link href="/">{tag}</Link></li>
                                  ))}
                               </ul>
-                              <Link href="/blog-details" className="read-more rounded-circle tran3s md-mt-20"><i className="bi bi-arrow-up-right"></i></Link>
+                              <Link href="/blogs" className="read-more rounded-circle tran3s md-mt-20"><i className="bi bi-arrow-up-right"></i></Link>
                            </div>
                         </div>
                      </article>

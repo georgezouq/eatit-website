@@ -22,9 +22,10 @@ type FooterFiveProps = {
     pricing: string;
     download: string;
   };
+  onLocaleChange?: (locale: Locale) => void;
 };
 
-const FooterFive = ({ footer, nav, locale, anchors }: FooterFiveProps) => {
+const FooterFive = ({ footer, nav, locale, anchors, onLocaleChange }: FooterFiveProps) => {
   const navLinks = [
     { key: "home", label: nav.home, href: `#${anchors.home}` },
     { key: "features", label: nav.features, href: `#${anchors.features}` },
@@ -46,7 +47,6 @@ const FooterFive = ({ footer, nav, locale, anchors }: FooterFiveProps) => {
                     </Link>
                   </div>
                   <p className="text-white-50 mb-3">{footer.tagline}</p>
-                  <LanguageSwitcher currentLocale={locale} label={nav.language} />
                 </div>
               </div>
               <div className="col-lg-5 col-md-7 d-none d-md-block">
@@ -62,7 +62,6 @@ const FooterFive = ({ footer, nav, locale, anchors }: FooterFiveProps) => {
                     <li className="col-sm-6">
                       <a
                         href={nav.blog.href}
-                        target="_blank"
                         rel="noreferrer"
                         className="tran3s"
                       >
@@ -101,7 +100,7 @@ const FooterFive = ({ footer, nav, locale, anchors }: FooterFiveProps) => {
                       <i className="fa-brands fa-youtube"></i>
                     </a>
                   </div>
-                  <div className="text-white-50 mt-3">
+                  <div className="text-white-50 mt-3 mb-3">
                     {footer.supportLabel}
                     <a
                       className="text-white ms-1"
@@ -109,6 +108,9 @@ const FooterFive = ({ footer, nav, locale, anchors }: FooterFiveProps) => {
                     >
                       {footer.supportEmail}
                     </a>
+                  </div>
+                  <div className="d-flex justify-content-md-end justify-content-lg-start">
+                    <LanguageSwitcher currentLocale={locale} label={nav.language} onLocaleChange={onLocaleChange} />
                   </div>
                 </div>
               </div>

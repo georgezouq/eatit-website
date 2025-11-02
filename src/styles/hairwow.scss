@@ -1638,3 +1638,141 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     font-size: 1rem !important;
   }
 }
+
+// Blog Preview Section on Homepage
+.blog-preview-section {
+  .blog-card-home {
+    background: rgba(9, 20, 28, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 0;
+    transition: all 0.3s ease;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255, 102, 196, 0.3);
+      box-shadow: 0 20px 40px rgba(255, 102, 196, 0.15);
+
+      .image-wrapper img {
+        transform: scale(1.05);
+      }
+
+      .post-title {
+        color: $hairwow-accent;
+      }
+
+      .read-more-link {
+        i {
+          transform: translateX(4px);
+        }
+      }
+    }
+
+    .image-wrapper {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px 12px 0 0;
+
+      img {
+        transition: transform 0.4s ease;
+      }
+
+      .date-badge {
+        bottom: 12px;
+        left: 12px;
+        background: rgba(255, 102, 196, 0.95);
+        backdrop-filter: blur(10px);
+        color: #051018;
+        padding: 6px 14px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        z-index: 2;
+      }
+    }
+
+    .post-content {
+      padding: 0 25px 25px;
+    }
+
+    .category-tag {
+      span {
+        background: linear-gradient(135deg, rgba(255, 102, 196, 0.15), rgba(110, 232, 255, 0.15));
+        padding: 4px 12px;
+        border-radius: 6px;
+        display: inline-block;
+      }
+    }
+
+    .post-title {
+      color: $hairwow-text;
+      transition: color 0.3s ease;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        color: $hairwow-accent;
+      }
+    }
+
+    .post-excerpt {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .read-more-link {
+      text-decoration: none;
+      transition: all 0.3s ease;
+
+      i {
+        transition: transform 0.3s ease;
+      }
+
+      &:hover {
+        color: $hairwow-accent-secondary !important;
+      }
+    }
+  }
+
+  .shapes.shape-one {
+    position: absolute;
+    top: 50%;
+    right: -100px;
+    transform: translateY(-50%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+// Responsive adjustments for blog preview
+@media (max-width: 991px) {
+  .blog-preview-section {
+    .blog-card-home {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .blog-preview-section {
+    .row.align-items-center {
+      .col-lg-6 {
+        text-align: center !important;
+        margin-bottom: 20px;
+      }
+    }
+
+    .blog-card-home {
+      .post-title {
+        font-size: 1.15rem !important;
+      }
+
+      .post-excerpt {
+        font-size: 0.9rem !important;
+      }
+    }
+  }
+}

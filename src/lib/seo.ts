@@ -2,15 +2,19 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   siteName: "EatIt",
-  siteUrl: "https://eatit.app",
+  siteUrl: "https://geteatit.com",
   defaultDescription:
-    "EatIt is the AI nutrition assistant that instantly analyses meals and ingredient labels, highlights allergens and additives, and delivers privacy-first coaching tailored to your goals.",
+    "Your Lifelong Nutrition Partner. Point your camera at a meal or ingredient list and EatIt reveals calories, macros, additives, allergens and health risks within seconds, tailored to your dietary rules.",
   defaultKeywords: [
     "EatIt",
     "nutrition app",
     "calorie tracker",
     "AI diet coach",
     "allergen scanner",
+    "health tech",
+    "food logging",
+    "AI nutrition assistant",
+    "meal tracking",
   ],
   socialImage: "/assets/images/media/img_07.jpg",
 };
@@ -21,6 +25,7 @@ type CreateMetadataOptions = {
   keywords?: string[];
   path?: string;
   imagePath?: string;
+  robots?: Metadata["robots"];
 };
 
 export const createMetadata = ({
@@ -29,6 +34,14 @@ export const createMetadata = ({
   keywords = siteConfig.defaultKeywords,
   path = "/",
   imagePath,
+  robots = {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 }: CreateMetadataOptions): Metadata => {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const url = `${siteConfig.siteUrl}${normalizedPath}`;
@@ -64,5 +77,6 @@ export const createMetadata = ({
       description,
       images: [imageUrl],
     },
+    robots,
   };
 };

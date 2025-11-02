@@ -4,6 +4,7 @@ import BlockFeature from "./BlockFeature"
 import FAQ from "@/components/homes/home-9/FAQ"
 import FooterEight from "@/layouts/footers/FooterEight"
 import HeaderNine from "@/layouts/headers/HeaderNine"
+import { createAnchors } from "@/lib/anchors";
 
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 import type { Locale } from "@/i18n/config";
@@ -14,14 +15,7 @@ type PricingOneProps = {
 };
 
 const PricingOne = ({ dictionary, locale }: PricingOneProps) => {
-   const anchors = {
-      home: "home",
-      features: dictionary.sections.why.id,
-      tracking: dictionary.sections.core.id,
-      pricing: dictionary.sections.pricing.id,
-      download: dictionary.sections.download.id,
-      faq: dictionary.sections.faq?.id ?? "faq",
-   } as const;
+   const anchors = createAnchors(dictionary);
 
    return (
       <div className="main-page-wrapper dark-bg-five">

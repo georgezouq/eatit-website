@@ -10,8 +10,8 @@ const FancyBanner = () => {
          <div className="container">
             <div className="row">
                <div className="col-xl-9 col-lg-7 m-auto text-center">
-                  <h2>700k+ Customers have our Piku. Try it Now!</h2>
-                  <Link href="/" className="btn-six">Claim 10k Words</Link>
+                  <h2>700k+ Customers have our EatIt. Try it Now!</h2>
+                  <Link href="/#download" className="btn-six">Start for free!</Link>
                </div>
             </div>
          </div>

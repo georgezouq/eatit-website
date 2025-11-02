@@ -10,6 +10,7 @@ import logo_1 from "@/assets/images/logo/logo_09.svg";
 
 import type { Locale } from "@/i18n/config";
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
+import { useCallback } from "react";
 
 type HeaderNineProps = {
   locale: Locale;
@@ -23,18 +24,27 @@ type HeaderNineProps = {
     faq: string;
   };
   blogHref: string;
+  onLocaleChange?: (locale: Locale) => void;
 };
 
-const HeaderNine = ({ locale, nav, anchors, blogHref }: HeaderNineProps) => {
+const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNineProps) => {
   const { sticky } = UseSticky();
 
   const navLinks = [
-    { label: nav.home, href: `#${anchors.home}` },
-    { label: nav.features, href: `#${anchors.features}` },
-    { label: nav.pricing, href: `#${anchors.pricing}` },
-    { label: nav.download, href: `#${anchors.download}` },
-    { label: nav.faq, href: `#${anchors.faq}` },
+    { label: nav.home, href: `/#${anchors.home}` },
+    { label: nav.features, href: `/#${anchors.features}` },
+    { label: nav.pricing, href: `/#${anchors.pricing}` },
+    { label: nav.download, href: `/#${anchors.download}` },
+    { label: nav.faq, href: `/#${anchors.faq}` },
   ];
+
+  const closeMobileMenu = useCallback(() => {
+    const navbar = document.getElementById("navbarNav");
+    if (!navbar) return;
+    if (navbar.classList.contains("show")) {
+      navbar.classList.remove("show");
+    }
+  }, []);
 
   return (
     <header className={`theme-main-menu menu-style-nine sticky-menu menu-overlay ${sticky ? "fixed" : ""}`}>
@@ -86,7 +96,12 @@ const HeaderNine = ({ locale, nav, anchors, blogHref }: HeaderNineProps) => {
               </div>
             </nav>
             <div className="right-widget ms-auto order-lg-3 d-flex align-items-center gap-3">
-              <LanguageSwitcher currentLocale={locale} label={nav.language} />
+              <LanguageSwitcher
+                currentLocale={locale}
+                label={nav.language}
+                onSelect={closeMobileMenu}
+                onLocaleChange={onLocaleChange}
+              />              
               <a href={`#${anchors.download}`} className="btn-eighteen">
                 {nav.download}
               </a>

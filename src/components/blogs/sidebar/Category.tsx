@@ -1,18 +1,34 @@
-import Link from "next/link"
+import Link from "next/link";
 
-const Category = () => {
-   return (
-      <div className="blog-category mt-60 lg-mt-40">
-         <h3 className="sidebar-title">Category</h3>
-         <ul className="style-none">
-            <li><Link href="/">Digital <span>(3)</span></Link></li>
-            <li><Link href="/">Marketing <span>(4)</span></Link></li>
-            <li><Link href="/">Consultation <span>(8)</span></Link></li>
-            <li><Link href="/">Payments <span>(5)</span></Link></li>
-            <li><Link href="/">Banking <span>(7)</span></Link></li>
-         </ul>
-      </div>
-   )
-}
+import type { CategoryWithCount } from "@/lib/blog/types";
 
-export default Category
+type CategoryProps = {
+  categories: CategoryWithCount[];
+  activeSlug: string;
+};
+
+const Category = ({ categories, activeSlug }: CategoryProps) => {
+  if (categories.length === 0) {
+    return null;
+  }
+
+  return (
+    <div className="blog-category mt-60 lg-mt-40">
+      <h3 className="sidebar-title">Categories</h3>
+      <ul className="style-none">
+        {categories.map((category) => (
+          <li key={category.slug}>
+            <Link
+              href={`/blogs?category=${category.slug}`}
+              className={activeSlug === category.slug ? "active" : ""}
+            >
+              {category.name} <span>({category.count})</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
+
+export default Category;

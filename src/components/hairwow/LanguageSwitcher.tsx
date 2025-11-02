@@ -1,19 +1,19 @@
 "use client";
 
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
-import { useRouter, usePathname } from "next/navigation";
 
 import { localeLabels, locales, type Locale } from "@/i18n/config";
+
+export const LOCALE_STORAGE_KEY = "hairwow-locale";
 
 type LanguageSwitcherProps = {
   currentLocale: Locale;
   label: string;
   onSelect?: () => void;
+  onLocaleChange?: (locale: Locale) => void;
 };
 
-const LanguageSwitcher = ({ currentLocale, label, onSelect }: LanguageSwitcherProps) => {
-  const router = useRouter();
-  const pathname = usePathname();
+const LanguageSwitcher = ({ currentLocale, label, onSelect, onLocaleChange }: LanguageSwitcherProps) => {
   const [open, setOpen] = useState(false);
   const [renderMenu, setRenderMenu] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,19 +33,6 @@ const LanguageSwitcher = ({ currentLocale, label, onSelect }: LanguageSwitcherPr
     setOpen(false);
   }, []);
 
-  const buildNextPath = useCallback(
-    (locale: Locale) => {
-      const segments = pathname.split("/").filter(Boolean);
-      if (segments.length === 0) {
-        segments.push(locale);
-      } else {
-        segments[0] = locale;
-      }
-      return `/${segments.join("/")}`;
-    },
-    [pathname]
-  );
-
   const handleToggle = useCallback(() => {
     setOpen((prev) => !prev);
   }, []);
@@ -57,12 +44,20 @@ const LanguageSwitcher = ({ currentLocale, label, onSelect }: LanguageSwitcherPr
         return;
       }
 
-      const nextPath = buildNextPath(nextLocale);
+      // Save to localStorage
+      if (typeof window !== "undefined") {
+        localStorage.setItem(LOCALE_STORAGE_KEY, nextLocale);
+      }
+
       closeMenu();
       onSelect?.();
-      router.push(nextPath);
+      
+      // Notify parent component to update locale
+      if (onLocaleChange) {
+        onLocaleChange(nextLocale);
+      }
     },
-    [buildNextPath, closeMenu, currentLocale, onSelect, router]
+    [closeMenu, currentLocale, onSelect, onLocaleChange]
   );
 
   useEffect(() => {

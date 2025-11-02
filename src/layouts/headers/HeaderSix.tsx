@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useCallback } from "react";
+import { useCallback, useMemo } from "react";
+import { usePathname } from "next/navigation";
 
 import UseSticky from "@/hooks/UseSticky";
 import LanguageSwitcher from "@/components/hairwow/LanguageSwitcher";
@@ -21,16 +22,27 @@ type HeaderSixProps = {
     pricing: string;
     download: string;
   };
+  landingHref?: string;
+  activePath?: string;
+  onLocaleChange?: (locale: Locale) => void;
 };
 
-const HeaderSix = ({ locale, nav, primaryCta, anchors }: HeaderSixProps) => {
+const HeaderSix = ({
+  locale,
+  onLocaleChange,
+  nav,
+  primaryCta,
+  anchors,
+  landingHref,
+  activePath,
+}: HeaderSixProps) => {
   const { sticky } = UseSticky();
 
   const navLinks = [
-    { key: "home", label: nav.home, href: `#${anchors.home}` },
-    { key: "features", label: nav.features, href: `#${anchors.features}` },
-    { key: "pricing", label: nav.pricing, href: `#${anchors.pricing}` },
-    { key: "download", label: nav.download, href: `#${anchors.download}` },
+    { key: "home", label: nav.home, anchor: anchors.home },
+    { key: "features", label: nav.features, anchor: anchors.features },
+    { key: "pricing", label: nav.pricing, anchor: anchors.pricing },
+    { key: "download", label: nav.download, anchor: anchors.download },
   ] as const;
 
   const closeMobileMenu = useCallback(() => {
@@ -40,6 +52,19 @@ const HeaderSix = ({ locale, nav, primaryCta, anchors }: HeaderSixProps) => {
       navbar.classList.remove("show");
     }
   }, []);
+
+  const pathname = usePathname();
+  const resolvedActivePath = activePath ?? pathname ?? "";
+
+  const getAnchorHref = useCallback(
+    (anchor: string) => (landingHref ? `${landingHref}#${anchor}` : `#${anchor}`),
+    [landingHref],
+  );
+
+  const blogIsActive = useMemo(
+    () => resolvedActivePath.startsWith(nav.blog.href),
+    [resolvedActivePath, nav.blog.href],
+  );
 
   return (
     <header
@@ -79,7 +104,7 @@ const HeaderSix = ({ locale, nav, primaryCta, anchors }: HeaderSixProps) => {
                   {navLinks.map((item) => (
                     <li key={item.key} className="nav-item">
                       <a
-                        href={item.href}
+                        href={getAnchorHref(item.anchor)}
                         className="nav-link"
                         onClick={closeMobileMenu}
                       >
@@ -88,15 +113,13 @@ const HeaderSix = ({ locale, nav, primaryCta, anchors }: HeaderSixProps) => {
                     </li>
                   ))}
                   <li key="blog" className="nav-item">
-                    <a
+                    <Link
                       href={nav.blog.href}
-                      className="nav-link"
-                      target="_blank"
-                      rel="noreferrer"
+                      className={`nav-link ${blogIsActive ? "active" : ""}`}
                       onClick={closeMobileMenu}
                     >
                       {nav.blog.label}
-                    </a>
+                    </Link>
                   </li>
                   {/* Mobile-only items */}
                   <li className="nav-item d-lg-none mt-4 px-3">
@@ -104,6 +127,7 @@ const HeaderSix = ({ locale, nav, primaryCta, anchors }: HeaderSixProps) => {
                       currentLocale={locale}
                       label={nav.language}
                       onSelect={closeMobileMenu}
+                      onLocaleChange={onLocaleChange}
                     />
                   </li>
                   <li className="nav-item d-lg-none mt-3 px-3">
@@ -134,6 +158,7 @@ const HeaderSix = ({ locale, nav, primaryCta, anchors }: HeaderSixProps) => {
                 currentLocale={locale}
                 label={nav.language}
                 onSelect={closeMobileMenu}
+                onLocaleChange={onLocaleChange}
               />
               <a
                 className="btn-seven color-two"

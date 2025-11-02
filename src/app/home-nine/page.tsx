@@ -2,6 +2,7 @@ import HomeNine from "@/components/homes/home-9";
 import Wrapper from "@/layouts/Wrapper";
 import { getDictionary } from "@/i18n/dictionaries";
 import { defaultLocale } from "@/i18n/config";
+import { getAllPostSummaries } from "@/lib/blog/api";
 
 import { createMetadata } from "@/lib/seo";
 
@@ -20,10 +21,11 @@ export const metadata = createMetadata({
 
 const page = () => {
   const dictionary = getDictionary(defaultLocale);
+  const latestPosts = getAllPostSummaries().slice(0, 3);
   
   return (
     <Wrapper>
-      <HomeNine dictionary={dictionary} locale={defaultLocale} />
+      <HomeNine dictionary={dictionary} locale={defaultLocale} latestPosts={latestPosts} />
     </Wrapper>
   )
 }

@@ -8,24 +8,22 @@ import Feedback from "./Feedback";
 import Hero from "./Hero";
 import Pricing from "./Pricing";
 import HeaderNine from "@/layouts/headers/HeaderNine";
+import { createAnchors } from "@/lib/anchors";
 
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 import type { Locale } from "@/i18n/config";
+import { PostSummary } from "@/lib/blog/types";
+import BlogPreview from "../home-6/BlogPreview";
 
 type HomeNineProps = {
   dictionary: LocaleDictionary;
   locale: Locale;
+  onLocaleChange?: (locale: Locale) => void;
+  latestPosts: PostSummary[];
 };
 
-const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
-  const anchors = {
-    home: "home",
-    features: dictionary.sections.why.id,
-    tracking: dictionary.sections.core.id,
-    pricing: dictionary.sections.pricing.id,
-    download: dictionary.sections.download.id,
-    faq: dictionary.sections.faq?.id ?? "faq",
-  } as const;
+const HomeNine = ({ dictionary, locale, onLocaleChange, latestPosts }: HomeNineProps) => {
+  const anchors = createAnchors(dictionary);
 
   return (
     <div className="main-page-wrapper dark-bg-five" id={anchors.home}>
@@ -34,6 +32,7 @@ const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
         nav={dictionary.nav}
         anchors={anchors}
         blogHref={dictionary.nav.blog.href}
+        onLocaleChange={onLocaleChange}
       />
       <main>
         <Hero hero={dictionary.hero} anchors={anchors} />
@@ -46,6 +45,7 @@ const HomeNine = ({ dictionary, locale }: HomeNineProps) => {
         <BlockFeatureTwo core={dictionary.sections.core} reviews={dictionary.sections.reviews} />
         <Feedback reviews={dictionary.sections.reviews} />
         <FancyBanner download={dictionary.sections.download} />
+        <BlogPreview posts={latestPosts} />
         {dictionary.sections.faq ? <FAQ faq={dictionary.sections.faq} /> : null}
       </main>
       <FooterEight

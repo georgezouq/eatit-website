@@ -15,7 +15,7 @@ const ko: LocaleDictionary = {
     faq: "FAQ",
     blog: {
       label: "블로그",
-      href: "https://blog.eatit.app",
+      href: "/blogs",
     },
     language: "언어",
     menuLabel: "메뉴",
@@ -28,8 +28,8 @@ const ko: LocaleDictionary = {
   },
   hero: {
     badge: "AI 영양 어시스턴트",
-    title: "한 번 스캔으로",
-    highlight: "모든 정보를",
+    title: "평생 건강한 식습관을 지켜드려요",
+    highlight: "",
     description:
       "카메라를 음식이나 성분표에 비추면 EatIt이 몇 초 만에 칼로리, 주요 영양소, 첨가물, 알레르기 위험을 보여주고 당신의 식단 규칙에 맞춰 평가합니다.",
     primaryCta: "EatIt 다운로드",
@@ -299,7 +299,7 @@ const ko: LocaleDictionary = {
       {
         title: "리소스",
         links: [
-          { label: "블로그", href: "https://blog.eatit.app" },
+          { label: "블로그", href: "/blogs" },
           { label: "헬프센터", href: "https://help.eatit.app" },
           { label: "보도자료", href: "https://press.eatit.app" },
         ],
@@ -313,6 +313,11 @@ const ko: LocaleDictionary = {
         ],
       },
     ],
+  },
+  notFound: {
+    title: "페이지를 찾을 수 없습니다",
+    description: "찾고 계신 페이지가 존재하지 않습니다. 이동되었거나 삭제되었을 수 있습니다.",
+    backButton: "홈으로 돌아가기",
   },
 };
 

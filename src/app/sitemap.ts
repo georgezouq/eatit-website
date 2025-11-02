@@ -1,51 +1,46 @@
 import type { MetadataRoute } from "next";
 
 import { siteConfig } from "@/lib/seo";
-import { locales, defaultLocale } from "@/i18n/config";
+import { getAllPostSummaries } from "@/lib/blog/api";
 
-// 有效的页面路由
-const validRoutes: Array<{ 
-  path: string; 
-  priority: number; 
+export const runtime = "nodejs";
+export const revalidate = 86400; // 24 hours
+
+const baseRoutes: Array<{
+  path: string;
+  priority: number;
   changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
 }> = [
-  // 首页 - 最高优先级
-  { path: "", priority: 1.0, changeFrequency: "daily" },
-  
-  // 博客列表页 - 高优先级,经常更新
-  { path: "/blog-v1", priority: 0.8, changeFrequency: "weekly" },
-  
-  // 博客详情页 - 中等优先级
-  { path: "/blog-details", priority: 0.7, changeFrequency: "weekly" },
+  { path: "/", priority: 1.0, changeFrequency: "daily" },
+  { path: "/blogs", priority: 0.8, changeFrequency: "weekly" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  const sitemapEntries: MetadataRoute.Sitemap = [];
 
-  // 为每个语言生成URL
-  locales.forEach((locale) => {
-    validRoutes.forEach(({ path, priority, changeFrequency }) => {
-      const localePrefix = locale === defaultLocale ? "" : `/${locale}`;
-      const fullPath = `${localePrefix}${path}`;
-      
-      sitemapEntries.push({
-        url: `${siteConfig.siteUrl}${fullPath}`,
-        lastModified,
-        changeFrequency,
-        priority,
-        // 添加多语言替代链接
-        alternates: {
-          languages: Object.fromEntries(
-            locales.map((l) => {
-              const altPrefix = l === defaultLocale ? "" : `/${l}`;
-              return [l, `${siteConfig.siteUrl}${altPrefix}${path}`];
-            })
-          ),
-        },
-      });
+  const entries: MetadataRoute.Sitemap = baseRoutes.map(({ path, priority, changeFrequency }) => ({
+    url: `${siteConfig.siteUrl}${path === "/" ? "" : path}`,
+    lastModified,
+    changeFrequency,
+    priority,
+  }));
+
+  let posts: ReturnType<typeof getAllPostSummaries> = [];
+
+  try {
+    posts = getAllPostSummaries();
+  } catch (error) {
+    console.error("Failed to load blog posts for the sitemap:", error);
+  }
+
+  posts.forEach((post) => {
+    entries.push({
+      url: `${siteConfig.siteUrl}/posts/${post.slug}`,
+      lastModified: new Date(post.date),
+      changeFrequency: "monthly",
+      priority: 0.7,
     });
   });
 
-  return sitemapEntries;
+  return entries;
 }

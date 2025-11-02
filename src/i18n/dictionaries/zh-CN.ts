@@ -15,7 +15,7 @@ const zhCN: LocaleDictionary = {
     faq: "常见问题",
     blog: {
       label: "博客",
-      href: "https://blog.eatit.app",
+      href: "/blogs",
     },
     language: "语言",
     menuLabel: "菜单",
@@ -28,8 +28,8 @@ const zhCN: LocaleDictionary = {
   },
   hero: {
     badge: "AI 营养助手",
-    title: "一扫即知",
-    highlight: "每一口",
+    title: "守护你的长期饮食健康",
+    highlight: "",
     description:
       "对准餐盘或配料表拍照，EatIt 会在几秒内呈现热量、营养素、添加剂与健康风险，并结合你的饮食规则给出建议。",
     primaryCta: "立即下载 EatIt",
@@ -292,7 +292,7 @@ const zhCN: LocaleDictionary = {
       {
         title: "资源",
         links: [
-          { label: "博客", href: "https://blog.eatit.app" },
+          { label: "博客", href: "/blogs" },
           { label: "帮助中心", href: "https://help.eatit.app" },
           { label: "媒体资料", href: "https://press.eatit.app" },
         ],
@@ -306,6 +306,11 @@ const zhCN: LocaleDictionary = {
         ],
       },
     ],
+  },
+  notFound: {
+    title: "页面未找到",
+    description: "您访问的页面不存在，可能已被移动或删除。",
+    backButton: "返回首页",
   },
 };
 

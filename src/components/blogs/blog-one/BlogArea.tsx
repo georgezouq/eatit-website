@@ -43,9 +43,9 @@ const BlogArea = () => {
                                  <li key={i}><Link href="/">{tag}</Link></li>
                               ))}
                            </ul>
-                           <Link href="/blog-details" className="blog-title d-block"><h4>{item.title}</h4></Link>
+                           <Link href="/blogs" className="blog-title d-block"><h4>{item.title}</h4></Link>
                            <p>{item.desc}</p>
-                           <Link href="/blog-details" className="read-more rounded-circle tran3s"><i className="bi bi-arrow-up-right"></i></Link>
+                           <Link href="/blogs" className="read-more rounded-circle tran3s"><i className="bi bi-arrow-up-right"></i></Link>
                         </div>
                      </article>
                   ))}

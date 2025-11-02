@@ -23,7 +23,7 @@ const es: LocaleDictionary = {
     faq: "Preguntas",
     blog: {
       label: "Blog",
-      href: "https://blog.eatit.app",
+      href: "/blogs",
     },
     language: "Idioma",
     menuLabel: "Menú",
@@ -36,8 +36,8 @@ const es: LocaleDictionary = {
   },
   hero: {
     badge: "Asistente nutricional IA",
-    title: "Conoce cada bocado",
-    highlight: "en un escaneo",
+    title: "Cuida tu salud nutricional para toda la vida",
+    highlight: "",
     description:
       "Apunta la cámara hacia tu plato o etiqueta y EatIt revela calorías, macros, aditivos, alérgenos y riesgos de salud en segundos, adaptado a tus reglas alimentarias.",
     primaryCta: "Descargar EatIt",
@@ -310,7 +310,7 @@ const es: LocaleDictionary = {
       {
         title: "Recursos",
         links: [
-          { label: "Blog", href: "https://blog.eatit.app" },
+          { label: "Blog", href: "/blogs" },
           { label: "Centro de ayuda", href: "https://help.eatit.app" },
           { label: "Sala de prensa", href: "https://press.eatit.app" },
         ],
@@ -324,6 +324,11 @@ const es: LocaleDictionary = {
         ],
       },
     ],
+  },
+  notFound: {
+    title: "Página no encontrada",
+    description: "La página que buscas no existe. Puede que haya sido movida o eliminada.",
+    backButton: "Volver al inicio",
   },
 };
 

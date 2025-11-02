@@ -15,7 +15,7 @@ const ja: LocaleDictionary = {
     faq: "FAQ",
     blog: {
       label: "ブログ",
-      href: "https://blog.eatit.app",
+      href: "/blogs",
     },
     language: "言語",
     menuLabel: "メニュー",
@@ -28,8 +28,8 @@ const ja: LocaleDictionary = {
   },
   hero: {
     badge: "AI栄養アシスタント",
-    title: "一目でわかる",
-    highlight: "賢い食選び",
+    title: "一生の健康的な食生活を守る",
+    highlight: "",
     description:
       "カメラを料理や成分表示に向けるだけで、EatIt が数秒でカロリー、マクロ、添加物、アレルゲン、健康リスクを表示し、あなたの食習慣に沿った評価を行います。",
     primaryCta: "EatIt をダウンロード",
@@ -298,7 +298,7 @@ const ja: LocaleDictionary = {
       {
         title: "リソース",
         links: [
-          { label: "ブログ", href: "https://blog.eatit.app" },
+          { label: "ブログ", href: "/blogs" },
           { label: "ヘルプセンター", href: "https://help.eatit.app" },
           { label: "プレスキット", href: "https://press.eatit.app" },
         ],
@@ -312,6 +312,11 @@ const ja: LocaleDictionary = {
         ],
       },
     ],
+  },
+  notFound: {
+    title: "ページが見つかりません",
+    description: "お探しのページは存在しません。移動または削除された可能性があります。",
+    backButton: "ホームに戻る",
   },
 };
 

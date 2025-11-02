@@ -23,7 +23,7 @@ const en: LocaleDictionary = {
     faq: "FAQ",
     blog: {
       label: "Blog",
-      href: "https://blog.eatit.app",
+      href: "/blogs",
     },
     language: "Language",
     menuLabel: "Menu",
@@ -36,8 +36,8 @@ const en: LocaleDictionary = {
   },
   hero: {
     badge: "AI Nutrition Assistant",
-    title: "Know every bite",
-    highlight: "in one scan",
+    title: "Your Lifelong Nutrition Partner",
+    highlight: "",
     titleSuffix: "",
     description:
       "Point your camera at a meal or ingredient list and EatIt reveals calories, macros, additives, allergens and health risks within seconds, tailored to your dietary rules.",
@@ -323,7 +323,7 @@ const en: LocaleDictionary = {
       {
         title: "Resources",
         links: [
-          { label: "Blog", href: "https://blog.eatit.app" },
+          { label: "Blog", href: "/blogs" },
           { label: "Help centre", href: "https://help.eatit.app" },
           { label: "Press", href: "https://press.eatit.app" },
         ],
@@ -337,6 +337,11 @@ const en: LocaleDictionary = {
         ],
       },
     ],
+  },
+  notFound: {
+    title: "Page Not Found",
+    description: "The page you're looking for doesn't exist. It may have been moved or deleted.",
+    backButton: "Go Back Home",
   },
 };
 

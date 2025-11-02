@@ -1,6 +1,7 @@
-import { redirect } from "next/navigation";
-
+import Wrapper from "@/layouts/Wrapper";
+import { LocaleProvider } from "@/components/hairwow/LocaleProvider";
 import { defaultLocale } from "@/i18n/config";
+import { getAllPostSummaries } from "@/lib/blog/api";
 
 import { createMetadata } from "@/lib/seo";
 
@@ -12,7 +13,15 @@ export const metadata = createMetadata({
 });
 
 const Page = () => {
-  redirect(`/${defaultLocale}`);
+  // No redirect - use client-side locale detection via localStorage
+  // Get latest blog posts on server side
+  const latestPosts = getAllPostSummaries().slice(0, 3);
+
+  return (
+    <Wrapper>
+      <LocaleProvider initialLocale={defaultLocale} latestPosts={latestPosts} />
+    </Wrapper>
+  );
 };
 
 export default Page;

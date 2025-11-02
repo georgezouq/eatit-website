@@ -5,6 +5,7 @@ import type { Locale } from "@/i18n/config";
 import { locales } from "@/i18n/config";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { getAllPostSummaries } from "@/lib/blog/api";
 
 import { createMetadata } from "@/lib/seo";
 
@@ -42,10 +43,11 @@ const HairwowPage = async ({ params }: { params: Promise<{ locale: string }> }) 
   }
 
   const dictionary = getDictionary(locale);
+  const latestPosts = getAllPostSummaries().slice(0, 3);
 
   return (
     <Wrapper>
-      <HomeNine dictionary={dictionary} locale={locale} />
+      <HomeNine dictionary={dictionary} locale={locale} latestPosts={latestPosts} />
     </Wrapper>
   );
 };

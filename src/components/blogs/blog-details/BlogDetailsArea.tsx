@@ -1,60 +1,95 @@
-import BlogForm from "@/components/forms/BlogForm"
-import Image from "next/image"
-import Link from "next/link"
+import BlogForm from "@/components/forms/BlogForm";
+import Image from "next/image";
+import Link from "next/link";
 
-import blog_details_thumb from "@/assets/images/blog/blog_img_18.jpg"
+import type { PostWithHtml } from "@/lib/blog/types";
+import { normalizeForComparison } from "@/lib/blog/slug";
 
-const BlogDetailsArea = () => {
-   return (
-      <div className="blog-details mt-200 lg-mt-150 mb-120 lg-mb-80">
-         <div className="container">
-            <div className="row">
-               <div className="col-xl-11 m-auto">
-                  <div className="pe-xl-5 ps-xl-5">
-                     <article className="blog-details-post">
-                        <div className="post-info text-center">Maria Jonas  /  2 Comments  /  o comment </div>
-                        <div className="title-three text-center mb-55 lg-mb-40">
-                           <h2>Make Productive Day with AI app</h2>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullaum laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit volupta velit esse cillum dolore eu fugiat nulla pariatur ut enim ad minim veniam.</p>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum magna quis nostured sed do eiusmod tempor .</p>
-                        <div className="media">
-                           <Image src={blog_details_thumb} alt="Hairwow blog article illustration" className="w-100" />
-                        </div>
-                        <h3>How I become my own mentor?</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullaum laboris nisi ut aliquip ex ea in reprehenderit volupta velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum magna quis nostured sed do eiusmod tempor .</p>
+type BlogDetailsAreaProps = {
+  post: PostWithHtml;
+};
 
-                        <div className="quote-wrapper">
-                           <blockquote>&quot;Budget your desires, investing knowledge, & let compound interest build your future.&quot;</blockquote>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+const BlogDetailsArea = ({ post }: BlogDetailsAreaProps) => {
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    day: "2-digit",
+    month: "long",
+    year: "numeric",
+  }).format(new Date(post.date));
 
-                        <p>quis nostrud exercitation ullaum laboris nisi ut aliquip ex ea in reprehenderit volupta velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum magna quis nostured sed do eiusmod tempor . minim veniam, quis nostrud exercitation ullaum laboris nisi ut aliquip ex ea  in reprehenderit.</p>
-                        <div className="bottom-widget d-lg-flex align-items-center justify-content-between">
-                           <ul className="d-flex align-items-center flex-wrap tags style-none pt-20">
-                              <li>Tag</li>
-                              <li><Link href="/">AI</Link></li>
-                              <li><Link href="/">Application</Link></li>
-                              <li><Link href="/">Technology</Link></li>
-                           </ul>
-                           <ul className="d-flex share-icon align-items-center style-none pt-20">
-                              <li>Share</li>
-                              <li><Link href="/"><i className="bi bi-facebook"></i></Link></li>
-                              <li><Link href="/"><i className="bi bi-twitter"></i></Link></li>
-                              <li><Link href="/"><i className="bi bi-instagram"></i></Link></li>
-                           </ul>
-                        </div>
-                     </article>
+  const shareUrl = encodeURIComponent(`https://hairwow.org/posts/${post.slug}`);
 
-                     <BlogForm />
-                  </div>
-               </div>
-            </div>
+  return (
+    <>
+      <article className="blog-details-post">
+        <div className="post-info text-center">
+          {post.author.name} · {formattedDate} · {post.readingTimeMinutes} min read
+        </div>
+        <div className="title-three text-center mb-55 lg-mb-40">
+          <h2>{post.title}</h2>
+        </div>
+        <div className="media">
+          <Image
+            src={post.coverImage}
+            alt={post.title}
+            className="w-100"
+            width={1200}
+            height={630}
+            priority
+          />
+        </div>
+        <div
+          className="mt-50 blog-content"
+          dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+        />
 
-         </div>
-      </div>
-   )
-}
+        <div className="bottom-widget d-lg-flex align-items-center justify-content-between">
+          <ul className="d-flex align-items-center flex-wrap tags style-none pt-20">
+            <li>Tags</li>
+            {post.tags?.map((tag) => (
+              <li key={tag}>
+                <Link href={`/blogs?tag=${normalizeForComparison(tag)}`}>{tag}</Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="d-flex share-icon align-items-center style-none pt-20">
+            <li>Share</li>
+            <li>
+              <Link
+                href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Share on Facebook"
+              >
+                <i className="bi bi-facebook"></i>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`https://twitter.com/intent/tweet?url=${shareUrl}&text=${encodeURIComponent(post.title)}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Share on X"
+              >
+                <i className="bi bi-twitter"></i>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Share on LinkedIn"
+              >
+                <i className="bi bi-linkedin"></i>
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </article>
 
-export default BlogDetailsArea
+      <BlogForm />
+    </>
+  );
+};
+
+export default BlogDetailsArea;
