@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={manrope.className} suppressHydrationWarning>
         {children}
       </body>
-      <GoogleAnalytics gaId="G-6N3K0QH432" />
+      <GoogleAnalytics gaId="G-6PWEYEBRDE" />
     </html>
   );
 }
