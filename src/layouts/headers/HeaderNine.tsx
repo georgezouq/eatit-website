@@ -54,19 +54,42 @@ const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNi
   }, []);
 
   const closeMobileMenu = useCallback(() => {
-    // Close the mobile menu by removing the 'show' class
+    // Close the mobile menu by removing the 'show' class and adding collapsing animation
     const navbar = document.getElementById("navbarNav");
     const toggler = document.querySelector(".navbar-toggler");
     
     if (navbar?.classList.contains("show")) {
-      navbar.classList.remove("show");
+      // Add collapsing class for animation
+      navbar.classList.add("collapsing");
+      navbar.classList.remove("collapse", "show");
+      
+      // Reset height for collapse animation
+      navbar.style.height = `${navbar.scrollHeight}px`;
+      
+      // Trigger reflow (force browser repaint)
+      void navbar.offsetHeight;
+      
+      // Set height to 0 to trigger collapse animation
+      navbar.style.height = "0";
+      
+      // After animation completes, clean up classes
+      setTimeout(() => {
+        navbar.classList.remove("collapsing");
+        navbar.classList.add("collapse");
+        navbar.style.height = "";
+      }, 350); // Bootstrap default transition time
+      
+      // Update toggler state
       toggler?.setAttribute("aria-expanded", "false");
       toggler?.classList.add("collapsed");
     }
   }, []);
 
   const handleNavLinkClick = useCallback(() => {
-    closeMobileMenu();
+    // Don't close immediately, let the click event propagate first
+    setTimeout(() => {
+      closeMobileMenu();
+    }, 100);
   }, [closeMobileMenu]);
 
   return (
@@ -74,32 +97,14 @@ const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNi
       <div className="inner-content gap-one">
         <div className="top-header position-relative">
           <div className="d-flex align-items-center w-100">
-            <div className="logo order-lg-0 me-lg-5 d-none d-lg-block">
+            <div className="logo order-0">
               <Link href={`/${locale}`} className="d-flex align-items-center">
                 <Image src={logo_1} alt="EatIt logo" height={60} />
               </Link>
             </div>
-            <nav className="navbar navbar-expand-lg p0 order-lg-2 ms-lg-5 ms-3">
-              <button
-                className="navbar-toggler d-block d-lg-none"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                aria-controls="navbarNav"
-                aria-expanded="false"
-                aria-label={nav.menuLabel}
-              >
-                <span></span>
-              </button>
+            <nav className="navbar navbar-expand-lg p0 order-lg-1 ms-lg-5">
               <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav align-items-lg-center">
-                  <li className="d-block d-lg-none">
-                    <div className="logo">
-                      <Link href={`/${locale}`} className="d-block" onClick={handleNavLinkClick}>
-                        <Image src={logo_1} alt="EatIt logo" height={80} />
-                      </Link>
-                    </div>
-                  </li>
                   {navLinks.map((item) => (
                     <li key={item.href} className="nav-item">
                       <a href={item.href} className="nav-link" onClick={handleNavLinkClick}>
@@ -118,7 +123,18 @@ const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNi
                 </ul>
               </div>
             </nav>
-            <div className="right-widget ms-auto order-lg-3 d-flex align-items-center gap-3">
+            <div className="right-widget ms-auto order-2 d-flex align-items-center gap-3">
+              <button
+                className="navbar-toggler d-block d-lg-none p-0 border-0"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label={nav.menuLabel}
+              >
+                <span></span>
+              </button>
               <div className="d-none d-lg-block">
                 <LanguageSwitcher
                   currentLocale={locale}
@@ -127,7 +143,7 @@ const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNi
                   onLocaleChange={onLocaleChange}
                 />
               </div>
-              <a href={`#${anchors.download}`} className="btn-eighteen">
+              <a href={`#${anchors.download}`} className="btn-eighteen d-none d-lg-block">
                 {nav.download}
               </a>
             </div>
