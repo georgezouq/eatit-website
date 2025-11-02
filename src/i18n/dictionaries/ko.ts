@@ -11,7 +11,7 @@ const ko: LocaleDictionary = {
     home: "홈",
     features: "주요 기능",
     pricing: "요금제",
-    download: "앱 다운로드",
+    download: "다운로드",
     faq: "FAQ",
     blog: {
       label: "블로그",

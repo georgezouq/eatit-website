@@ -11,7 +11,7 @@ const zhTW: LocaleDictionary = {
     home: "首頁",
     features: "功能亮點",
     pricing: "方案價格",
-    download: "下載 App",
+    download: "下載",
     faq: "常見問題",
     blog: {
       label: "部落格",

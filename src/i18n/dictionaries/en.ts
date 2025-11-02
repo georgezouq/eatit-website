@@ -19,7 +19,7 @@ const en: LocaleDictionary = {
     home: "Home",
     features: "Features",
     pricing: "Plans",
-    download: "Get the app",
+    download: "Download",
     faq: "FAQ",
     blog: {
       label: "Blog",

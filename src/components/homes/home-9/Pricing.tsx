@@ -8,7 +8,7 @@ type PricingProps = {
 
 const Pricing = ({ pricing }: PricingProps) => {
   return (
-    <section className="pricing-section-six mt-170 lg-mt-80" id={pricing.id}>
+    <section className="pricing-section-six mt-180 lg-mt-80 mb-180 lg-mb-80" id={pricing.id}>
       <div className="container lg">
         <div className="row align-items-end mb-60">
           <div className="col-xl-6 col-lg-7">
@@ -23,9 +23,9 @@ const Pricing = ({ pricing }: PricingProps) => {
             <p className="fs-20 text-white-50">{pricing.note}</p>
           </div>
         </div>
-        <div className="row">
+        <div className="row gx-xxl-5">
           {pricing.plans.map((plan) => (
-            <div key={plan.name} className="col-lg-4 d-flex">
+            <div key={plan.name} className="col-lg-4 d-flex mb-4 mb-lg-0">
               <div className={`pr-column w-100 ${plan.popular ? "popular" : ""}`}>
                 <div className="pr-header text-center mb-25">
                   <div className="plane-name">{plan.name}</div>

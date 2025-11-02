@@ -11,7 +11,7 @@ const ja: LocaleDictionary = {
     home: "ホーム",
     features: "機能",
     pricing: "料金",
-    download: "アプリを入手",
+    download: "ダウンロード",
     faq: "FAQ",
     blog: {
       label: "ブログ",

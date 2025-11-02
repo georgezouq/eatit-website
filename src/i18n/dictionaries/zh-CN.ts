@@ -11,7 +11,7 @@ const zhCN: LocaleDictionary = {
     home: "首页",
     features: "功能亮点",
     pricing: "套餐价格",
-    download: "下载应用",
+    download: "下载",
     faq: "常见问题",
     blog: {
       label: "博客",
