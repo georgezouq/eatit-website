@@ -2174,6 +2174,267 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
           color: #050d18;
           border-color: transparent;
         }
+    }
+  }
+}
+
+  .hairwow-blog-sidebar {
+    position: sticky;
+    top: clamp(100px, 12vh, 140px);
+    padding: clamp(2.4rem, 3.6vw, 2.9rem) clamp(1.8rem, 3vw, 2.4rem);
+    border-radius: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(160deg, rgba(8, 16, 24, 0.92) 0%, rgba(5, 12, 20, 0.82) 100%);
+    box-shadow: 0 32px 110px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(18px);
+    color: rgba(255, 255, 255, 0.86);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.8rem, 3vw, 2.6rem);
+
+    > * {
+      margin: 0;
+    }
+
+    > * + * {
+      padding-top: clamp(1.6rem, 2.5vw, 2rem);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .sidebar-title {
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.62);
+      margin-bottom: 1.1rem;
+    }
+
+    .sidebar-search {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      padding: 0.85rem 1rem;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255, 255, 255, 0.04);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+      &:focus-within {
+        border-color: rgba(255, 102, 196, 0.45);
+        box-shadow: 0 18px 45px rgba(255, 102, 196, 0.2);
+      }
+
+      input {
+        flex: 1;
+        background: transparent;
+        border: none;
+        color: rgba(255, 255, 255, 0.92);
+        font-size: 0.95rem;
+        padding: 0;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.45);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      button {
+        width: 44px;
+        height: 44px;
+        border-radius: 999px;
+        border: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #ff66c4 0%, #6ae8ff 100%);
+        color: #051018;
+        font-size: 1.05rem;
+        box-shadow: 0 14px 28px rgba(110, 232, 255, 0.25);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+          transform: translateY(-1px);
+          box-shadow: 0 18px 36px rgba(255, 102, 196, 0.25);
+        }
+
+        i {
+          line-height: 1;
+        }
+      }
+    }
+
+    .blog-category {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      li a {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.75rem;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.82);
+        font-size: 0.95rem;
+        padding: 0.75rem 0.95rem;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+
+        span {
+          color: rgba(255, 255, 255, 0.6);
+          font-size: 0.85rem;
+        }
+
+        &:hover,
+        &:focus-visible {
+          background: rgba(255, 255, 255, 0.07);
+          border-color: rgba(106, 232, 255, 0.35);
+          color: #ffffff;
+        }
+
+        &.active {
+          background: linear-gradient(135deg, rgba(255, 102, 196, 0.22), rgba(106, 232, 255, 0.18));
+          border-color: rgba(255, 102, 196, 0.45);
+          color: #ffffff;
+
+          span {
+            color: rgba(255, 255, 255, 0.75);
+          }
+        }
+      }
+    }
+
+    .blog-recent-news {
+      .recent-news {
+        padding: 1.1rem 1.25rem;
+        border-radius: 20px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid transparent;
+        transition: all 0.2s ease;
+        margin-bottom: 0;
+
+        & + .recent-news {
+          margin-top: 0.9rem;
+        }
+
+        &:hover {
+          border-color: rgba(106, 232, 255, 0.28);
+          background: rgba(255, 255, 255, 0.06);
+          box-shadow: 0 20px 45px rgba(7, 15, 24, 0.4);
+        }
+
+        .date {
+          font-size: 0.78rem;
+          letter-spacing: 0.12em;
+          text-transform: uppercase;
+          color: rgba(255, 255, 255, 0.48);
+          margin-bottom: 0.55rem;
+        }
+
+        .blog-title {
+          text-decoration: none;
+
+          h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            line-height: 1.45;
+            color: rgba(255, 255, 255, 0.88);
+            transition: color 0.2s ease;
+          }
+
+          &:hover h3,
+          &:focus-visible h3 {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    .blog-keyword {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+
+      li a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.4rem 1.05rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.05);
+        font-size: 0.82rem;
+        letter-spacing: 0.08em;
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+        transition: all 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+          background: linear-gradient(135deg, #ff66c4 0%, #6ae8ff 100%);
+          border-color: transparent;
+          color: #050d18;
+        }
+
+        &.active {
+          background: linear-gradient(135deg, rgba(255, 102, 196, 0.22), rgba(106, 232, 255, 0.22));
+          border-color: rgba(255, 102, 196, 0.4);
+          color: #ffffff;
+        }
+      }
+    }
+
+    .contact-banner {
+      margin-top: 0 !important;
+      padding: clamp(1.8rem, 3vw, 2.4rem) clamp(1.4rem, 2.5vw, 2rem);
+      border-radius: 26px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: linear-gradient(150deg, rgba(255, 102, 196, 0.2) 0%, rgba(106, 232, 255, 0.18) 100%);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+
+      h3 {
+        font-size: 1.45rem;
+        line-height: 1.35;
+        color: #ffffff;
+      }
+
+      a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        padding: 0.65rem 1.6rem;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.75);
+        color: #050d18;
+        background: #ffffff;
+        font-size: 0.88rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
+
+        &:hover,
+        &:focus-visible {
+          background: #050d18;
+          color: #ffffff;
+          border-color: transparent;
+        }
       }
     }
   }
@@ -2191,6 +2452,15 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
           min-width: 480px;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .blog-details {
+    .hairwow-blog-sidebar {
+      top: clamp(80px, 14vh, 120px);
+      padding: clamp(2.1rem, 5vw, 2.6rem) clamp(1.6rem, 4vw, 2.2rem);
     }
   }
 }
@@ -2236,6 +2506,54 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
 
       .bottom-widget {
         padding: 1.4rem 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .blog-details {
+    .hairwow-blog-sidebar {
+      position: static;
+      box-shadow: 0 26px 90px rgba(0, 0, 0, 0.35);
+      padding: clamp(1.9rem, 6vw, 2.4rem) clamp(1.35rem, 5vw, 2rem);
+
+      > * + * {
+        padding-top: clamp(1.2rem, 3vw, 1.6rem);
+      }
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .blog-details {
+    .hairwow-blog-sidebar {
+      border-radius: 24px;
+      padding: clamp(1.6rem, 7vw, 2rem) clamp(1.1rem, 6vw, 1.7rem);
+      gap: clamp(1.4rem, 5vw, 1.8rem);
+
+      .sidebar-search {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+
+        button {
+          width: 100%;
+        }
+      }
+
+      .blog-recent-news .recent-news {
+        padding: 1rem 1.05rem;
+      }
+
+      .contact-banner {
+        h3 {
+          font-size: 1.25rem;
+        }
+
+        a {
+          width: 100%;
+        }
       }
     }
   }

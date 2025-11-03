@@ -29,7 +29,7 @@ const BlogDetails = ({
         <div className="container">
           <div className="row">
             <div className="col-xxl-12 m-auto">
-              <div className="row gx-xxl-5">
+              <div className="row gx-xxl-5 gy-5 align-items-start">
                 <div className="col-lg-9">
                   <BlogDetailsArea post={post} />
                 </div>
