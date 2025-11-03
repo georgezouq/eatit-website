@@ -1760,6 +1760,14 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     backdrop-filter: blur(18px);
     transition: box-shadow 0.3s ease;
 
+    @media (min-width: 1200px) {
+      max-width: min(900px, 100%);
+    }
+
+    @media (min-width: 1500px) {
+      max-width: min(960px, 100%);
+    }
+
     &:hover {
       box-shadow: 0 50px 150px rgba(0, 0, 0, 0.5);
     }
