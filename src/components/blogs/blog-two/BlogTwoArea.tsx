@@ -67,7 +67,7 @@ const BlogTwoArea = ({ posts, categories, tags, recentPosts }: BlogTwoAreaProps)
     <div className="blog-section-two mt-200 lg-mt-150 mb-120 lg-mb-80">
       <div className="container">
         <div className="title-two text-center mb-80 lg-mb-50">
-          <h1 className="mb-30">HairWow Blog</h1>
+          <h1 className="mb-30">EatIt Blog</h1>
           <p className="text-lg mx-auto text-white-50" style={{ maxWidth: "700px", fontSize: "1.05rem", lineHeight: "1.7" }}>
             Discover expert insights on AI-powered hair styling, trending hairstyles, and professional beauty tips.
           </p>

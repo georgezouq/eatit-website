@@ -30,7 +30,7 @@ const BlogDetails = ({
           <div className="row">
             <div className="col-xxl-12 m-auto">
               <div className="row gx-xxl-5 gy-5 align-items-start">
-                <div className="col-lg-8">
+                <div className="col-lg-9 col-xl-8 col-xxl-8">
                   <BlogDetailsArea post={post} />
                 </div>
                 <Sidebar
