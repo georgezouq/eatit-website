@@ -7,10 +7,9 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
 import type { Element, Root } from "hast";
-import type { Plugin } from "unified";
 import type { Parent } from "unist";
 
-const wrapTables: Plugin<[], Root> = () => (tree) => {
+const wrapTables = () => (tree: Root) => {
   visit(tree, "element", (node, index, parent) => {
     if (!parent || typeof index !== "number") {
       return;
