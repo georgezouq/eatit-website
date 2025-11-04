@@ -20,8 +20,8 @@ type SidebarProps = {
 
 const Sidebar = ({ categories, tags, recentPosts, activeCategory, activeTag }: SidebarProps) => {
   return (
-    <div className="col-lg-3">
-      <div className="blog-sidebar md-mt-60 ps-xl-4">
+    <div className="col-lg-3 col-xl-4 col-xxl-4">
+      <aside className="hairwow-blog-sidebar blog-sidebar md-mt-60" aria-label="Blog sidebar">
         <form onSubmit={(e) => e.preventDefault()} className="sidebar-search">
           <input type="text" placeholder="Search.." aria-label="Search blog articles" />
           <button className="tran3s" aria-label="Search">
@@ -40,7 +40,7 @@ const Sidebar = ({ categories, tags, recentPosts, activeCategory, activeTag }: S
             Let’s Talk
           </Link>
         </div>
-      </div>
+      </aside>
     </div>
   );
 };

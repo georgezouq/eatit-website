@@ -7,11 +7,11 @@ import { toSlug } from "@/lib/blog/slug";
 import type { CategoryWithCount, TagWithCount, PostSummary } from "@/lib/blog/types";
 
 export const metadata = createMetadata({
-  title: "HairWow Blog | AI Salon Growth Strategies & Case Studies",
+  title: "EatIt Blog | AI Salon Growth Strategies & Case Studies",
   description:
     "Explore the latest HairWow insights on AI consultations, salon marketing, and retention workflows designed to scale modern beauty businesses.",
   keywords: [
-    "HairWow blog",
+    "EatIt Blog",
     "salon marketing",
     "AI consultations",
     "beauty business growth",

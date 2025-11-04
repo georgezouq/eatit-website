@@ -44,9 +44,9 @@ const BlogDetailsArea = ({ post }: BlogDetailsAreaProps) => {
 
         <div className="bottom-widget d-lg-flex align-items-center justify-content-between">
           <ul className="d-flex align-items-center flex-wrap tags style-none pt-20">
-            <li>Tags</li>
+            <li style={{marginTop: '5px'}}>Tags</li>
             {post.tags?.map((tag) => (
-              <li key={tag}>
+              <li key={tag} style={{marginTop: '5px'}}>
                 <Link href={`/blogs?tag=${normalizeForComparison(tag)}`}>{tag}</Link>
               </li>
             ))}
