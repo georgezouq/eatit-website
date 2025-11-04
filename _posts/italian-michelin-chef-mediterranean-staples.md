@@ -52,8 +52,6 @@ Scan the olive oil and olives to keep an eye on **added sodium** and total fats.
 - Prefer dairy? A spoon of plain yogurt mixed with lemon and grated cucumber makes a quick tzatziki on the side.  
 - Crusty whole-grain bread is classic; EatIt will flag portions if your carbs are running high that day.
 
----
-
 ## Dish #2: Sicilian Caponata over Warm Farro (Serves 4 as a side, 2 as a main)
 
 Silky eggplant, sweet-sour tomatoes, celery crunch, a little briny pop. The chef’s trick is gentle heat and a splash of vinegar at the end.

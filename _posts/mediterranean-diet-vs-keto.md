@@ -102,8 +102,6 @@ Plenty of people run a **Mediterranean-keto hybrid**: very low net carbs, but wi
 
 ![side-by-side grocery cart contents: left with colorful produce, olive oil, fish; right with eggs, leafy greens, avocados, nuts—clean studio lighting](/assets/images/blog-article/med_keto_carts.jpg)
 
----
-
 **One last thing:** Nutrition is personal. If you have diabetes, kidney disease, high triglycerides, or you’re pregnant or breastfeeding, check in with your clinician before making big changes. EatIt is a guide, not a diagnosis.
 
 Ready to experiment? Open **EatIt**, set your mode, scan your next meal, and let the data nudge you to better choices—whichever path you take.
