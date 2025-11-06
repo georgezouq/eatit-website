@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,6 +14,10 @@ type FancyBannerProps = {
 };
 
 const FancyBanner = ({ download }: FancyBannerProps) => {
+  const handleGooglePlayClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert(download.comingSoon);
+  };
   return (
     <section
       className="fancy-banner-seven position-relative z-1 mt-200 xl-mt-170 lg-mt-100"
@@ -54,7 +60,8 @@ const FancyBanner = ({ download }: FancyBannerProps) => {
                 </div>
               </Link>
               <Link
-                href={download.google.href}
+                href="javscript:void(0);"
+                onClick={handleGooglePlayClick}
                 className="d-flex align-items-center windows-button"
                 target="_blank"
                 rel="noreferrer"

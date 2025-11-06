@@ -111,6 +111,7 @@ export type LocaleDictionary = {
         href: string;
         label: string;
       };
+      comingSoon: string;
     };
     pricing: {
       id: string;

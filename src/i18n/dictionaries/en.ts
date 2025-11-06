@@ -164,13 +164,14 @@ const en: LocaleDictionary = {
       ],
       storeLabel: "Get EatIt on",
       apple: {
-        href: "https://apps.apple.com/app",
+        href: "https://itunes.apple.com/us/app/id6753906159",
         label: "App Store",
       },
       google: {
-        href: "https://play.google.com/store/apps",
+        href: "#",
         label: "Google Play",
       },
+      comingSoon: "Coming soon, stay tuned!",
     },
     pricing: {
       id: "pricing",

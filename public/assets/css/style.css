@@ -3927,7 +3927,8 @@ p {
   animation: jumpThree 5s infinite linear;
   max-width: 12%;
 }
-.fancy-banner-seven .platform-button-group a {
+.fancy-banner-seven .platform-button-group a,
+.fancy-banner-seven .platform-button-group button {
   width: 190px;
   height: 58px;
   border: 2px solid #fff;
@@ -3940,21 +3941,25 @@ p {
   font-size: 18px;
   transition: all 0.3s ease-in-out;
 }
-.fancy-banner-seven .platform-button-group a:hover {
+.fancy-banner-seven .platform-button-group a:hover,
+.fancy-banner-seven .platform-button-group button:hover {
   transform: translateY(-5px);
   box-shadow: -5px 10px 30px rgba(0, 0, 0, 0.05);
 }
-.fancy-banner-seven .platform-button-group a .icon {
+.fancy-banner-seven .platform-button-group a .icon,
+.fancy-banner-seven .platform-button-group button .icon {
   margin-right: 14px;
 }
-.fancy-banner-seven .platform-button-group a span {
+.fancy-banner-seven .platform-button-group a span,
+.fancy-banner-seven .platform-button-group button span {
   font-size: 12px;
   color: rgba(255, 255, 255, 0.6);
   display: block;
   line-height: initial;
   margin-bottom: -3px;
 }
-.fancy-banner-seven .platform-button-group a strong {
+.fancy-banner-seven .platform-button-group a strong,
+.fancy-banner-seven .platform-button-group button strong {
   font-weight: 500;
   display: block;
 }

@@ -153,13 +153,14 @@ const ko: LocaleDictionary = {
       ],
       storeLabel: "EatIt 받기",
       apple: {
-        href: "https://apps.apple.com/app",
+        href: "https://itunes.apple.com/us/app/id6753906159",
         label: "App Store",
       },
       google: {
-        href: "https://play.google.com/store/apps",
+        href: "#",
         label: "Google Play",
       },
+      comingSoon: "곧 출시됩니다. 기대해 주세요!",
     },
     pricing: {
       id: "pricing",

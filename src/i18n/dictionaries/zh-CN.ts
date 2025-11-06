@@ -151,13 +151,14 @@ const zhCN: LocaleDictionary = {
       ],
       storeLabel: "下载 EatIt",
       apple: {
-        href: "https://apps.apple.com/app",
+        href: "https://itunes.apple.com/us/app/id6753906159",
         label: "App Store",
       },
       google: {
-        href: "https://play.google.com/store/apps",
+        href: "#",
         label: "Google Play",
       },
+      comingSoon: "即将推出，敬请期待！",
     },
     pricing: {
       id: "pricing",
