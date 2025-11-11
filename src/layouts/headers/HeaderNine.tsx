@@ -99,7 +99,7 @@ const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNi
           <div className="d-flex align-items-center w-100">
             <div className="logo order-0">
               <Link href={`/${locale}`} className="d-flex align-items-center">
-                <Image src={logo_1} alt="EatIt logo" height={60} />
+                <Image src={logo_1} alt="Eatibo logo" height={60} />
               </Link>
             </div>
             <nav className="navbar navbar-expand-lg p0 order-lg-1 ms-lg-5">

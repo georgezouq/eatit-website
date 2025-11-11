@@ -2,10 +2,10 @@ import type { LocaleDictionary } from "./types";
 
 const ja: LocaleDictionary = {
   metadata: {
-    title: "EatIt — AI栄養スキャナー & コーチ",
+    title: "Eatibo — AI栄養スキャナー & コーチ",
     description:
-      "EatIt は料理や原材料表示を撮影するだけで、カロリー、栄養素、アレルゲン、添加物を瞬時に分析し、あなたの食事目標に合わせたアドバイスを届けます。",
-    keywords: ["EatIt", "栄養管理", "カロリー計算", "AIコーチ", "アレルゲン", "フードログ"],
+      "Eatibo は料理や原材料表示を撮影するだけで、カロリー、栄養素、アレルゲン、添加物を瞬時に分析し、あなたの食事目標に合わせたアドバイスを届けます。",
+    keywords: ["Eatibo", "栄養管理", "カロリー計算", "AIコーチ", "アレルゲン", "フードログ"],
   },
   nav: {
     home: "ホーム",
@@ -19,7 +19,7 @@ const ja: LocaleDictionary = {
     },
     language: "言語",
     menuLabel: "メニュー",
-    menuIntro: "EatIt を見る",
+    menuIntro: "Eatibo を見る",
     closeMenu: "メニューを閉じる",
   },
   auth: {
@@ -31,8 +31,8 @@ const ja: LocaleDictionary = {
     title: "一生の健康的な食生活を守る",
     highlight: "",
     description:
-      "カメラを料理や成分表示に向けるだけで、EatIt が数秒でカロリー、マクロ、添加物、アレルゲン、健康リスクを表示し、あなたの食習慣に沿った評価を行います。",
-    primaryCta: "EatIt をダウンロード",
+      "カメラを料理や成分表示に向けるだけで、Eatibo が数秒でカロリー、マクロ、添加物、アレルゲン、健康リスクを表示し、あなたの食習慣に沿った評価を行います。",
+    primaryCta: "Eatibo をダウンロード",
     secondaryCta: "使い方を見る",
     note: "ローカル優先の保存と暗号化同期で、食事データはあなたのもの。",
     rating: {
@@ -46,19 +46,19 @@ const ja: LocaleDictionary = {
       "トレンド分析で日々の変化を実感",
     ],
     visual: {
-      title: "EatIt スキャン体験",
+      title: "Eatibo スキャン体験",
       items: [
         "添加物・アレルゲンの自動検出",
         "毎日の栄養バランス通知",
         "AI栄養士による代替案と提案",
       ],
-      pill: "EatIt でスキャン",
+      pill: "Eatibo でスキャン",
     },
   },
   sections: {
     why: {
       id: "features",
-      title: "EatIt が毎日の相棒になる理由",
+      title: "Eatibo が毎日の相棒になる理由",
       subtitle: "カロリーから隠れた添加物まで、1回のスキャンで食べる判断がクリアになります。",
       items: [
         {
@@ -78,7 +78,7 @@ const ja: LocaleDictionary = {
     core: {
       id: "tracking",
       title: "誰の身体にもフィットする深い栄養洞察",
-      subtitle: "EatIt は食事記録とあなたのゴールを結び、次のアクションを導きます。",
+      subtitle: "Eatibo は食事記録とあなたのゴールを結び、次のアクションを導きます。",
       cards: [
         {
           title: "カロリー & マクロ管理",
@@ -113,11 +113,11 @@ const ja: LocaleDictionary = {
     assist: {
       id: "assist",
       title: "ライフスタイルを理解するサポート",
-      subtitle: "EatIt は文化や健康状態、個人の選択を尊重し、誰もが安心して食事を楽しめるようにします。",
+      subtitle: "Eatibo は文化や健康状態、個人の選択を尊重し、誰もが安心して食事を楽しめるようにします。",
       items: [
         {
           title: "アレルギー・禁忌リスト",
-          description: "個別のアレルゲンや宗教的制限、避けたい成分を一度設定すれば、EatIt が記憶します。",
+          description: "個別のアレルゲンや宗教的制限、避けたい成分を一度設定すれば、Eatibo が記憶します。",
         },
         {
           title: "健康リスクマーカー",
@@ -142,15 +142,15 @@ const ja: LocaleDictionary = {
     },
     download: {
       id: "download",
-      badge: "EatIt をダウンロード",
+      badge: "Eatibo をダウンロード",
       title: "もっとスマートにスキャンして、自信を持って食べよう。",
-      subtitle: "外出先でも EatIt があれば、料理やラベルを数秒で読み解けます。",
+      subtitle: "外出先でも Eatibo があれば、料理やラベルを数秒で読み解けます。",
       highlights: [
         "ラベル・バーコード・料理写真を一瞬で解析",
         "アレルギーや食文化、目標に合わせた提案",
         "暗号化された同期で食事履歴を安全に保護",
       ],
-      storeLabel: "EatIt を入手",
+      storeLabel: "Eatibo を入手",
       apple: {
         href: "https://itunes.apple.com/us/app/id6753906159",
         label: "App Store",
@@ -210,14 +210,14 @@ const ja: LocaleDictionary = {
       id: "privacy",
       title: "あなたのデータはあなたのもの",
       description: "地域の法規制に準拠しつつ全ログを暗号化。保存場所と利用範囲を自分で管理できます。",
-      cta: "https://eatit.app/security",
+      cta: "https://eatibo.app/security",
     },
     reviews: {
       id: "stories",
       title: "世界中の mindful eaters に愛されるアプリ",
       subtitle: "伝統・味・健康のバランスを取る人々の声。",
       quote:
-        "EatIt があれば、マラソンのトレーニングをしながら家族のハラール習慣を守れます。AIコーチが不足栄養を先回りで教えてくれます。",
+        "Eatibo があれば、マラソンのトレーニングをしながら家族のハラール習慣を守れます。AIコーチが不足栄養を先回りで教えてくれます。",
       author: "Farah Q.",
       role: "ランナー / 栄養ブロガー",
       stats: {
@@ -245,12 +245,12 @@ const ja: LocaleDictionary = {
     faq: {
       id: "faq",
       title: "よくある質問",
-      subtitle: "EatIt の始め方に関する代表的な疑問にお答えします。",
+      subtitle: "Eatibo の始め方に関する代表的な疑問にお答えします。",
       items: [
         {
           question: "カロリー・マクロの検出精度はどの程度ですか？",
           answer:
-            "EatIt はコンピュータビジョンと検証済みの食材データベースを組み合わせています。各スキャンに精度指標が表示され、保存前に分量を調整できます。",
+            "Eatibo はコンピュータビジョンと検証済みの食材データベースを組み合わせています。各スキャンに精度指標が表示され、保存前に分量を調整できます。",
         },
         {
           question: "文化や宗教による食事ルールにも対応できますか？",
@@ -272,20 +272,20 @@ const ja: LocaleDictionary = {
   },
   footer: {
     tagline: "あなたのプレートを理解するAIで、もっと賢く食べよう。",
-    rights: "© 2024 EatIt. All rights reserved.",
-    socialsLabel: "EatIt とつながる",
+    rights: "© 2024 Eatibo. All rights reserved.",
+    socialsLabel: "Eatibo とつながる",
     supportLabel: "サポートが必要ですか？",
     supportEmail: "cs@clearcrowds.com",
     faqLabel: "FAQ",
     supportChannels: [
       { type: "email", label: "メールサポート", value: "cs@clearcrowds.com" },
       { type: "phone", label: "栄養ホットライン", value: "+1(305)4621683" },
-      { type: "chat", label: "ライブチャット", value: "geteatit.com" },
+      { type: "chat", label: "ライブチャット", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatitapp", label: "X / Twitter" },
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatitapp", label: "Instagram" },
-      { icon: "fa-brands fa-youtube", href: "https://youtube.com/@eatitapp", label: "YouTube" },
+      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "X / Twitter" },
+      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
+      { icon: "fa-brands fa-youtube", href: "https://youtube.com/@eatiboapp", label: "YouTube" },
     ],
     navGroups: [
       {
@@ -293,23 +293,23 @@ const ja: LocaleDictionary = {
         links: [
           { label: "機能", href: "#features" },
           { label: "料金", href: "#pricing" },
-          { label: "セキュリティ", href: "https://eatit.app/security" },
+          { label: "セキュリティ", href: "https://eatibo.app/security" },
         ],
       },
       {
         title: "リソース",
         links: [
           { label: "ブログ", href: "/blogs" },
-          { label: "ヘルプセンター", href: "https://help.eatit.app" },
-          { label: "プレスキット", href: "https://press.eatit.app" },
+          { label: "ヘルプセンター", href: "https://help.eatibo.app" },
+          { label: "プレスキット", href: "https://press.eatibo.app" },
         ],
       },
       {
         title: "会社情報",
         links: [
-          { label: "EatIt について", href: "https://eatit.app/about" },
-          { label: "採用情報", href: "https://eatit.app/careers" },
-          { label: "お問い合わせ", href: "https://eatit.app/contact" },
+          { label: "Eatibo について", href: "https://eatibo.app/about" },
+          { label: "採用情報", href: "https://eatibo.app/careers" },
+          { label: "お問い合わせ", href: "https://eatibo.app/contact" },
         ],
       },
     ],

@@ -2,10 +2,10 @@ import type { LocaleDictionary } from "./types";
 
 const zhCN: LocaleDictionary = {
   metadata: {
-    title: "EatIt —— AI 营养扫描与饮食顾问",
+    title: "Eatibo —— AI 营养扫描与饮食顾问",
     description:
-      "EatIt 能够即时识别任何餐食或配料表中的热量、营养素、过敏原与添加剂，并依据你的饮食目标给出个性化建议。",
-    keywords: ["EatIt", "营养扫描", "热量记录", "AI 饮食顾问", "过敏原识别", "健康饮食"],
+      "Eatibo 能够即时识别任何餐食或配料表中的热量、营养素、过敏原与添加剂，并依据你的饮食目标给出个性化建议。",
+    keywords: ["Eatibo", "营养扫描", "热量记录", "AI 饮食顾问", "过敏原识别", "健康饮食"],
   },
   nav: {
     home: "首页",
@@ -19,7 +19,7 @@ const zhCN: LocaleDictionary = {
     },
     language: "语言",
     menuLabel: "菜单",
-    menuIntro: "浏览 EatIt",
+    menuIntro: "浏览 Eatibo",
     closeMenu: "关闭菜单",
   },
   auth: {
@@ -31,8 +31,8 @@ const zhCN: LocaleDictionary = {
     title: "守护你的长期饮食健康",
     highlight: "",
     description:
-      "对准餐盘或配料表拍照，EatIt 会在几秒内呈现热量、营养素、添加剂与健康风险，并结合你的饮食规则给出建议。",
-    primaryCta: "立即下载 EatIt",
+      "对准餐盘或配料表拍照，Eatibo 会在几秒内呈现热量、营养素、添加剂与健康风险，并结合你的饮食规则给出建议。",
+    primaryCta: "立即下载 Eatibo",
     secondaryCta: "了解工作方式",
     note: "本地优先存储与加密同步，饮食数据始终归你所有。",
     rating: {
@@ -46,19 +46,19 @@ const zhCN: LocaleDictionary = {
       "趋势分析帮助你看见持续进步",
     ],
     visual: {
-      title: "EatIt 扫描体验",
+      title: "Eatibo 扫描体验",
       items: [
         "识别配料中的添加剂与过敏原",
         "每日营养均衡提醒",
         "AI 营养顾问提供替代方案",
       ],
-      pill: "使用 EatIt 扫描",
+      pill: "使用 Eatibo 扫描",
     },
   },
   sections: {
     why: {
       id: "features",
-      title: "EatIt 如何成为你的饮食搭档",
+      title: "Eatibo 如何成为你的饮食搭档",
       subtitle: "从热量到隐形添加剂，每一次扫描都让你吃得更放心。",
       items: [
         {
@@ -71,14 +71,14 @@ const zhCN: LocaleDictionary = {
         },
         {
           title: "目标感知的建议",
-          description: "无论增肌、控糖还是清真饮食，EatIt 都能给出贴合目标的判断。",
+          description: "无论增肌、控糖还是清真饮食，Eatibo 都能给出贴合目标的判断。",
         },
       ],
     },
     core: {
       id: "tracking",
       title: "适配每个人的深度营养洞察",
-      subtitle: "EatIt 将每日记录与健康目标关联起来，让下一步选择更明确。",
+      subtitle: "Eatibo 将每日记录与健康目标关联起来，让下一步选择更明确。",
       cards: [
         {
           title: "热量与宏量营养追踪",
@@ -112,11 +112,11 @@ const zhCN: LocaleDictionary = {
     assist: {
       id: "assist",
       title: "懂你生活方式的贴心支持",
-      subtitle: "EatIt 尊重文化、健康与个人选择，让每个人都能安心享受美食。",
+      subtitle: "Eatibo 尊重文化、健康与个人选择，让每个人都能安心享受美食。",
       items: [
         {
           title: "过敏/禁忌清单",
-          description: "一次设定个人过敏原、宗教饮食与黑名单配料，EatIt 永远记得。",
+          description: "一次设定个人过敏原、宗教饮食与黑名单配料，Eatibo 永远记得。",
         },
         {
           title: "健康风险标注",
@@ -124,7 +124,7 @@ const zhCN: LocaleDictionary = {
         },
         {
           title: "饮食亚文化友好",
-          description: "无论是无籽油、养生派还是植物基清真饮食，EatIt 都能听懂。",
+          description: "无论是无籽油、养生派还是植物基清真饮食，Eatibo 都能听懂。",
         },
       ],
     },
@@ -141,15 +141,15 @@ const zhCN: LocaleDictionary = {
     },
     download: {
       id: "download",
-      badge: "下载 EatIt",
+      badge: "下载 Eatibo",
       title: "更聪明地扫描，更安心地开吃",
-      subtitle: "把 EatIt 装进口袋，随时随地几秒读懂餐盘与配料表。",
+      subtitle: "把 Eatibo 装进口袋，随时随地几秒读懂餐盘与配料表。",
       highlights: [
         "标签、条码、实物菜品一拍即识",
         "结合过敏、饮食文化与目标给出建议",
         "加密同步守护你的饮食数据",
       ],
-      storeLabel: "下载 EatIt",
+      storeLabel: "下载 Eatibo",
       apple: {
         href: "https://itunes.apple.com/us/app/id6753906159",
         label: "App Store",
@@ -209,13 +209,13 @@ const zhCN: LocaleDictionary = {
       id: "privacy",
       title: "你的饮食数据只属于你",
       description: "我们遵循本地优先与分区合规，加密保存每一条饮食记录，并提供完整的数据控制权。",
-      cta: "https://eatit.app/security",
+      cta: "https://eatibo.app/security",
     },
     reviews: {
       id: "stories",
-      title: "全球吃货都在用 EatIt",
+      title: "全球吃货都在用 Eatibo",
       subtitle: "用更聪明的方式平衡传统、口味与健康。",
-      quote: "EatIt 让我在马拉松训练中也能遵守清真饮食，AI 顾问会提前提示营养缺口。",
+      quote: "Eatibo 让我在马拉松训练中也能遵守清真饮食，AI 顾问会提前提示营养缺口。",
       author: "Farah Q.",
       role: "跑者 & 营养博主",
       stats: {
@@ -234,7 +234,7 @@ const zhCN: LocaleDictionary = {
           role: "普拉提教练",
         },
         {
-          quote: "作为厨师，我喜欢 EatIt 快速标出添加剂和籽油。",
+          quote: "作为厨师，我喜欢 Eatibo 快速标出添加剂和籽油。",
           author: "Marco D.",
           role: "餐饮顾问",
         },
@@ -243,15 +243,15 @@ const zhCN: LocaleDictionary = {
     faq: {
       id: "faq",
       title: "常见问题",
-      subtitle: "关于 EatIt 的热门提问都在这里。",
+      subtitle: "关于 Eatibo 的热门提问都在这里。",
       items: [
         {
           question: "AI 识别热量与营养的准确性如何？",
-          answer: "EatIt 结合计算机视觉与权威配料数据库，每次扫描都会显示可信度，并允许你在保存前微调份量。",
+          answer: "Eatibo 结合计算机视觉与权威配料数据库，每次扫描都会显示可信度，并允许你在保存前微调份量。",
         },
         {
           question: "能否支持宗教或文化饮食规则？",
-          answer: "当然。你可以设置清真、犹太洁食、素食、低 FODMAP、无籽油等偏好，EatIt 会在冲突发生前提醒。",
+          answer: "当然。你可以设置清真、犹太洁食、素食、低 FODMAP、无籽油等偏好，Eatibo 会在冲突发生前提醒。",
         },
         {
           question: "AI 营养顾问有什么特别之处？",
@@ -266,20 +266,20 @@ const zhCN: LocaleDictionary = {
   },
   footer: {
     tagline: "用懂你的 AI，吃得更聪明。",
-    rights: "© 2024 EatIt. 保留所有权利。",
-    socialsLabel: "关注 EatIt",
+    rights: "© 2024 Eatibo. 保留所有权利。",
+    socialsLabel: "关注 Eatibo",
     supportLabel: "需要帮助？",
     supportEmail: "cs@clearcrowds.com",
     faqLabel: "常见问题",
     supportChannels: [
       { type: "email", label: "邮件支持", value: "cs@clearcrowds.com" },
       { type: "phone", label: "营养顾问热线", value: "+1(305)4621683" },
-      { type: "chat", label: "在线客服", value: "geteatit.com" },
+      { type: "chat", label: "在线客服", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-weibo", href: "https://weibo.com/eatit", label: "微博" },
-      { icon: "fa-brands fa-wechat", href: "https://eatit.app/wechat", label: "微信" },
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatitapp", label: "Twitter" },
+      { icon: "fa-brands fa-weibo", href: "https://weibo.com/eatibo", label: "微博" },
+      { icon: "fa-brands fa-wechat", href: "https://eatibo.app/wechat", label: "微信" },
+      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
     ],
     navGroups: [
       {
@@ -287,23 +287,23 @@ const zhCN: LocaleDictionary = {
         links: [
           { label: "功能", href: "#features" },
           { label: "价格", href: "#pricing" },
-          { label: "安全", href: "https://eatit.app/security" },
+          { label: "安全", href: "https://eatibo.app/security" },
         ],
       },
       {
         title: "资源",
         links: [
           { label: "博客", href: "/blogs" },
-          { label: "帮助中心", href: "https://help.eatit.app" },
-          { label: "媒体资料", href: "https://press.eatit.app" },
+          { label: "帮助中心", href: "https://help.eatibo.app" },
+          { label: "媒体资料", href: "https://press.eatibo.app" },
         ],
       },
       {
         title: "关于我们",
         links: [
-          { label: "品牌故事", href: "https://eatit.app/about" },
-          { label: "加入我们", href: "https://eatit.app/careers" },
-          { label: "商务合作", href: "https://eatit.app/contact" },
+          { label: "品牌故事", href: "https://eatibo.app/about" },
+          { label: "加入我们", href: "https://eatibo.app/careers" },
+          { label: "商务合作", href: "https://eatibo.app/contact" },
         ],
       },
     ],

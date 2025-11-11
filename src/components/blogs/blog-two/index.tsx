@@ -35,7 +35,7 @@ const BlogTwo = ({
         <div className="blog-section-two mt-200 lg-mt-150 mb-120 lg-mb-80">
           <div className="container">
             <div className="title-two text-center mb-80 lg-mb-50">
-              <h2>EatIt Blog</h2>
+              <h2>Eatibo Blog</h2>
             </div>
             <div className="text-center text-white-50">Loading...</div>
           </div>

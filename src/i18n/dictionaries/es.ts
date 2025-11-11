@@ -2,11 +2,11 @@ import type { LocaleDictionary } from "./types";
 
 const es: LocaleDictionary = {
   metadata: {
-    title: "EatIt — Escáner y asesor de nutrición con IA",
+    title: "Eatibo — Escáner y asesor de nutrición con IA",
     description:
-      "EatIt analiza al instante cualquier comida o etiqueta para mostrar calorías, nutrientes, alérgenos y aditivos, y ofrece recomendaciones personalizadas basadas en tus objetivos alimentarios.",
+      "Eatibo analiza al instante cualquier comida o etiqueta para mostrar calorías, nutrientes, alérgenos y aditivos, y ofrece recomendaciones personalizadas basadas en tus objetivos alimentarios.",
     keywords: [
-      "EatIt",
+      "Eatibo",
       "nutrición",
       "contador de calorías",
       "coach nutricional",
@@ -27,7 +27,7 @@ const es: LocaleDictionary = {
     },
     language: "Idioma",
     menuLabel: "Menú",
-    menuIntro: "Explora EatIt",
+    menuIntro: "Explora Eatibo",
     closeMenu: "Cerrar menú",
   },
   auth: {
@@ -39,8 +39,8 @@ const es: LocaleDictionary = {
     title: "Cuida tu salud nutricional para toda la vida",
     highlight: "",
     description:
-      "Apunta la cámara hacia tu plato o etiqueta y EatIt revela calorías, macros, aditivos, alérgenos y riesgos de salud en segundos, adaptado a tus reglas alimentarias.",
-    primaryCta: "Descargar EatIt",
+      "Apunta la cámara hacia tu plato o etiqueta y Eatibo revela calorías, macros, aditivos, alérgenos y riesgos de salud en segundos, adaptado a tus reglas alimentarias.",
+    primaryCta: "Descargar Eatibo",
     secondaryCta: "Ver cómo funciona",
     note: "Registro privado con sincronización cifrada y análisis local.",
     rating: {
@@ -54,19 +54,19 @@ const es: LocaleDictionary = {
       "Tendencias que celebran tu progreso",
     ],
     visual: {
-      title: "Experiencia de escaneo EatIt",
+      title: "Experiencia de escaneo Eatibo",
       items: [
         "Detección de aditivos y alérgenos",
         "Balance nutricional diario con recordatorios suaves",
         "Sugerencias y sustituciones del asesor IA",
       ],
-      pill: "Escanear con EatIt",
+      pill: "Escanear con Eatibo",
     },
   },
   sections: {
     why: {
       id: "features",
-      title: "Por qué EatIt es tu aliado diario",
+      title: "Por qué Eatibo es tu aliado diario",
       subtitle:
         "Cada escaneo aporta claridad: desde calorías hasta ingredientes ocultos, para que comas con confianza.",
       items: [
@@ -87,7 +87,7 @@ const es: LocaleDictionary = {
     core: {
       id: "tracking",
       title: "Información nutricional profunda para todos",
-      subtitle: "EatIt conecta tus registros diarios con los objetivos que te importan y guía el siguiente paso.",
+      subtitle: "Eatibo conecta tus registros diarios con los objetivos que te importan y guía el siguiente paso.",
       cards: [
         {
           title: "Seguimiento de calorías y macros",
@@ -122,11 +122,11 @@ const es: LocaleDictionary = {
     assist: {
       id: "assist",
       title: "Soporte que entiende tu estilo de vida",
-      subtitle: "EatIt respeta necesidades culturales, médicas y personales para que nadie quede fuera de la conversación.",
+      subtitle: "Eatibo respeta necesidades culturales, médicas y personales para que nadie quede fuera de la conversación.",
       items: [
         {
           title: "Lista de vigilancia de alérgenos",
-          description: "Configura alérgenos personales, reglas religiosas o listas negras una sola vez—EatIt no las olvida.",
+          description: "Configura alérgenos personales, reglas religiosas o listas negras una sola vez—Eatibo no las olvida.",
         },
         {
           title: "Marcadores de riesgo",
@@ -134,7 +134,7 @@ const es: LocaleDictionary = {
         },
         {
           title: "Amigable con subculturas alimentarias",
-          description: "Sin aceites de semilla, longevidad, plant-based halal: EatIt habla tu idioma.",
+          description: "Sin aceites de semilla, longevidad, plant-based halal: Eatibo habla tu idioma.",
         },
       ],
     },
@@ -152,16 +152,16 @@ const es: LocaleDictionary = {
     },
     download: {
       id: "download",
-      badge: "Descarga EatIt",
+      badge: "Descarga Eatibo",
       title: "Escanea con más inteligencia. Come con confianza.",
       subtitle:
-        "Lleva EatIt en tu bolsillo para descifrar platos, etiquetas y menús en segundos.",
+        "Lleva Eatibo en tu bolsillo para descifrar platos, etiquetas y menús en segundos.",
       highlights: [
         "Escanea etiquetas, códigos de barras o platos completos al instante",
         "Recomendaciones adaptadas a alergias, metas y dietas culturales",
         "Sincronización cifrada que mantiene privado tu historial",
       ],
-      storeLabel: "Obtén EatIt en",
+      storeLabel: "Obtén Eatibo en",
       apple: {
         href: "https://itunes.apple.com/us/app/id6753906159",
         label: "App Store",
@@ -222,14 +222,14 @@ const es: LocaleDictionary = {
       title: "Tus datos te pertenecen",
       description:
         "Ciframos cada registro, cumplimos con las normativas locales y te damos control total sobre dónde vive tu historial.",
-      cta: "https://eatit.app/security",
+      cta: "https://eatibo.app/security",
     },
     reviews: {
       id: "stories",
       title: "Amado por quienes comen con intención",
-      subtitle: "Personas reales equilibrando tradición, sabor y salud con EatIt.",
+      subtitle: "Personas reales equilibrando tradición, sabor y salud con Eatibo.",
       quote:
-        "EatIt me permite respetar la dieta halal de mi familia mientras entreno para un maratón. El coach IA detecta déficits antes de que los sienta.",
+        "Eatibo me permite respetar la dieta halal de mi familia mientras entreno para un maratón. El coach IA detecta déficits antes de que los sienta.",
       author: "Farah Q.",
       role: "Corredora y creadora de contenido",
       stats: {
@@ -243,7 +243,7 @@ const es: LocaleDictionary = {
           role: "Padre de niños con alergias",
         },
         {
-          quote: "EatIt explicó por qué me quedaba sin energía. El balance nutricional me mantiene enfocada.",
+          quote: "Eatibo explicó por qué me quedaba sin energía. El balance nutricional me mantiene enfocada.",
           author: "Lina M.",
           role: "Instructora de pilates",
         },
@@ -257,17 +257,17 @@ const es: LocaleDictionary = {
     faq: {
       id: "faq",
       title: "Preguntas frecuentes",
-      subtitle: "Todo lo que necesitas saber para empezar con EatIt.",
+      subtitle: "Todo lo que necesitas saber para empezar con Eatibo.",
       items: [
         {
           question: "¿Qué tan precisa es la detección de calorías y macros?",
           answer:
-            "EatIt combina visión computacional con una base validada de ingredientes. Cada escaneo muestra un indicador de precisión y puedes ajustar porciones antes de guardar.",
+            "Eatibo combina visión computacional con una base validada de ingredientes. Cada escaneo muestra un indicador de precisión y puedes ajustar porciones antes de guardar.",
         },
         {
-          question: "¿EatIt respeta mis reglas culturales o religiosas?",
+          question: "¿Eatibo respeta mis reglas culturales o religiosas?",
           answer:
-            "Sí. Configura preferencias como halal, kosher, vegetariano, bajo FODMAP o sin aceites de semilla y EatIt avisará antes de que haya conflicto.",
+            "Sí. Configura preferencias como halal, kosher, vegetariano, bajo FODMAP o sin aceites de semilla y Eatibo avisará antes de que haya conflicto.",
         },
         {
           question: "¿Qué diferencia al coach nutricional IA?",
@@ -275,7 +275,7 @@ const es: LocaleDictionary = {
             "Analiza tu ingesta reciente, metas y actividad. Sugiere cambios, resalta carencias y enlaza a ciencia confiable sin juicios.",
         },
         {
-          question: "¿Cómo protege EatIt mis datos?",
+          question: "¿Cómo protege Eatibo mis datos?",
           answer:
             "Procesamos en el dispositivo siempre que sea posible y ciframos los datos si activas la sincronización en la nube. Puedes exportar o borrar tus registros cuando quieras.",
         },
@@ -284,20 +284,20 @@ const es: LocaleDictionary = {
   },
   footer: {
     tagline: "Come con inteligencia gracias a una IA que entiende tu plato.",
-    rights: "© 2024 EatIt. Todos los derechos reservados.",
-    socialsLabel: "Conecta con EatIt",
+    rights: "© 2024 Eatibo. Todos los derechos reservados.",
+    socialsLabel: "Conecta con Eatibo",
     supportLabel: "¿Necesitas ayuda?",
     supportEmail: "cs@clearcrowds.com",
     faqLabel: "Preguntas",
     supportChannels: [
       { type: "email", label: "Soporte por correo", value: "cs@clearcrowds.com" },
       { type: "phone", label: "Línea nutricional", value: "+1(305)4621683" },
-      { type: "chat", label: "Chat en vivo", value: "geteatit.com" },
+      { type: "chat", label: "Chat en vivo", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatitapp", label: "Instagram" },
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatitapp", label: "Twitter" },
-      { icon: "fa-brands fa-linkedin", href: "https://linkedin.com/company/eatit", label: "LinkedIn" },
+      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
+      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
+      { icon: "fa-brands fa-linkedin", href: "https://linkedin.com/company/eatibo", label: "LinkedIn" },
     ],
     navGroups: [
       {
@@ -305,23 +305,23 @@ const es: LocaleDictionary = {
         links: [
           { label: "Funciones", href: "#features" },
           { label: "Planes", href: "#pricing" },
-          { label: "Seguridad", href: "https://eatit.app/security" },
+          { label: "Seguridad", href: "https://eatibo.app/security" },
         ],
       },
       {
         title: "Recursos",
         links: [
           { label: "Blog", href: "/blogs" },
-          { label: "Centro de ayuda", href: "https://help.eatit.app" },
-          { label: "Sala de prensa", href: "https://press.eatit.app" },
+          { label: "Centro de ayuda", href: "https://help.eatibo.app" },
+          { label: "Sala de prensa", href: "https://press.eatibo.app" },
         ],
       },
       {
         title: "Compañía",
         links: [
-          { label: "Sobre nosotros", href: "https://eatit.app/about" },
-          { label: "Empleo", href: "https://eatit.app/careers" },
-          { label: "Contacto", href: "https://eatit.app/contact" },
+          { label: "Sobre nosotros", href: "https://eatibo.app/about" },
+          { label: "Empleo", href: "https://eatibo.app/careers" },
+          { label: "Contacto", href: "https://eatibo.app/contact" },
         ],
       },
     ],

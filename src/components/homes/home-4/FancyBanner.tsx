@@ -14,7 +14,7 @@ const FancyBanner = () => {
                   <div className="row">
                      <div className="col-xl-9 col-lg-8 m-auto">
                         <div className="title-six mb-40">
-                           <h2 className="color-dark">700k+ Customers have our EatIt. Try it Now!</h2>
+                           <h2 className="color-dark">700k+ Customers have our Eatibo. Try it Now!</h2>
                         </div>
                         <Link href="/#download" className="btn-seven style-two">Get Started</Link>
                      </div>

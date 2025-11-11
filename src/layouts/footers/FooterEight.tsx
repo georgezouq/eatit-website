@@ -67,7 +67,7 @@ const FooterEight = ({ footer, nav, locale, anchors, blogHref }: FooterEightProp
             <div className="col-lg-3 col-md-4 mb-4 mb-md-0">
               <div className="logo">
                 <Link href={`/${locale}`}>
-                  <Image src={logo_1} alt="EatIt footer logo" height={60} />
+                  <Image src={logo_1} alt="Eatibo footer logo" height={60} />
                 </Link>
               </div>
             </div>

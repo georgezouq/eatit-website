@@ -2,10 +2,10 @@ import type { LocaleDictionary } from "./types";
 
 const ko: LocaleDictionary = {
   metadata: {
-    title: "EatIt — AI 영양 스캐너 & 코치",
+    title: "Eatibo — AI 영양 스캐너 & 코치",
     description:
-      "EatIt은 음식이나 성분표를 비추기만 하면 칼로리, 영양소, 알레르겐, 첨가물을 즉시 분석하고, 당신의 식습관 목표에 맞는 맞춤형 조언을 제공합니다.",
-    keywords: ["EatIt", "영양 관리", "칼로리 추적", "AI 코치", "알레르기", "식단 기록"],
+      "Eatibo은 음식이나 성분표를 비추기만 하면 칼로리, 영양소, 알레르겐, 첨가물을 즉시 분석하고, 당신의 식습관 목표에 맞는 맞춤형 조언을 제공합니다.",
+    keywords: ["Eatibo", "영양 관리", "칼로리 추적", "AI 코치", "알레르기", "식단 기록"],
   },
   nav: {
     home: "홈",
@@ -19,7 +19,7 @@ const ko: LocaleDictionary = {
     },
     language: "언어",
     menuLabel: "메뉴",
-    menuIntro: "EatIt 탐색",
+    menuIntro: "Eatibo 탐색",
     closeMenu: "메뉴 닫기",
   },
   auth: {
@@ -31,8 +31,8 @@ const ko: LocaleDictionary = {
     title: "평생 건강한 식습관을 지켜드려요",
     highlight: "",
     description:
-      "카메라를 음식이나 성분표에 비추면 EatIt이 몇 초 만에 칼로리, 주요 영양소, 첨가물, 알레르기 위험을 보여주고 당신의 식단 규칙에 맞춰 평가합니다.",
-    primaryCta: "EatIt 다운로드",
+      "카메라를 음식이나 성분표에 비추면 Eatibo이 몇 초 만에 칼로리, 주요 영양소, 첨가물, 알레르기 위험을 보여주고 당신의 식단 규칙에 맞춰 평가합니다.",
+    primaryCta: "Eatibo 다운로드",
     secondaryCta: "작동 방식 보기",
     note: "로컬 우선 저장과 암호화 동기화로, 데이터는 오직 당신의 것입니다.",
     rating: {
@@ -46,19 +46,19 @@ const ko: LocaleDictionary = {
       "변화를 보여주는 트렌드 분석",
     ],
     visual: {
-      title: "EatIt 스캐닝 경험",
+      title: "Eatibo 스캐닝 경험",
       items: [
         "첨가물·알레르겐 자동 감지",
         "일일 영양 균형 리마인드",
         "AI 영양 코치의 대체 제안",
       ],
-      pill: "EatIt으로 스캔",
+      pill: "Eatibo으로 스캔",
     },
   },
   sections: {
     why: {
       id: "features",
-      title: "매일 EatIt을 선택하는 이유",
+      title: "매일 Eatibo을 선택하는 이유",
       subtitle: "칼로리부터 숨은 첨가물까지, 한 번의 스캔으로 더 현명한 선택을 돕습니다.",
       items: [
         {
@@ -78,7 +78,7 @@ const ko: LocaleDictionary = {
     core: {
       id: "tracking",
       title: "모든 몸을 위한 깊이 있는 인사이트",
-      subtitle: "EatIt은 당신의 기록과 목표를 연결해 다음 선택을 안내합니다.",
+      subtitle: "Eatibo은 당신의 기록과 목표를 연결해 다음 선택을 안내합니다.",
       cards: [
         {
           title: "칼로리 & 매크로 추적",
@@ -113,11 +113,11 @@ const ko: LocaleDictionary = {
     assist: {
       id: "assist",
       title: "라이프스타일을 이해하는 지원",
-      subtitle: "EatIt은 문화, 건강, 개인 선택을 존중하며 누구나 안심하고 식사할 수 있도록 돕습니다.",
+      subtitle: "Eatibo은 문화, 건강, 개인 선택을 존중하며 누구나 안심하고 식사할 수 있도록 돕습니다.",
       items: [
         {
           title: "알레르기·금지 성분 목록",
-          description: "개인 알레르겐과 식단 금지 목록을 한 번 설정하면 EatIt이 기억합니다.",
+          description: "개인 알레르겐과 식단 금지 목록을 한 번 설정하면 Eatibo이 기억합니다.",
         },
         {
           title: "건강 위험 표시",
@@ -142,16 +142,16 @@ const ko: LocaleDictionary = {
     },
     download: {
       id: "download",
-      badge: "EatIt 다운로드",
+      badge: "Eatibo 다운로드",
       title: "더 똑똑하게 스캔하고, 자신 있게 먹어요.",
       subtitle:
-        "EatIt만 있으면 언제 어디서나 음식과 라벨을 몇 초 만에 해석할 수 있습니다.",
+        "Eatibo만 있으면 언제 어디서나 음식과 라벨을 몇 초 만에 해석할 수 있습니다.",
       highlights: [
         "라벨·바코드·음식 사진을 순식간에 분석",
         "알레르기, 목표, 문화적 식단에 맞춘 추천",
         "암호화된 동기화로 식단 기록을 안전하게 보호",
       ],
-      storeLabel: "EatIt 받기",
+      storeLabel: "Eatibo 받기",
       apple: {
         href: "https://itunes.apple.com/us/app/id6753906159",
         label: "App Store",
@@ -211,14 +211,14 @@ const ko: LocaleDictionary = {
       id: "privacy",
       title: "당신의 식단 데이터는 당신의 것",
       description: "지역 규정을 준수하면서 모든 기록을 암호화하고, 저장 위치와 사용 권한을 직접 관리할 수 있습니다.",
-      cta: "https://eatit.app/security",
+      cta: "https://eatibo.app/security",
     },
     reviews: {
       id: "stories",
       title: "전 세계의 현명한 식습관러가 선택",
-      subtitle: "EatIt과 함께 전통, 맛, 건강을 조화시키는 사람들의 이야기.",
+      subtitle: "Eatibo과 함께 전통, 맛, 건강을 조화시키는 사람들의 이야기.",
       quote:
-        "EatIt 덕분에 마라톤 훈련을 하면서도 가족의 할랄 식단을 지킬 수 있어요. AI 코치가 부족한 영양소를 미리 알려줍니다.",
+        "Eatibo 덕분에 마라톤 훈련을 하면서도 가족의 할랄 식단을 지킬 수 있어요. AI 코치가 부족한 영양소를 미리 알려줍니다.",
       author: "Farah Q.",
       role: "러너 & 푸드 크리에이터",
       stats: {
@@ -246,17 +246,17 @@ const ko: LocaleDictionary = {
     faq: {
       id: "faq",
       title: "자주 묻는 질문",
-      subtitle: "EatIt 시작 전에 알아두면 좋은 정보들을 모았습니다.",
+      subtitle: "Eatibo 시작 전에 알아두면 좋은 정보들을 모았습니다.",
       items: [
         {
           question: "칼로리와 매크로 인식 정확도는 어느 정도인가요?",
           answer:
-            "EatIt은 컴퓨터 비전과 검증된 재료 데이터베이스를 결합합니다. 각 스캔에 정확도 지표가 표시되며, 저장 전에 분량을 조정할 수 있습니다.",
+            "Eatibo은 컴퓨터 비전과 검증된 재료 데이터베이스를 결합합니다. 각 스캔에 정확도 지표가 표시되며, 저장 전에 분량을 조정할 수 있습니다.",
         },
         {
           question: "문화·종교적 식단 규칙도 지원하나요?",
           answer:
-            "네. 할랄, 코셔, 채식, 저FODMAP, 씨앗유 프리 등 선호도를 설정하면 EatIt이 충돌을 미리 알려줍니다.",
+            "네. 할랄, 코셔, 채식, 저FODMAP, 씨앗유 프리 등 선호도를 설정하면 Eatibo이 충돌을 미리 알려줍니다.",
         },
         {
           question: "AI 영양 코치가 특별한 이유는?",
@@ -273,20 +273,20 @@ const ko: LocaleDictionary = {
   },
   footer: {
     tagline: "내 식탁을 이해하는 AI와 함께 현명하게 먹어요.",
-    rights: "© 2024 EatIt. All rights reserved.",
-    socialsLabel: "EatIt과 연결하기",
+    rights: "© 2024 Eatibo. All rights reserved.",
+    socialsLabel: "Eatibo과 연결하기",
     supportLabel: "도움이 필요하신가요?",
     supportEmail: "cs@clearcrowds.com",
     faqLabel: "FAQ",
     supportChannels: [
       { type: "email", label: "이메일 지원", value: "cs@clearcrowds.com" },
       { type: "phone", label: "영양 헬프라인", value: "+1(305)4621683" },
-      { type: "chat", label: "라이브 챗", value: "geteatit.com" },
+      { type: "chat", label: "라이브 챗", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatitapp", label: "Instagram" },
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatitapp", label: "Twitter" },
-      { icon: "fa-brands fa-youtube", href: "https://youtube.com/@eatitapp", label: "YouTube" },
+      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
+      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
+      { icon: "fa-brands fa-youtube", href: "https://youtube.com/@eatiboapp", label: "YouTube" },
     ],
     navGroups: [
       {
@@ -294,23 +294,23 @@ const ko: LocaleDictionary = {
         links: [
           { label: "기능", href: "#features" },
           { label: "요금", href: "#pricing" },
-          { label: "보안", href: "https://eatit.app/security" },
+          { label: "보안", href: "https://eatibo.app/security" },
         ],
       },
       {
         title: "리소스",
         links: [
           { label: "블로그", href: "/blogs" },
-          { label: "헬프센터", href: "https://help.eatit.app" },
-          { label: "보도자료", href: "https://press.eatit.app" },
+          { label: "헬프센터", href: "https://help.eatibo.app" },
+          { label: "보도자료", href: "https://press.eatibo.app" },
         ],
       },
       {
         title: "회사",
         links: [
-          { label: "회사 소개", href: "https://eatit.app/about" },
-          { label: "채용", href: "https://eatit.app/careers" },
-          { label: "문의", href: "https://eatit.app/contact" },
+          { label: "회사 소개", href: "https://eatibo.app/about" },
+          { label: "채용", href: "https://eatibo.app/careers" },
+          { label: "문의", href: "https://eatibo.app/contact" },
         ],
       },
     ],

@@ -10,7 +10,7 @@ const FancyBanner = () => {
          <div className="container">
             <div className="row">
                <div className="col-xl-9 col-lg-7 m-auto text-center">
-                  <h2>700k+ Customers have our EatIt. Try it Now!</h2>
+                  <h2>700k+ Customers have our Eatibo. Try it Now!</h2>
                   <Link href="/#download" className="btn-six">Start for free!</Link>
                </div>
             </div>

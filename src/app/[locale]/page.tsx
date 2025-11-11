@@ -19,17 +19,17 @@ export async function generateMetadata({
 
   if (!locales.includes(locale)) {
     return createMetadata({
-      title: "EatIt Multilingual Experience",
+      title: "Eatibo Multilingual Experience",
       description:
-        "Discover localized nutrition coaching, allergy insights, and personalised meal guidance from EatIt in your preferred language.",
+        "Discover localized nutrition coaching, allergy insights, and personalised meal guidance from Eatibo in your preferred language.",
       path: "/",
     });
   }
 
   return createMetadata({
-    title: `EatIt ${locale.toUpperCase()} | Personalised Nutrition Assistant`,
+    title: `Eatibo ${locale.toUpperCase()} | Personalised Nutrition Assistant`,
     description:
-      "Explore EatIt's localized homepage with smart meal scanning, allergy protection, and pricing tailored to your language and goals.",
+      "Explore Eatibo's localized homepage with smart meal scanning, allergy protection, and pricing tailored to your language and goals.",
     path: `/${locale}`,
   });
 }

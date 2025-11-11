@@ -36,7 +36,7 @@ export async function generateMetadata({
 
   if (!post) {
     return createMetadata({
-      title: "EatIt Blog Article",
+      title: "Eatibo Blog Article",
       path: `/posts/${slug}`,
     });
   }
@@ -44,9 +44,9 @@ export async function generateMetadata({
   const imagePath = post.coverImage.startsWith("http") ? undefined : post.coverImage;
 
   return createMetadata({
-    title: `${post.title} | EatIt Blog`,
+    title: `${post.title} | Eatibo Blog`,
     description: post.seoDescription ?? post.excerpt,
-    keywords: [...(post.tags ?? []), "EatIt Blog"],
+    keywords: [...(post.tags ?? []), "Eatibo Blog"],
     path: `/posts/${post.slug}`,
     imagePath,
   });

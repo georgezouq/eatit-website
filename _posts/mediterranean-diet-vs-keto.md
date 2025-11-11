@@ -8,18 +8,18 @@ tags:
   - "Keto"
   - "Meal Planning"
   - "Nutrition"
-  - "EatIt App"
+  - "Eatibo App"
 category: "Nutrition"
 author:
-  name: "EatIt Editorial Team"
+  name: "Eatibo Editorial Team"
   role: "Registered Dietitians & Food Data Science"
-seoDescription: "Mediterranean diet vs keto: a practical comparison of weight loss speed, blood sugar control, heart-health markers, and long-term sustainability. Learn sample meal plans, pros and cons, and how to track net carbs, fiber, and healthy fats with the EatIt app. Primary keyword: Mediterranean diet vs keto. Secondary keywords: keto vs Mediterranean, Mediterranean keto, low carb diet, heart healthy diet."
+seoDescription: "Mediterranean diet vs keto: a practical comparison of weight loss speed, blood sugar control, heart-health markers, and long-term sustainability. Learn sample meal plans, pros and cons, and how to track net carbs, fiber, and healthy fats with the Eatibo app. Primary keyword: Mediterranean diet vs keto. Secondary keywords: keto vs Mediterranean, Mediterranean keto, low carb diet, heart healthy diet."
 slug: mediterranean-diet-vs-keto
 ---
 
 If you’re torn between Mediterranean and keto, you’re not alone. One promises quick scale drops; the other reads like a lifelong way to eat. The better pick hinges on your goal, your health markers, and your lifestyle. You can even blend ideas from both.
 
-> Try this while you read: open **EatIt**, set your goal to **Keto** or **Mediterranean**, and scan a meal or barcode. You’ll see net carbs, fiber, saturated fat, and simple “Good / Limit / Skip” flags—so the article turns into action on your plate.
+> Try this while you read: open **Eatibo**, set your goal to **Keto** or **Mediterranean**, and scan a meal or barcode. You’ll see net carbs, fiber, saturated fat, and simple “Good / Limit / Skip” flags—so the article turns into action on your plate.
 
 ![top-down split image of a colorful Mediterranean grain-and-veg bowl on the left and a simple keto steak-with-greens plate on the right, natural light, minimal props](/assets/images/blog-article/med_vs_keto_side_by_side.jpg)
 
@@ -40,7 +40,7 @@ If you’re torn between Mediterranean and keto, you’re not alone. One promise
 - **Blood sugars and cravings.** Keto’s lower carb load can smooth spikes for some people; Mediterranean’s fiber and steady carbs help with satiety and stability.  
 - **Cooking style and social life.** Mediterranean flexes easily for date nights and family gatherings. Keto works great if you enjoy meal-prepping and clear guardrails.
 
-> In **EatIt**, switch between **Keto** and **Mediterranean** modes to see how the same meal scores differently. The app recalculates net carbs, highlights fiber gaps, and flags added sugars so you can edit on the fly.
+> In **Eatibo**, switch between **Keto** and **Mediterranean** modes to see how the same meal scores differently. The app recalculates net carbs, highlights fiber gaps, and flags added sugars so you can edit on the fly.
 
 ## What a day can look like
 
@@ -70,7 +70,7 @@ If you’re torn between Mediterranean and keto, you’re not alone. One promise
 - **Why people love it:** Clear rules, early momentum, fewer cravings for many.  
 - **Watch-outs:** Socially trickier, fiber can drop if veggies and nuts are limited, and some folks miss fruit and grains.
 
-> Use **EatIt’s “Nutrition Gaps”** insight to catch low fiber or omega-3s on keto, or rising added sugars on a loose Mediterranean day. The app nudges you toward fixes—like “swap in leafy greens” or “add canned sardines.”
+> Use **Eatibo’s “Nutrition Gaps”** insight to catch low fiber or omega-3s on keto, or rising added sugars on a loose Mediterranean day. The app nudges you toward fixes—like “swap in leafy greens” or “add canned sardines.”
 
 ## How to make either approach work in real life
 
@@ -81,7 +81,7 @@ If you’re torn between Mediterranean and keto, you’re not alone. One promise
 
 ![flat lay of pantry items: olive oil, canned tomatoes, chickpeas, sardines, almonds, herbs—clean Mediterranean vibe](/assets/images/blog-article/med_pantry_flatlay.jpg)
 
-### What EatIt does for you (quietly, in the background)
+### What Eatibo does for you (quietly, in the background)
 - **Barcode & label scan:** Instant macros, net carbs, added sugar, and ingredient alerts.  
 - **Goal-aware scoring:** “Good / Limit / Skip” changes based on your chosen mode.  
 - **Allergen & sensitivity flags:** Nuts, dairy, gluten, and more—clearly marked.  
@@ -92,16 +92,16 @@ If you’re torn between Mediterranean and keto, you’re not alone. One promise
 
 Plenty of people run a **Mediterranean-keto hybrid**: very low net carbs, but with Mediterranean choices—olive oil, fish, nuts, heaps of non-starchy veggies—while going easy on processed meats. It keeps keto’s appetite control with a more heart-friendly fat profile.
 
-> Toggle **Mediterranean** in EatIt, then switch to **Keto** and compare the same day. You’ll see exactly where to trim carbs while keeping olive oil, fish, and greens in the mix.
+> Toggle **Mediterranean** in Eatibo, then switch to **Keto** and compare the same day. You’ll see exactly where to trim carbs while keeping olive oil, fish, and greens in the mix.
 
 ## A quick decision guide
 
 - **You want a lifestyle pattern with social flexibility.** Mediterranean.  
 - **You want a structured push to reset cravings.** Keto.  
-- **You’re curious about both.** Try a four-week Mediterranean base, then a two-week keto block with EatIt guarding fiber and micronutrients.
+- **You’re curious about both.** Try a four-week Mediterranean base, then a two-week keto block with Eatibo guarding fiber and micronutrients.
 
 ![side-by-side grocery cart contents: left with colorful produce, olive oil, fish; right with eggs, leafy greens, avocados, nuts—clean studio lighting](/assets/images/blog-article/med_keto_carts.jpg)
 
-**One last thing:** Nutrition is personal. If you have diabetes, kidney disease, high triglycerides, or you’re pregnant or breastfeeding, check in with your clinician before making big changes. EatIt is a guide, not a diagnosis.
+**One last thing:** Nutrition is personal. If you have diabetes, kidney disease, high triglycerides, or you’re pregnant or breastfeeding, check in with your clinician before making big changes. Eatibo is a guide, not a diagnosis.
 
-Ready to experiment? Open **EatIt**, set your mode, scan your next meal, and let the data nudge you to better choices—whichever path you take.
+Ready to experiment? Open **Eatibo**, set your mode, scan your next meal, and let the data nudge you to better choices—whichever path you take.

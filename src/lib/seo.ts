@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
 export const siteConfig = {
-  siteName: "EatIt",
-  siteUrl: "https://geteatit.com",
+  siteName: "Eatibo",
+  siteUrl: "https://www.eatibo.com",
   defaultDescription:
-    "Your Lifelong Nutrition Partner. Point your camera at a meal or ingredient list and EatIt reveals calories, macros, additives, allergens and health risks within seconds, tailored to your dietary rules.",
+    "Your Lifelong Nutrition Partner. Point your camera at a meal or ingredient list and Eatibo reveals calories, macros, additives, allergens and health risks within seconds, tailored to your dietary rules.",
   defaultKeywords: [
-    "EatIt",
+    "Eatibo",
     "nutrition app",
     "calorie tracker",
     "AI diet coach",

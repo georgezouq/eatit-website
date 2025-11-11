@@ -4,11 +4,11 @@ import Wrapper from "@/layouts/Wrapper";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
-  title: "EatIt Blog | Hair Care Tips & Salon News",
+  title: "Eatibo Blog | Hair Care Tips & Salon News",
   description:
     "Read the latest Hairwow articles covering hair care science, salon trends, and step-by-step styling guides curated by our expert team.",
   keywords: [
-    "EatIt Blog",
+    "Eatibo Blog",
     "hair care tips",
     "salon news",
     "styling guides",
