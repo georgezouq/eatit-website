@@ -60,7 +60,7 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
             </div>
           </div>
         ) : null}
-        <div className="trusted-by text-center mt-80">
+        {/* <div className="trusted-by text-center mt-80">
           <p className="text-white-50 mb-4">{smart.subtitle}</p>
           <div className="d-flex justify-content-center justify-content-md-between flex-wrap logos">
             {[brand_1, brand_2, brand_3, brand_4, brand_5].map((brand, idx) => (
@@ -69,7 +69,7 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

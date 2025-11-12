@@ -41,7 +41,7 @@ const en: LocaleDictionary = {
     titleSuffix: "",
     description:
       "Point your camera at a meal or ingredient list and Eatibo reveals calories, macros, additives, allergens and health risks within seconds, tailored to your dietary rules.",
-    primaryCta: "Download Eatibo",
+    primaryCta: "Download",
     secondaryCta: "See how it works",
     note: "Privacy-first food logging with encrypted sync and local insights.",
     rating: {
@@ -153,7 +153,7 @@ const en: LocaleDictionary = {
     },
     download: {
       id: "download",
-      badge: "Download Eatibo",
+      badge: "Download",
       title: "Scan smarter. Eat with confidence.",
       subtitle:
         "Keep Eatibo in your pocket to decode meals, labels and dining out choices instantly.",
