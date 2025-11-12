@@ -7,11 +7,11 @@ import icon_1 from "@/assets/images/icon/icon_46.svg";
 import icon_2 from "@/assets/images/icon/icon_47.svg";
 import icon_3 from "@/assets/images/icon/icon_48.svg";
 import btn_icon from "@/assets/images/icon/icon_49.svg";
-import brand_1 from "@/assets/images/assets/d_n_01.png";
-import brand_2 from "@/assets/images/assets/d_n_02.png";
-import brand_3 from "@/assets/images/assets/d_n_03.png";
-import brand_4 from "@/assets/images/assets/d_n_04.png";
-import brand_5 from "@/assets/images/assets/d_n_05.png";
+// import brand_1 from "@/assets/images/assets/d_n_01.png";
+// import brand_2 from "@/assets/images/assets/d_n_02.png";
+// import brand_3 from "@/assets/images/assets/d_n_03.png";
+// import brand_4 from "@/assets/images/assets/d_n_04.png";
+// import brand_5 from "@/assets/images/assets/d_n_05.png";
 
 type BlockFeatureOneProps = {
   content: LocaleDictionary["sections"]["why"];
