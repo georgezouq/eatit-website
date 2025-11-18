@@ -338,10 +338,10 @@ const es: LocaleDictionary = {
     },
   },
   smartBanner: {
-    appName: "Eatibo",
-    view: "VER",
+    appName: "Eatibo: Escaneo y Registro de Alimentos AI",
+    view: "DESCARGAR",
     close: "Cerrar",
-    viewInAppStore: "Ver en App Store",
+    viewInAppStore: "Descargar desde App Store",
   },
 };
 

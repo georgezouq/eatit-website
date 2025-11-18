@@ -351,10 +351,10 @@ const en: LocaleDictionary = {
     },
   },
   smartBanner: {
-    appName: "Eatibo",
-    view: "VIEW",
+    appName: "Eatibo: AI Food Scan & Record",
+    view: "DOWNLOAD",
     close: "Close",
-    viewInAppStore: "View in App Store",
+    viewInAppStore: "Download from App Store",
   },
 };
 

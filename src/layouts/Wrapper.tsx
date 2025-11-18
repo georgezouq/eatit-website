@@ -12,7 +12,8 @@ interface WrapperProps {
 }
 
 const Wrapper = ({ children, dictionary }: WrapperProps) => {
-
+    console.log('[Wrapper] Rendering with dictionary:', !!dictionary);
+    
     return <>
         {dictionary && <CustomSmartBanner dictionary={dictionary} />}
         {children}

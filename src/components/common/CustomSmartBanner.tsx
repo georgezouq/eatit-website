@@ -126,18 +126,22 @@ export function CustomSmartBanner({
             <div 
               style={{ 
                 flex: 1, 
-                minWidth: 0 
+                minWidth: 0,
+                overflow: 'hidden'
               }}
             >
               <h3 
                 style={{
-                  fontSize: '14px',
+                  fontSize: '13px',
                   fontWeight: 600,
                   color: '#1a1a1a',
                   margin: 0,
+                  lineHeight: '1.3',
                   overflow: 'hidden',
                   textOverflow: 'ellipsis',
-                  whiteSpace: 'nowrap'
+                  display: '-webkit-box',
+                  WebkitLineClamp: 2,
+                  WebkitBoxOrient: 'vertical'
                 }}
               >
                 {appName}

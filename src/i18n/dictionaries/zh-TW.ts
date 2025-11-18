@@ -320,10 +320,10 @@ const zhTW: LocaleDictionary = {
     },
   },
   smartBanner: {
-    appName: "Eatibo",
-    view: "檢視",
+    appName: "Eatibo: AI 食物掃描與記錄",
+    view: "下載",
     close: "關閉",
-    viewInAppStore: "在 App Store 中檢視",
+    viewInAppStore: "從 App Store 下載",
   },
 };
 

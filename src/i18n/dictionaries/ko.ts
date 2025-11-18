@@ -327,10 +327,10 @@ const ko: LocaleDictionary = {
     },
   },
   smartBanner: {
-    appName: "Eatibo",
-    view: "보기",
+    appName: "Eatibo: AI 음식 스캔 및 기록",
+    view: "다운로드",
     close: "닫기",
-    viewInAppStore: "App Store에서 보기",
+    viewInAppStore: "App Store에서 다운로드",
   },
 };
 

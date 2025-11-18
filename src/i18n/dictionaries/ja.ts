@@ -326,10 +326,10 @@ const ja: LocaleDictionary = {
     },
   },
   smartBanner: {
-    appName: "Eatibo",
-    view: "表示",
+    appName: "Eatibo: AI 食品スキャン＆記録",
+    view: "ダウンロード",
     close: "閉じる",
-    viewInAppStore: "App Store で表示",
+    viewInAppStore: "App Store からダウンロード",
   },
 };
 
