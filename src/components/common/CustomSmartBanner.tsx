@@ -31,6 +31,13 @@ export function CustomSmartBanner({
 }: CustomSmartBannerProps) {
   const { shouldShow, dismiss, appStoreUrl } = useSmartBanner({ appId });
 
+  // Debug logging
+  console.log('[CustomSmartBanner] Render:', {
+    shouldShow,
+    hasDictionary: !!dictionary,
+    appStoreUrl
+  });
+
   if (!shouldShow) return null;
 
   const handleOpenApp = () => {
