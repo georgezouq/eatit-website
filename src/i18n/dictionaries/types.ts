@@ -182,4 +182,10 @@ export type LocaleDictionary = {
       downloadCta: string;
     };
   };
+  smartBanner: {
+    appName: string;
+    view: string;
+    close: string;
+    viewInAppStore: string;
+  };
 };

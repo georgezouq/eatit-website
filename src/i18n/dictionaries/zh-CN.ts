@@ -319,6 +319,12 @@ const zhCN: LocaleDictionary = {
       downloadCta: "下载应用",
     },
   },
+  smartBanner: {
+    appName: "Eatibo",
+    view: "查看",
+    close: "关闭",
+    viewInAppStore: "在 App Store 中查看",
+  },
 };
 
 export default zhCN;

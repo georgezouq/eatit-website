@@ -2,6 +2,7 @@ import Wrapper from "@/layouts/Wrapper";
 import { BlogProvider } from "@/components/blogs/BlogProvider";
 import { createMetadata } from "@/lib/seo";
 import { defaultLocale } from "@/i18n/config";
+import { getDictionary } from "@/i18n/dictionaries";
 import { getAllPostSummaries } from "@/lib/blog/api";
 import { toSlug } from "@/lib/blog/slug";
 import type { CategoryWithCount, TagWithCount, PostSummary } from "@/lib/blog/types";
@@ -59,9 +60,10 @@ const BlogListingPage = () => {
   const categories = mapCategories(posts);
   const tags = mapTags(posts);
   const recentPosts = posts.slice(0, 3);
+  const dictionary = getDictionary(defaultLocale);
 
   return (
-    <Wrapper>
+    <Wrapper dictionary={dictionary}>
       <BlogProvider
         initialLocale={defaultLocale}
         posts={posts}

@@ -350,6 +350,12 @@ const en: LocaleDictionary = {
       downloadCta: "Download App",
     },
   },
+  smartBanner: {
+    appName: "Eatibo",
+    view: "VIEW",
+    close: "Close",
+    viewInAppStore: "View in App Store",
+  },
 };
 
 export default en;

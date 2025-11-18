@@ -18,6 +18,7 @@ export const metadata = createMetadata({
 const page = () => {
   return (
     <Wrapper>
+      123
       {/* <HomeSix /> */}
     </Wrapper>
   )

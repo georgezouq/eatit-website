@@ -46,7 +46,7 @@ const HairwowPage = async ({ params }: { params: Promise<{ locale: string }> }) 
   const latestPosts = getAllPostSummaries().slice(0, 3);
 
   return (
-    <Wrapper>
+    <Wrapper dictionary={dictionary}>
       <HomeNine dictionary={dictionary} locale={locale} latestPosts={latestPosts} />
     </Wrapper>
   );

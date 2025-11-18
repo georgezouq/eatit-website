@@ -95,7 +95,7 @@ const BlogPostPage = async ({ params }: { params: Promise<{ slug: string }> }) =
   const recentPosts = postSummaries.filter((summary) => summary.slug !== article.slug).slice(0, 3);
 
   return (
-    <Wrapper>
+    <Wrapper dictionary={dictionary}>
       <BlogDetails
         locale={defaultLocale}
         dictionary={dictionary}

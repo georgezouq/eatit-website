@@ -319,6 +319,12 @@ const zhTW: LocaleDictionary = {
       downloadCta: "下載應用程式",
     },
   },
+  smartBanner: {
+    appName: "Eatibo",
+    view: "檢視",
+    close: "關閉",
+    viewInAppStore: "在 App Store 中檢視",
+  },
 };
 
 export default zhTW;

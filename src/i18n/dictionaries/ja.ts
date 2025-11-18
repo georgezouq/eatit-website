@@ -325,6 +325,12 @@ const ja: LocaleDictionary = {
       downloadCta: "アプリをダウンロード",
     },
   },
+  smartBanner: {
+    appName: "Eatibo",
+    view: "表示",
+    close: "閉じる",
+    viewInAppStore: "App Store で表示",
+  },
 };
 
 export default ja;

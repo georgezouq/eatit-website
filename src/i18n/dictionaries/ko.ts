@@ -326,6 +326,12 @@ const ko: LocaleDictionary = {
       downloadCta: "앱 다운로드",
     },
   },
+  smartBanner: {
+    appName: "Eatibo",
+    view: "보기",
+    close: "닫기",
+    viewInAppStore: "App Store에서 보기",
+  },
 };
 
 export default ko;
