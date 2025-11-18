@@ -176,4 +176,10 @@ export type LocaleDictionary = {
     description: string;
     backButton: string;
   };
+  blog: {
+    sidebar: {
+      downloadTitle: string;
+      downloadCta: string;
+    };
+  };
 };

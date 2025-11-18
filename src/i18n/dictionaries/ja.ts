@@ -319,6 +319,12 @@ const ja: LocaleDictionary = {
     description: "お探しのページは存在しません。移動または削除された可能性があります。",
     backButton: "ホームに戻る",
   },
+  blog: {
+    sidebar: {
+      downloadTitle: "Eatibo をダウンロード",
+      downloadCta: "アプリをダウンロード",
+    },
+  },
 };
 
 export default ja;

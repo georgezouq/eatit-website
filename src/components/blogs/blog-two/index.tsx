@@ -46,6 +46,7 @@ const BlogTwo = ({
           categories={categories}
           tags={tags}
           recentPosts={recentPosts}
+          dict={dictionary}
         />
       </Suspense>
       <FancyBanner />

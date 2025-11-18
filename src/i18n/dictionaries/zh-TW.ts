@@ -313,6 +313,12 @@ const zhTW: LocaleDictionary = {
     description: "您造訪的頁面不存在，可能已被移動或刪除。",
     backButton: "返回首頁",
   },
+  blog: {
+    sidebar: {
+      downloadTitle: "下載 Eatibo",
+      downloadCta: "下載應用程式",
+    },
+  },
 };
 
 export default zhTW;

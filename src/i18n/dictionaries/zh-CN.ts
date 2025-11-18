@@ -313,6 +313,12 @@ const zhCN: LocaleDictionary = {
     description: "您访问的页面不存在，可能已被移动或删除。",
     backButton: "返回首页",
   },
+  blog: {
+    sidebar: {
+      downloadTitle: "下载 Eatibo",
+      downloadCta: "下载应用",
+    },
+  },
 };
 
 export default zhCN;

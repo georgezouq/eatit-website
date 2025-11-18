@@ -344,6 +344,12 @@ const en: LocaleDictionary = {
     description: "The page you're looking for doesn't exist. It may have been moved or deleted.",
     backButton: "Go Back Home",
   },
+  blog: {
+    sidebar: {
+      downloadTitle: "Download Eatibo",
+      downloadCta: "Download App",
+    },
+  },
 };
 
 export default en;

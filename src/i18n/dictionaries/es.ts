@@ -331,6 +331,12 @@ const es: LocaleDictionary = {
     description: "La página que buscas no existe. Puede que haya sido movida o eliminada.",
     backButton: "Volver al inicio",
   },
+  blog: {
+    sidebar: {
+      downloadTitle: "Descargar Eatibo",
+      downloadCta: "Descargar App",
+    },
+  },
 };
 
 export default es;

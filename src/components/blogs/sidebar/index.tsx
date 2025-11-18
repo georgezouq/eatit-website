@@ -9,6 +9,7 @@ import type {
   PostSummary,
   TagWithCount,
 } from "@/lib/blog/types";
+import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 
 type SidebarProps = {
   categories: CategoryWithCount[];
@@ -16,9 +17,10 @@ type SidebarProps = {
   recentPosts: PostSummary[];
   activeCategory: string;
   activeTag: string;
+  dict: LocaleDictionary;
 };
 
-const Sidebar = ({ categories, tags, recentPosts, activeCategory, activeTag }: SidebarProps) => {
+const Sidebar = ({ categories, tags, recentPosts, activeCategory, activeTag, dict }: SidebarProps) => {
   return (
     <div className="col-lg-3 col-xl-4 col-xxl-4">
       <aside className="hairwow-blog-sidebar blog-sidebar md-mt-60" aria-label="Blog sidebar">
@@ -34,10 +36,10 @@ const Sidebar = ({ categories, tags, recentPosts, activeCategory, activeTag }: S
         <Tags tags={tags} activeSlug={activeTag} />
         <div className="contact-banner text-center mt-50 lg-mt-30">
           <h3 className="mb-20">
-            Any Questions? <br />Let’s talk
+            {dict.blog.sidebar.downloadTitle}
           </h3>
-          <Link href="/contact" className="tran3s fw-500">
-            Let’s Talk
+          <Link href="/#download" className="tran3s fw-500">
+            {dict.blog.sidebar.downloadCta}
           </Link>
         </div>
       </aside>

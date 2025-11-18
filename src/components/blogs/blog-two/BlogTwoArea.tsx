@@ -14,15 +14,17 @@ import type {
   TagWithCount,
 } from "@/lib/blog/types";
 import { normalizeForComparison } from "@/lib/blog/slug";
+import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 
 type BlogTwoAreaProps = {
   posts: PostSummary[];
   categories: CategoryWithCount[];
   tags: TagWithCount[];
   recentPosts: PostSummary[];
+  dict: LocaleDictionary;
 };
 
-const BlogTwoArea = ({ posts, categories, tags, recentPosts }: BlogTwoAreaProps) => {
+const BlogTwoArea = ({ posts, categories, tags, recentPosts, dict }: BlogTwoAreaProps) => {
   const searchParams = useSearchParams();
   const itemsPerPage = 4;
   const [itemOffset, setItemOffset] = useState(0);
@@ -168,6 +170,7 @@ const BlogTwoArea = ({ posts, categories, tags, recentPosts }: BlogTwoAreaProps)
                 recentPosts={recentPosts}
                 activeCategory={activeCategory}
                 activeTag={activeTag}
+                dict={dict}
               />
             </div>
           </div>

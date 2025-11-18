@@ -39,6 +39,7 @@ const BlogDetails = ({
                   recentPosts={recentPosts}
                   activeCategory={post.category ? normalizeForComparison(post.category) : ""}
                   activeTag=""
+                  dict={dictionary}
                 />
               </div>
             </div>

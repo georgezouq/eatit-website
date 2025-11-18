@@ -320,6 +320,12 @@ const ko: LocaleDictionary = {
     description: "찾고 계신 페이지가 존재하지 않습니다. 이동되었거나 삭제되었을 수 있습니다.",
     backButton: "홈으로 돌아가기",
   },
+  blog: {
+    sidebar: {
+      downloadTitle: "Eatibo 다운로드",
+      downloadCta: "앱 다운로드",
+    },
+  },
 };
 
 export default ko;
