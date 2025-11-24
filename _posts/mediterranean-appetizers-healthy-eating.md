@@ -1,31 +1,4 @@
 ---
-title: >-
-  Eatibo — Your AI-powered food scanner and smart nutrition coach. Point your
-  camera at a meal or a nutrition label and get instant calories, macros,
-  additives, and allergen flags. Eatibo rates each item as Eat / Limit / Skip,
-  then tailors guidance to your goals (muscle gain, weight loss, low-sugar,
-  seed-oil-free, etc.). You’ll get simple swaps, a clean food log with calendar
-  view, and weekly trends you can act on. Private by design with encrypted
-  sync—your data stays yours. Eat smarter, one scan at a time.
-date: '2025-11-24'
-slug: eatibo-your-ai-powered-food-scanner-and
-category: Nutrition
-tags:
-  - Mediterranean Appetizers
-  - Food Scan
-  - Health Food
-  - Calories Scan
-author:
-  name: SEO Editorial Team
-  role: Content Strategy
-excerpt: >-
-  yaml --- title: "Savoring the Mediterranean: Your Guide to Healthy Appetizers"
-  date: "2025-11-24" excerpt: "Discover how Mediterranean appetizers offer a
-  delicious and guilt-free way to indulge whi...
-coverImage: /assets/images/blog-article/eatibo-your-ai-powered-food-scanner-and-1.jpg
----
-yaml
----
 title: "Savoring the Mediterranean: Your Guide to Healthy Appetizers"
 date: "2025-11-24"
 excerpt: "Discover how Mediterranean appetizers offer a delicious and guilt-free way to indulge while supporting your health goals."
