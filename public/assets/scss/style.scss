@@ -2601,10 +2601,14 @@ p {line-height: 1.777em;}
     }
     .illustration {
         position: absolute;
-        right: 2%;
-        top:0;
-        max-width: 51%;
+        right: 3%;
+        top: 50%;
+        transform: translateY(-50%);
+        max-width: 42%;
         z-index: -1;
+        img {
+            object-fit: contain;
+        }
     }
 }
 

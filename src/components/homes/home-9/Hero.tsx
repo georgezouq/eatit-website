@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
 
-import thumb from "@/assets/images/assets/ils_24.svg";
+import thumb from "@/assets/images/assets/main-image.png";
 
 type HeroProps = {
   hero: LocaleDictionary["hero"];
@@ -41,10 +41,10 @@ const Hero = ({ hero, anchors }: HeroProps) => {
                 {hero.secondaryCta}
               </Link>
             </div>
-            <p className="fs-22 pt-40 lg-pt-20">
+            {/* <p className="fs-22 pt-40 lg-pt-20">
               {hero.note}
-            </p>
-            <div className="d-flex align-items-center gap-3 text-white-50">
+            </p> */}
+            <div className="d-flex pt-40  align-items-center gap-3 text-white-50">
               <div className="display-6 fw-600 text-white">{hero.rating.value}</div>
               <div>
                 <div className="fw-500 text-white">{hero.rating.label}</div>

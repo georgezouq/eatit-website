@@ -712,7 +712,7 @@
   .block-feature-twentyOne .feature-block .counter-block.border-style {border-right: none; border-bottom: 1px solid #b6ded7;}
   .feedback-section-eight .slick-dots {position: static; justify-content: center; margin-top: 40px;}
   .feedback-section-eight .wrapper {padding: 35px 12px;}
-  .hero-banner-nine .illustration {position: static; margin: 20px auto 0; max-width: 500px;}
+  .hero-banner-nine .illustration {position: relative; margin: 20px auto 0; max-width: 500px; right: auto; top: auto; transform: none; z-index: auto;}
   .feedback-section-four .slick-dots {position: static; padding: 50px 0 0; justify-content: center;}
   .pricing-section-four .pr-column .shape {display: none;}
   .feedback-block-five {margin-bottom: 50px;}
