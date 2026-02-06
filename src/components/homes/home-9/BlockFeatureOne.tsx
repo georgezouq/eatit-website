@@ -46,7 +46,7 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
             </div>
           ))}
         </div>
-        {smart.bullets?.length ? (
+        {/* {smart.bullets?.length ? (
           <div className="row justify-content-center mt-80">
             <div className="col-xl-8 col-lg-9">
               <ul className="style-none d-flex flex-column gap-3 align-items-center align-items-md-start text-white-50 fw-500">
@@ -59,7 +59,7 @@ const BlockFeatureOne = ({ content, smart }: BlockFeatureOneProps) => {
               </ul>
             </div>
           </div>
-        ) : null}
+        ) : null} */}
         {/* <div className="trusted-by text-center mt-80">
           <p className="text-white-50 mb-4">{smart.subtitle}</p>
           <div className="d-flex justify-content-center justify-content-md-between flex-wrap logos">

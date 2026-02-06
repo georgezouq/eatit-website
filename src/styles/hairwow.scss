@@ -2616,3 +2616,224 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     }
   }
 }
+
+.eatibo-includes-section {
+  --include-surface: rgba(8, 17, 28, 0.8);
+  --include-border: rgba(255, 255, 255, 0.12);
+  --include-accent: #f9d76e;
+  --include-accent-soft: rgba(249, 215, 110, 0.22);
+
+  .eatibo-includes-head {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .eyebrow {
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 2.9vw, 3.4rem);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: clamp(1rem, 1.2vw, 1.28rem);
+      line-height: 1.75;
+    }
+  }
+
+  .eatibo-includes-shell {
+    position: relative;
+    padding: 14px;
+    background: transparent;
+    overflow: hidden;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .eatibo-includes-shell > .row {
+    --bs-gutter-x: 1.25rem;
+  }
+
+  .feature-rail {
+    display: grid;
+    gap: 14px;
+  }
+
+  .feature-card {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.02);
+    color: inherit;
+    padding: 15px 18px;
+    transition: border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+
+    .feature-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 0;
+    }
+
+    .feature-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    h3 {
+      font-size: 21px;
+      line-height: 1.2;
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      letter-spacing: -0.01em;
+    }
+
+    .feature-details {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transform: translateY(-6px);
+      transition: max-height 0.35s ease, opacity 0.28s ease, transform 0.28s ease;
+
+      p {
+        color: rgba(255, 255, 255, 0.75);
+        margin: 10px 0 10px;
+      }
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.9);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--include-accent);
+        box-shadow: 0 0 0 4px var(--include-accent-soft);
+      }
+    }
+
+    &:hover,
+    &:focus-visible,
+    &.is-active {
+      border-color: rgba(249, 215, 110, 0.54);
+      background: linear-gradient(130deg, rgba(249, 215, 110, 0.12), rgba(106, 232, 255, 0.07));
+    }
+
+    &.is-active {
+      .feature-details {
+        max-height: 260px;
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .phone-stage {
+    position: relative;
+    min-height: 440px;
+    padding: 20px;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.15) 35%, transparent 55%);
+      transform: translateX(-100%);
+      animation: includeSweep 5.5s ease-in-out infinite;
+    }
+  }
+
+  .screen-wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-screen {
+    width: min(100%, 360px);
+    height: auto;
+    object-fit: contain;
+    animation: includeFade 0.55s ease;
+    filter: drop-shadow(0 34px 42px rgba(0, 0, 0, 0.45));
+  }
+}
+
+@keyframes includeFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes includeSweep {
+  0%,
+  100% {
+    transform: translateX(-110%);
+  }
+  55% {
+    transform: translateX(120%);
+  }
+}
+
+@media (max-width: 991px) {
+  .eatibo-includes-section {
+    .eatibo-includes-shell {
+      padding: 12px;
+      border-radius: 22px;
+      max-width: 100%;
+    }
+
+    .feature-card {
+      &:hover,
+      &:focus-visible,
+      &.is-active {
+        transform: none;
+      }
+
+      h3 {
+        font-size: 20px;
+      }
+    }
+
+    .phone-stage {
+      min-height: 340px;
+      padding: 16px;
+    }
+
+    .screen-wrap {
+      min-height: 300px;
+    }
+  }
+}

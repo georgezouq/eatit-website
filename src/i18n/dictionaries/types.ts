@@ -4,6 +4,17 @@ export type SectionCard = {
   bullets?: string[];
 };
 
+export type IncludeFeature = {
+  key: string;
+  title: string;
+  description: string;
+  points: string[];
+  image: {
+    src: string;
+    alt: string;
+  };
+};
+
 export type PricingPlan = {
   name: string;
   price: string;
@@ -95,6 +106,14 @@ export type LocaleDictionary = {
       title: string;
       subtitle: string;
       bullets: string[];
+    };
+    includes: {
+      id: string;
+      badge: string;
+      title: string;
+      subtitle: string;
+      autoplayLabel: string;
+      features: IncludeFeature[];
     };
     download: {
       id: string;

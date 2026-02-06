@@ -150,6 +150,80 @@ const es: LocaleDictionary = {
         "Funciona sin conexión y sincroniza después",
       ],
     },
+    includes: {
+      id: "pricing",
+      badge: "¿Qué incluye Eatibo?",
+      title: "¿Qué incluye Eatibo?",
+      subtitle: "Desde escaneo de alimentos hasta control de peso: un solo módulo para cuidar tu bienestar diario.",
+      autoplayLabel: "Carrusel de funciones clave de Eatibo",
+      features: [
+        {
+          key: "scan-diets",
+          title: "Escaneo de comida y hábitos",
+          description: "Escanea etiquetas o platos y adapta Eatibo a tu estilo de alimentación.",
+          points: [
+            "Soporte mediterráneo, keto, halal y sin aceites de semilla",
+            "Sugerencias basadas en tus hábitos reales",
+          ],
+          image: {
+            src: "/assets/images/media/img_16.png",
+            alt: "Pantalla de escaneo nutricional de Eatibo",
+          },
+        },
+        {
+          key: "health-alerts",
+          title: "Salud alimentaria",
+          description: "Detecta riesgos ocultos antes de comprar o comer.",
+          points: [
+            "Alertas de aditivos en tiempo real",
+            "Recordatorios de alérgenos según tu perfil",
+          ],
+          image: {
+            src: "/assets/images/media/img_17.png",
+            alt: "Alertas de aditivos y alérgenos en Eatibo",
+          },
+        },
+        {
+          key: "medication",
+          title: "Recordatorios de medicación",
+          description: "No pierdas ninguna toma importante dentro de tu rutina.",
+          points: [
+            "Avisos diarios sincronizados con tus horarios",
+            "Notificaciones suaves para no interrumpirte",
+          ],
+          image: {
+            src: "/assets/images/media/img_18.png",
+            alt: "Pantalla de recordatorios de medicación",
+          },
+        },
+        {
+          key: "hydration",
+          title: "Recordatorios de hidratación",
+          description: "Mantén tu consumo de agua al día sin esfuerzo.",
+          points: [
+            "Prompts inteligentes según hora y actividad",
+            "Progreso visual para mantener el ritmo",
+          ],
+          image: {
+            src: "/assets/images/media/img_19.png",
+            alt: "Seguimiento de hidratación en Eatibo",
+          },
+        },
+        {
+          key: "weight-goals",
+          title: "Gestión de peso",
+          description: "Acompañamiento para bajar o subir peso de forma saludable.",
+          points: [
+            "Modo dual para perder grasa o ganar masa",
+            "Feedback de tendencia con tus registros",
+          ],
+          image: {
+            src: "/assets/images/media/img_20.png",
+            alt: "Gráficos de objetivos de peso en Eatibo",
+          },
+        },
+      ],
+    },
     download: {
       id: "download",
       badge: "Descarga Eatibo",
