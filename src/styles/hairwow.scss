@@ -2648,14 +2648,15 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
 
   .eatibo-includes-shell {
     position: relative;
-    border: 1px solid var(--include-border);
-    border-radius: 30px;
-    padding: 26px;
-    background: radial-gradient(circle at 14% 10%, rgba(106, 232, 255, 0.18), transparent 48%),
-      radial-gradient(circle at 84% 84%, rgba(255, 102, 196, 0.16), transparent 44%),
-      var(--include-surface);
-    box-shadow: 0 45px 130px rgba(0, 0, 0, 0.35);
+    padding: 14px;
+    background: transparent;
     overflow: hidden;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+
+  .eatibo-includes-shell > .row {
+    --bs-gutter-x: 1.25rem;
   }
 
   .feature-rail {
@@ -2670,7 +2671,7 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     background: rgba(255, 255, 255, 0.02);
     color: inherit;
     padding: 15px 18px;
-    transition: all 0.35s ease;
+    transition: border-color 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
 
     .feature-head {
       display: flex;
@@ -2737,17 +2738,10 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     &:focus-visible,
     &.is-active {
       border-color: rgba(249, 215, 110, 0.54);
-      transform: translateX(4px);
       background: linear-gradient(130deg, rgba(249, 215, 110, 0.12), rgba(106, 232, 255, 0.07));
     }
 
     &.is-active {
-      padding: 18px 18px 16px;
-
-      .feature-head {
-        margin-bottom: 6px;
-      }
-
       .feature-details {
         max-height: 260px;
         opacity: 1;
@@ -2758,11 +2752,8 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
 
   .phone-stage {
     position: relative;
-    min-height: 500px;
-    border-radius: 30px;
-    padding: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+    min-height: 440px;
+    padding: 20px;
     overflow: hidden;
 
     &::before {
@@ -2780,14 +2771,14 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     z-index: 1;
     width: 100%;
     height: 100%;
-    min-height: 450px;
+    min-height: 390px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .feature-screen {
-    width: min(100%, 430px);
+    width: min(100%, 360px);
     height: auto;
     object-fit: contain;
     animation: includeFade 0.55s ease;
@@ -2819,8 +2810,9 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
 @media (max-width: 991px) {
   .eatibo-includes-section {
     .eatibo-includes-shell {
-      padding: 16px;
+      padding: 12px;
       border-radius: 22px;
+      max-width: 100%;
     }
 
     .feature-card {
@@ -2836,12 +2828,12 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     }
 
     .phone-stage {
-      min-height: 390px;
+      min-height: 340px;
       padding: 16px;
     }
 
     .screen-wrap {
-      min-height: 350px;
+      min-height: 300px;
     }
   }
 }

@@ -33,6 +33,7 @@ const IncludesShowcase = ({ includes }: IncludesShowcaseProps) => {
   }
 
   const activeFeature = safeFeatures[activeIndex] ?? safeFeatures[0];
+  const imageSrc = `/assets/showcase/${activeFeature.key}.png`;
 
   return (
     <section
@@ -93,8 +94,8 @@ const IncludesShowcase = ({ includes }: IncludesShowcaseProps) => {
               >
                 <div className="screen-wrap">
                   <Image
-                    key={activeFeature.image.src}
-                    src={activeFeature.image.src}
+                    key={imageSrc}
+                    src={imageSrc}
                     alt={activeFeature.image.alt}
                     width={758}
                     height={729}
