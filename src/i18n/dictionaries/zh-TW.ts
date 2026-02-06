@@ -139,6 +139,80 @@ const zhTW: LocaleDictionary = {
         "離線可用，連網即自動同步",
       ],
     },
+    includes: {
+      id: "pricing",
+      badge: "Eatibo 包含什麼？",
+      title: "Eatibo 包含什麼？",
+      subtitle: "從飲食掃描到體重管理，一套完整功能陪你養成更健康的日常節奏。",
+      autoplayLabel: "Eatibo 核心賣點輪播",
+      features: [
+        {
+          key: "scan-diets",
+          title: "食物掃描與飲食習慣",
+          description: "拍下配料表或餐盤，Eatibo 會自動對應你的飲食偏好。",
+          points: [
+            "支援地中海、無菜籽油、生酮、清真等方式",
+            "依照歷史習慣提供更貼近的建議",
+          ],
+          image: {
+            src: "/assets/images/media/img_16.png",
+            alt: "Eatibo 食物掃描畫面",
+          },
+        },
+        {
+          key: "health-alerts",
+          title: "關注飲食健康",
+          description: "在你下單或開吃前，先把風險看清楚。",
+          points: [
+            "添加劑提示，降低隱性負擔",
+            "食物過敏提醒，依個人檔案精準觸發",
+          ],
+          image: {
+            src: "/assets/images/media/img_17.png",
+            alt: "Eatibo 添加劑與過敏提醒",
+          },
+        },
+        {
+          key: "medication",
+          title: "用藥提醒",
+          description: "跟著你的生活節奏提醒，不再漏服關鍵藥物。",
+          points: [
+            "每日固定提醒，結合三餐與作息",
+            "溫和通知，不打擾休息時間",
+          ],
+          image: {
+            src: "/assets/images/media/img_18.png",
+            alt: "Eatibo 用藥提醒畫面",
+          },
+        },
+        {
+          key: "hydration",
+          title: "飲水提醒",
+          description: "輕鬆紀錄每日喝水量，穩定建立補水習慣。",
+          points: [
+            "依時間與活動智慧提醒補水",
+            "可視化進度讓你更容易達標",
+          ],
+          image: {
+            src: "/assets/images/media/img_19.png",
+            alt: "Eatibo 飲水提醒畫面",
+          },
+        },
+        {
+          key: "weight-goals",
+          title: "體重管理",
+          description: "支援減肥與增肥雙目標，幫你更科學地管理體態。",
+          points: [
+            "減脂與增重模式自由切換",
+            "整合掃描與紀錄提供趨勢回饋",
+          ],
+          image: {
+            src: "/assets/images/media/img_20.png",
+            alt: "Eatibo 體重管理圖表",
+          },
+        },
+      ],
+    },
     download: {
       id: "download",
       badge: "下載 Eatibo",

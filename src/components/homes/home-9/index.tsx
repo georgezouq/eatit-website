@@ -6,7 +6,7 @@ import FancyBanner from "./FancyBanner";
 import FAQ from "./FAQ";
 import Feedback from "./Feedback";
 import Hero from "./Hero";
-import Pricing from "./Pricing";
+import IncludesShowcase from "./IncludesShowcase";
 import HeaderNine from "@/layouts/headers/HeaderNine";
 import { createAnchors } from "@/lib/anchors";
 
@@ -37,7 +37,7 @@ const HomeNine = ({ dictionary, locale, onLocaleChange, latestPosts }: HomeNineP
       <main>
         <Hero hero={dictionary.hero} anchors={anchors} />
         <BlockFeatureOne content={dictionary.sections.why} smart={dictionary.sections.smart} />
-        <Pricing pricing={dictionary.sections.pricing} />
+        <IncludesShowcase includes={dictionary.sections.includes} />
         <BlockFeatureThree
           assist={dictionary.sections.assist}
           smart={dictionary.sections.smart}

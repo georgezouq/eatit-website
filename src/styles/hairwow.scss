@@ -2616,3 +2616,210 @@ $hairwow-muted: rgba(241, 246, 255, 0.7);
     }
   }
 }
+
+.eatibo-includes-section {
+  --include-surface: rgba(8, 17, 28, 0.8);
+  --include-border: rgba(255, 255, 255, 0.12);
+  --include-accent: #f9d76e;
+  --include-accent-soft: rgba(249, 215, 110, 0.22);
+
+  .eatibo-includes-head {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .eyebrow {
+      color: rgba(255, 255, 255, 0.65);
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 2.9vw, 3.4rem);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.72);
+      font-size: clamp(1rem, 1.2vw, 1.28rem);
+      line-height: 1.75;
+    }
+  }
+
+  .eatibo-includes-shell {
+    position: relative;
+    border: 1px solid var(--include-border);
+    border-radius: 34px;
+    padding: 34px;
+    background: radial-gradient(circle at 14% 10%, rgba(106, 232, 255, 0.18), transparent 48%),
+      radial-gradient(circle at 84% 84%, rgba(255, 102, 196, 0.16), transparent 44%),
+      var(--include-surface);
+    box-shadow: 0 45px 130px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+  }
+
+  .feature-rail {
+    display: grid;
+    gap: 14px;
+  }
+
+  .feature-card {
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.02);
+    color: inherit;
+    padding: 20px 22px 22px;
+    transition: all 0.35s ease;
+
+    .feature-head {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .feature-index {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    h3 {
+      font-size: 24px;
+      line-height: 1.2;
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      letter-spacing: -0.01em;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 12px;
+    }
+
+    li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      color: rgba(255, 255, 255, 0.9);
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 10px;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: var(--include-accent);
+        box-shadow: 0 0 0 4px var(--include-accent-soft);
+      }
+    }
+
+    &:hover,
+    &:focus-visible,
+    &.is-active {
+      border-color: rgba(249, 215, 110, 0.54);
+      transform: translateX(6px);
+      background: linear-gradient(130deg, rgba(249, 215, 110, 0.12), rgba(106, 232, 255, 0.07));
+    }
+  }
+
+  .phone-stage {
+    position: relative;
+    min-height: 560px;
+    border-radius: 30px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.15) 35%, transparent 55%);
+      transform: translateX(-100%);
+      animation: includeSweep 5.5s ease-in-out infinite;
+    }
+  }
+
+  .screen-wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    min-height: 510px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .feature-screen {
+    width: min(100%, 520px);
+    height: auto;
+    object-fit: contain;
+    animation: includeFade 0.55s ease;
+    filter: drop-shadow(0 34px 42px rgba(0, 0, 0, 0.45));
+  }
+}
+
+@keyframes includeFade {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes includeSweep {
+  0%,
+  100% {
+    transform: translateX(-110%);
+  }
+  55% {
+    transform: translateX(120%);
+  }
+}
+
+@media (max-width: 991px) {
+  .eatibo-includes-section {
+    .eatibo-includes-shell {
+      padding: 18px;
+      border-radius: 24px;
+    }
+
+    .feature-card {
+      &:hover,
+      &:focus-visible,
+      &.is-active {
+        transform: none;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+    }
+
+    .phone-stage {
+      min-height: 460px;
+      padding: 16px;
+    }
+
+    .screen-wrap {
+      min-height: 420px;
+    }
+  }
+}
