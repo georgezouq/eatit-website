@@ -35,9 +35,12 @@ const IncludesShowcase = ({ includes }: IncludesShowcaseProps) => {
   const activeFeature = safeFeatures[activeIndex] ?? safeFeatures[0];
 
   return (
-    <section className="eatibo-includes-section position-relative mt-180 lg-mt-90 mb-170 lg-mb-90" id={includes.id}>
+    <section
+      className="eatibo-includes-section position-relative mt-150 lg-mt-80 mb-140 lg-mb-80"
+      id={includes.id}
+    >
       <div className="container lg">
-        <div className="eatibo-includes-head text-center mb-55 lg-mb-35">
+        <div className="eatibo-includes-head text-center mb-45 lg-mb-30">
           <p className="eyebrow text-uppercase letter-spacing-2">{includes.badge}</p>
           <h2 className="font-Playfair">{includes.title}</h2>
           <p className="subtitle mb-0">{includes.subtitle}</p>
@@ -58,6 +61,7 @@ const IncludesShowcase = ({ includes }: IncludesShowcaseProps) => {
                       onClick={() => setActiveIndex(index)}
                       role="tab"
                       aria-selected={isActive}
+                      aria-expanded={isActive}
                       aria-controls={`include-panel-${feature.key}`}
                       id={`include-tab-${feature.key}`}
                     >
@@ -65,19 +69,22 @@ const IncludesShowcase = ({ includes }: IncludesShowcaseProps) => {
                         <span className="feature-index">0{index + 1}</span>
                         <h3>{feature.title}</h3>
                       </div>
-                      <p>{feature.description}</p>
-                      <ul className="style-none mb-0">
-                        {feature.points.map((point) => (
-                          <li key={point}>{point}</li>
-                        ))}
-                      </ul>
+
+                      <div className={`feature-details ${isActive ? "is-visible" : ""}`} aria-hidden={!isActive}>
+                        <p>{feature.description}</p>
+                        <ul className="style-none mb-0">
+                          {feature.points.map((point) => (
+                            <li key={point}>{point}</li>
+                          ))}
+                        </ul>
+                      </div>
                     </button>
                   );
                 })}
               </div>
             </div>
 
-            <div className="col-lg-6 mt-50 mt-lg-0">
+            <div className="col-lg-6 mt-35 mt-lg-0">
               <div
                 className="phone-stage"
                 role="tabpanel"
