@@ -140,6 +140,80 @@ const ko: LocaleDictionary = {
         "오프라인 사용 가능, 온라인 시 자동 동기화",
       ],
     },
+    includes: {
+      id: "pricing",
+      badge: "Eatibo에는 무엇이 포함되나요?",
+      title: "Eatibo에는 무엇이 포함되나요?",
+      subtitle: "식품 스캔부터 체중 관리까지, 일상 건강 루틴을 위한 핵심 기능을 한 번에 제공합니다.",
+      autoplayLabel: "Eatibo 핵심 기능 캐러셀",
+      features: [
+        {
+          key: "scan-diets",
+          title: "음식 스캔과 식습관",
+          description: "라벨 또는 식단을 스캔하면 당신의 식사 성향에 맞춰 분석합니다.",
+          points: [
+            "지중해식·무카놀라유·키토·할랄 지원",
+            "누적 습관 기반 맞춤 제안",
+          ],
+          image: {
+            src: "/assets/images/media/img_16.png",
+            alt: "Eatibo 음식 스캔 화면",
+          },
+        },
+        {
+          key: "health-alerts",
+          title: "식단 건강 알림",
+          description: "먹기 전, 숨은 위험 요소를 미리 확인하세요.",
+          points: [
+            "첨가물 경고로 위험 요소 사전 확인",
+            "개인 프로필 기반 알레르기 알림",
+          ],
+          image: {
+            src: "/assets/images/media/img_17.png",
+            alt: "Eatibo 첨가물 및 알레르기 알림",
+          },
+        },
+        {
+          key: "medication",
+          title: "복약 알림",
+          description: "생활 리듬에 맞춘 알림으로 복약 누락을 줄입니다.",
+          points: [
+            "식사와 일정에 맞춘 일일 리마인드",
+            "방해를 줄인 부드러운 알림",
+          ],
+          image: {
+            src: "/assets/images/media/img_18.png",
+            alt: "Eatibo 복약 알림 화면",
+          },
+        },
+        {
+          key: "hydration",
+          title: "수분 섭취 알림",
+          description: "물 섭취량을 간편하게 추적하고 습관을 유지하세요.",
+          points: [
+            "시간·활동 기반 스마트 알림",
+            "하루 진행률 시각화",
+          ],
+          image: {
+            src: "/assets/images/media/img_19.png",
+            alt: "Eatibo 수분 섭취 트래커",
+          },
+        },
+        {
+          key: "weight-goals",
+          title: "체중 관리",
+          description: "감량과 증량 목표를 모두 지원하는 안전한 관리 플로우.",
+          points: [
+            "감량/증량 듀얼 모드 제공",
+            "스캔 기록 기반 추세 피드백",
+          ],
+          image: {
+            src: "/assets/images/media/img_20.png",
+            alt: "Eatibo 체중 목표 차트",
+          },
+        },
+      ],
+    },
     download: {
       id: "download",
       badge: "Eatibo 다운로드",

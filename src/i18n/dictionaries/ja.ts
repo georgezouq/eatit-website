@@ -140,6 +140,80 @@ const ja: LocaleDictionary = {
         "オフラインでも利用でき、接続時に自動同期",
       ],
     },
+    includes: {
+      id: "pricing",
+      badge: "Eatiboには何が含まれていますか？",
+      title: "Eatiboには何が含まれていますか？",
+      subtitle: "食事スキャンから体重管理まで、毎日の健康を支える主要機能をひとつに。",
+      autoplayLabel: "Eatibo主要機能カルーセル",
+      features: [
+        {
+          key: "scan-diets",
+          title: "食品スキャンと食習慣",
+          description: "ラベルや食事をスキャンして、あなたの食スタイルに合わせて最適化。",
+          points: [
+            "地中海式・菜種油なし・ケト・ハラールに対応",
+            "過去の食習慣に基づく提案",
+          ],
+          image: {
+            src: "/assets/images/media/img_16.png",
+            alt: "Eatiboの食品スキャン画面",
+          },
+        },
+        {
+          key: "health-alerts",
+          title: "食の健康アラート",
+          description: "購入前・食事前に見えにくいリスクを先回りで通知。",
+          points: [
+            "添加物の注意喚起",
+            "個人設定に合わせたアレルゲン通知",
+          ],
+          image: {
+            src: "/assets/images/media/img_17.png",
+            alt: "Eatiboの添加物・アレルギー通知",
+          },
+        },
+        {
+          key: "medication",
+          title: "服薬リマインド",
+          description: "食事リズムと連携し、飲み忘れを防ぎます。",
+          points: [
+            "生活リズムに合わせた毎日の通知",
+            "静かな時間帯を配慮したやさしいリマインド",
+          ],
+          image: {
+            src: "/assets/images/media/img_18.png",
+            alt: "Eatiboの服薬リマインド画面",
+          },
+        },
+        {
+          key: "hydration",
+          title: "水分補給リマインド",
+          description: "水分摂取を手軽に記録し、習慣化をサポート。",
+          points: [
+            "時間と活動量に応じたスマート通知",
+            "1日の進捗を可視化",
+          ],
+          image: {
+            src: "/assets/images/media/img_19.png",
+            alt: "Eatiboの水分補給トラッカー",
+          },
+        },
+        {
+          key: "weight-goals",
+          title: "体重管理",
+          description: "減量・増量の両目標に対応した安全なプラン設計。",
+          points: [
+            "減量モードと増量モードを切替可能",
+            "スキャンと記録に基づく推移フィードバック",
+          ],
+          image: {
+            src: "/assets/images/media/img_20.png",
+            alt: "Eatiboの体重目標チャート",
+          },
+        },
+      ],
+    },
     download: {
       id: "download",
       badge: "Eatibo をダウンロード",

@@ -151,6 +151,80 @@ const en: LocaleDictionary = {
         "Works offline with auto-sync once you're connected",
       ],
     },
+    includes: {
+      id: "pricing",
+      badge: "What does Eatibo include?",
+      title: "What does Eatibo include?",
+      subtitle: "Discover everything inside Eatibo: one intelligent workflow that supports your daily nutrition, medication and wellness rhythm.",
+      autoplayLabel: "Eatibo feature highlights",
+      features: [
+        {
+          key: "scan-diets",
+          title: "Food scan & diet habits",
+          description: "Scan labels or meals and let Eatibo adapt to your personal eating philosophy.",
+          points: [
+            "Mediterranean, keto, halal and seed-oil-free support",
+            "Habit-aware suggestions based on your eating history",
+          ],
+          image: {
+            src: "/assets/images/media/img_16.png",
+            alt: "Eatibo nutrition scan dashboard",
+          },
+        },
+        {
+          key: "health-alerts",
+          title: "Diet health protection",
+          description: "Stay ahead of hidden risks in everyday food choices.",
+          points: [
+            "Additive warnings before checkout or first bite",
+            "Allergen reminders tailored to your profile",
+          ],
+          image: {
+            src: "/assets/images/media/img_17.png",
+            alt: "Eatibo additive and allergen alerts",
+          },
+        },
+        {
+          key: "medication",
+          title: "Medication reminders",
+          description: "Never miss medication windows linked with your meal schedule.",
+          points: [
+            "Daily reminders synced with your routine",
+            "Gentle nudges that respect your quiet hours",
+          ],
+          image: {
+            src: "/assets/images/media/img_18.png",
+            alt: "Eatibo medication reminder screen",
+          },
+        },
+        {
+          key: "hydration",
+          title: "Hydration reminders",
+          description: "Track your water intake and maintain hydration without effort.",
+          points: [
+            "Smart sip prompts based on time and activity",
+            "Visual daily progress to keep momentum",
+          ],
+          image: {
+            src: "/assets/images/media/img_19.png",
+            alt: "Eatibo water reminder tracker",
+          },
+        },
+        {
+          key: "weight-goals",
+          title: "Weight management",
+          description: "Plan safely for fat loss or healthy weight gain with AI insights.",
+          points: [
+            "Dual-mode support for weight loss and muscle gain",
+            "Trend-based feedback from your scans and logs",
+          ],
+          image: {
+            src: "/assets/images/media/img_20.png",
+            alt: "Eatibo weight goal progress charts",
+          },
+        },
+      ],
+    },
     download: {
       id: "download",
       badge: "Download",
