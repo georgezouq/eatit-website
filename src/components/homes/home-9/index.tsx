@@ -7,6 +7,7 @@ import FAQ from "./FAQ";
 import Feedback from "./Feedback";
 import Hero from "./Hero";
 import IncludesShowcase from "./IncludesShowcase";
+import ScrollRevealController from "./ScrollRevealController";
 import HeaderNine from "@/layouts/headers/HeaderNine";
 import { createAnchors } from "@/lib/anchors";
 
@@ -26,7 +27,7 @@ const HomeNine = ({ dictionary, locale, onLocaleChange, latestPosts }: HomeNineP
   const anchors = createAnchors(dictionary);
 
   return (
-    <div className="main-page-wrapper dark-bg-five" id={anchors.home}>
+    <div className="main-page-wrapper dark-bg-five eatibo-homepage" id={anchors.home}>
       <HeaderNine
         locale={locale}
         nav={dictionary.nav}
@@ -35,6 +36,7 @@ const HomeNine = ({ dictionary, locale, onLocaleChange, latestPosts }: HomeNineP
         onLocaleChange={onLocaleChange}
       />
       <main>
+        <ScrollRevealController />
         <Hero hero={dictionary.hero} anchors={anchors} />
         <BlockFeatureOne content={dictionary.sections.why} smart={dictionary.sections.smart} />
         <IncludesShowcase includes={dictionary.sections.includes} />
@@ -54,6 +56,7 @@ const HomeNine = ({ dictionary, locale, onLocaleChange, latestPosts }: HomeNineP
         locale={locale}
         anchors={anchors}
         blogHref={dictionary.nav.blog.href}
+        onLocaleChange={onLocaleChange}
       />
     </div>
   );

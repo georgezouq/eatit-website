@@ -216,12 +216,12 @@ const zhCN: LocaleDictionary = {
     download: {
       id: "download",
       badge: "下载 Eatibo",
-      title: "更聪明地扫描，更安心地开吃",
-      subtitle: "把 Eatibo 装进口袋，随时随地几秒读懂餐盘与配料表。",
+      title: "把饮食健康变成可持续的日常习惯",
+      subtitle: "Eatibo 将营养平衡、用药提醒、饮水管理和体重趋势整合到同一套日常节奏。",
       highlights: [
-        "标签、条码、实物菜品一拍即识",
-        "结合过敏、饮食文化与目标给出建议",
-        "加密同步守护你的饮食数据",
+        "提前发现营养缺口，并给出可执行的餐食替换建议",
+        "用药与饮水提醒跟随你的作息，不打扰却不遗漏",
+        "持续追踪体重与代谢趋势，同时守护隐私数据",
       ],
       storeLabel: "下载 Eatibo",
       apple: {
@@ -312,6 +312,31 @@ const zhCN: LocaleDictionary = {
           author: "Marco D.",
           role: "餐饮顾问",
         },
+        {
+          quote: "把用药提醒和三餐绑定后，我第一次连续 90 天没漏服甲状腺药。",
+          author: "Priya S.",
+          role: "产品经理 / 甲减用户",
+        },
+        {
+          quote: "喝水提醒很克制但很有效，两周后我的下午头痛几乎消失。",
+          author: "Ethan K.",
+          role: "远程软件工程师",
+        },
+        {
+          quote: "我经营清真餐饮，Eatibo 能在新供应商上线前发现隐藏添加剂。",
+          author: "Amina H.",
+          role: "餐饮创始人",
+        },
+        {
+          quote: "我爸有糖尿病和高血压，糖和钠的双重预警让我们点外卖更安心。",
+          author: "Carlos V.",
+          role: "家庭照护者",
+        },
+        {
+          quote: "我是夜班护士，每周营养缺口总结直接告诉我该补什么，不再靠猜。",
+          author: "Mia T.",
+          role: "ICU 护士",
+        },
       ],
     },
     faq: {
@@ -351,9 +376,9 @@ const zhCN: LocaleDictionary = {
       { type: "chat", label: "在线客服", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-weibo", href: "https://weibo.com/eatibo", label: "微博" },
-      { icon: "fa-brands fa-wechat", href: "https://eatibo.app/wechat", label: "微信" },
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
+      { icon: "brand-bluesky", href: "https://bsky.app/profile/linaeatibo.bsky.social", label: "Bluesky" },
+      { icon: "fa-brands fa-instagram", href: "https://www.instagram.com/linaeatibo/", label: "Instagram" },
+      { icon: "brand-mastodon", href: "https://mastodon.social/@georgezou", label: "Mastodon" },
     ],
     navGroups: [
       {

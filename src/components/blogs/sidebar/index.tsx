@@ -27,7 +27,7 @@ const Sidebar = ({ categories, tags, recentPosts, activeCategory, activeTag, dic
         <form onSubmit={(e) => e.preventDefault()} className="sidebar-search">
           <input type="text" placeholder="Search.." aria-label="Search blog articles" />
           <button className="tran3s" aria-label="Search">
-            <i className="bi bi-search"></i>
+            <i className="bi bi-arrow-up-right"></i>
           </button>
         </form>
         <Category categories={categories} activeSlug={activeCategory} />

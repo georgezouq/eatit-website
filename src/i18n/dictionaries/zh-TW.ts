@@ -216,12 +216,12 @@ const zhTW: LocaleDictionary = {
     download: {
       id: "download",
       badge: "下載 Eatibo",
-      title: "更聰明地掃描，更安心地用餐",
-      subtitle: "把 Eatibo 放進口袋，隨時隨地幾秒讀懂餐盤與成分表。",
+      title: "把飲食健康變成可長可久的日常習慣",
+      subtitle: "Eatibo 把營養平衡、用藥提醒、飲水管理與體重趨勢整合成同一套日常節奏。",
       highlights: [
-        "標籤、條碼、實物菜色一拍即識",
-        "結合過敏、飲食文化與目標提供建議",
-        "加密同步守護你的飲食資料",
+        "提早看見營養缺口，並給出可執行的餐點替換建議",
+        "用藥與補水提醒配合你的作息，不打擾也不漏接",
+        "持續追蹤體重與代謝趨勢，同時守護隱私資料",
       ],
       storeLabel: "下載 Eatibo",
       apple: {
@@ -312,6 +312,31 @@ const zhTW: LocaleDictionary = {
           author: "Marco D.",
           role: "餐飲顧問",
         },
+        {
+          quote: "把用藥提醒綁在三餐後，我第一次連續 90 天沒漏吃甲狀腺藥。",
+          author: "Priya S.",
+          role: "產品經理／甲狀腺低下使用者",
+        },
+        {
+          quote: "喝水提醒不吵人卻很有效，兩週後下午頭痛幾乎消失。",
+          author: "Ethan K.",
+          role: "遠端軟體工程師",
+        },
+        {
+          quote: "我經營清真餐飲，Eatibo 能在新供應商上線前抓出隱藏添加物。",
+          author: "Amina H.",
+          role: "餐飲創辦人",
+        },
+        {
+          quote: "我爸有糖尿病和高血壓，糖與鈉雙重警示讓我們點外送更安心。",
+          author: "Carlos V.",
+          role: "家庭照顧者",
+        },
+        {
+          quote: "我是 ICU 夜班護理師，每週營養缺口摘要直接告訴我該補什麼。",
+          author: "Mia T.",
+          role: "ICU 護理師",
+        },
       ],
     },
     faq: {
@@ -351,9 +376,9 @@ const zhTW: LocaleDictionary = {
       { type: "chat", label: "線上即時客服", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-facebook", href: "https://facebook.com/eatiboapp", label: "Facebook" },
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
+      { icon: "brand-bluesky", href: "https://bsky.app/profile/linaeatibo.bsky.social", label: "Bluesky" },
+      { icon: "fa-brands fa-instagram", href: "https://www.instagram.com/linaeatibo/", label: "Instagram" },
+      { icon: "brand-mastodon", href: "https://mastodon.social/@georgezou", label: "Mastodon" },
     ],
     navGroups: [
       {

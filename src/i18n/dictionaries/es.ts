@@ -227,13 +227,13 @@ const es: LocaleDictionary = {
     download: {
       id: "download",
       badge: "Descarga Eatibo",
-      title: "Escanea con más inteligencia. Come con confianza.",
+      title: "Convierte la alimentación saludable en una rutina sostenible",
       subtitle:
-        "Lleva Eatibo en tu bolsillo para descifrar platos, etiquetas y menús en segundos.",
+        "Eatibo unifica equilibrio nutricional, recordatorios de medicación, hidratación y tendencia de peso en un solo flujo diario.",
       highlights: [
-        "Escanea etiquetas, códigos de barras o platos completos al instante",
-        "Recomendaciones adaptadas a alergias, metas y dietas culturales",
-        "Sincronización cifrada que mantiene privado tu historial",
+        "Detecta carencias nutricionales a tiempo con cambios de comida accionables",
+        "Recordatorios de medicación e hidratación adaptados a tu horario",
+        "Seguimiento de peso y metabolismo con privacidad integrada",
       ],
       storeLabel: "Obtén Eatibo en",
       apple: {
@@ -326,6 +326,36 @@ const es: LocaleDictionary = {
           author: "Marco D.",
           role: "Consultor gastronómico",
         },
+        {
+          quote:
+            "Desde que vinculé los recordatorios de medicación a las comidas, llevo 90 días sin olvidar mi tratamiento de tiroides.",
+          author: "Priya S.",
+          role: "Product manager y paciente de hipotiroidismo",
+        },
+        {
+          quote:
+            "Los avisos de hidratación son suaves pero funcionan. En dos semanas desaparecieron mis dolores de cabeza de la tarde.",
+          author: "Ethan K.",
+          role: "Ingeniero de software remoto",
+        },
+        {
+          quote:
+            "Dirijo una cocina halal y Eatibo detecta aditivos ocultos de nuevos proveedores antes del servicio.",
+          author: "Amina H.",
+          role: "Fundadora de catering",
+        },
+        {
+          quote:
+            "Mi papá tiene diabetes e hipertensión. Las alertas de azúcar y sodio nos ayudan a elegir takeout seguro en segundos.",
+          author: "Carlos V.",
+          role: "Cuidador familiar",
+        },
+        {
+          quote:
+            "Trabajo turnos de noche en UCI y el resumen semanal de carencias me dice exactamente qué añadir.",
+          author: "Mia T.",
+          role: "Enfermera UCI",
+        },
       ],
     },
     faq: {
@@ -369,9 +399,9 @@ const es: LocaleDictionary = {
       { type: "chat", label: "Chat en vivo", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
-      { icon: "fa-brands fa-linkedin", href: "https://linkedin.com/company/eatibo", label: "LinkedIn" },
+      { icon: "brand-bluesky", href: "https://bsky.app/profile/linaeatibo.bsky.social", label: "Bluesky" },
+      { icon: "fa-brands fa-instagram", href: "https://www.instagram.com/linaeatibo/", label: "Instagram" },
+      { icon: "brand-mastodon", href: "https://mastodon.social/@georgezou", label: "Mastodon" },
     ],
     navGroups: [
       {

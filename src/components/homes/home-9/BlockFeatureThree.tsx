@@ -15,9 +15,9 @@ const icons = [icon_1, icon_2, icon_3];
 
 const BlockFeatureThree = ({ assist, smart }: BlockFeatureThreeProps) => {
   return (
-    <section className="block-feature-twentyFive mt-180 lg-mt-80" id={assist.id}>
+    <section className="block-feature-twentyFive" id={assist.id}>
       <div className="container lg">
-        <div className="border-top border-bottom border-white border-2 pt-90 lg-pt-40 pb-90 lg-pb-40">
+        <div className="pt-90 lg-pt-80 pb-90 lg-pb-80">
           <div className="row">
             <div className="col-lg-8 mx-auto text-center">
               <p className="text-uppercase text-white-50 letter-spacing-2 mb-20">

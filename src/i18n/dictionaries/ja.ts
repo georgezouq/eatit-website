@@ -217,12 +217,12 @@ const ja: LocaleDictionary = {
     download: {
       id: "download",
       badge: "Eatibo をダウンロード",
-      title: "もっとスマートにスキャンして、自信を持って食べよう。",
-      subtitle: "外出先でも Eatibo があれば、料理やラベルを数秒で読み解けます。",
+      title: "食生活の健康を、続けられる習慣へ",
+      subtitle: "Eatibo は栄養バランス・服薬リマインド・水分補給・体重トレンドを1つの毎日ルーティンにまとめます。",
       highlights: [
-        "ラベル・バーコード・料理写真を一瞬で解析",
-        "アレルギーや食文化、目標に合わせた提案",
-        "暗号化された同期で食事履歴を安全に保護",
+        "栄養不足を早めに把握し、実行しやすい食事置き換えを提案",
+        "服薬と水分補給リマインドを生活リズムに合わせて通知",
+        "体重・代謝トレンドを継続管理しながらプライバシーを保護",
       ],
       storeLabel: "Eatibo を入手",
       apple: {
@@ -314,6 +314,32 @@ const ja: LocaleDictionary = {
           author: "Marco D.",
           role: "レストランコンサルタント",
         },
+        {
+          quote: "服薬リマインドを食事に連動させてから、甲状腺の薬を90日連続で飲み忘れなくなりました。",
+          author: "Priya S.",
+          role: "プロダクトマネージャー / 甲状腺機能低下症ユーザー",
+        },
+        {
+          quote: "水分リマインドは控えめなのに効果的。2週間で午後の頭痛がほぼ消えました。",
+          author: "Ethan K.",
+          role: "リモートソフトウェアエンジニア",
+        },
+        {
+          quote:
+            "ハラール対応のケータリングを運営していますが、新規仕入れの隠れ添加物を提供前に見抜けます。",
+          author: "Amina H.",
+          role: "ケータリング創業者",
+        },
+        {
+          quote: "父は糖尿病と高血圧。糖分とナトリウムの警告でテイクアウト選びが一気に安全になりました。",
+          author: "Carlos V.",
+          role: "家族ケア担当",
+        },
+        {
+          quote: "夜勤のICU看護師です。週間の栄養ギャップ要約が「何を足すべきか」を明確にしてくれます。",
+          author: "Mia T.",
+          role: "ICU看護師",
+        },
       ],
     },
     faq: {
@@ -357,9 +383,9 @@ const ja: LocaleDictionary = {
       { type: "chat", label: "ライブチャット", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "X / Twitter" },
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
-      { icon: "fa-brands fa-youtube", href: "https://youtube.com/@eatiboapp", label: "YouTube" },
+      { icon: "brand-bluesky", href: "https://bsky.app/profile/linaeatibo.bsky.social", label: "Bluesky" },
+      { icon: "fa-brands fa-instagram", href: "https://www.instagram.com/linaeatibo/", label: "Instagram" },
+      { icon: "brand-mastodon", href: "https://mastodon.social/@georgezou", label: "Mastodon" },
     ],
     navGroups: [
       {

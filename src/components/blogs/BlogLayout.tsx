@@ -16,7 +16,7 @@ const BlogLayout = ({ locale, dictionary, children, onLocaleChange }: BlogLayout
   const blogHref = dictionary.nav.blog.href;
 
   return (
-    <div className="main-page-wrapper dark-bg-five">
+    <div className="main-page-wrapper dark-bg-five eatibo-blog">
       <HeaderNine
         locale={locale}
         nav={dictionary.nav}
@@ -31,6 +31,7 @@ const BlogLayout = ({ locale, dictionary, children, onLocaleChange }: BlogLayout
         locale={locale}
         anchors={anchors}
         blogHref={blogHref}
+        onLocaleChange={onLocaleChange}
       />
     </div>
   );

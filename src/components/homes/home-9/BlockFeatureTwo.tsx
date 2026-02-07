@@ -19,7 +19,7 @@ const icons = [icon_1, icon_2, icon_3];
 const BlockFeatureTwo = ({ core, reviews }: BlockFeatureTwoProps) => {
   const [firstCard, secondCard, thirdCard] = core.cards;
   return (
-    <section className="block-feature-twentySix mt-180 xl-mt-150 lg-mt-80" id={core.id}>
+    <section className="block-feature-twentySix mt-180 xl-mt-150 lg-mt-80 mb-180 xl-mb-150 lg-mb-80" id={core.id}>
       <div className="container lg">
         <div className="row">
           <div className="col-xl-7 col-lg-7 m-auto">

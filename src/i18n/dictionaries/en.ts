@@ -228,13 +228,13 @@ const en: LocaleDictionary = {
     download: {
       id: "download",
       badge: "Download",
-      title: "Scan smarter. Eat with confidence.",
+      title: "Build healthier eating habits that actually stick.",
       subtitle:
-        "Keep Eatibo in your pocket to decode meals, labels and dining out choices instantly.",
+        "Eatibo helps you balance nutrition, medication, hydration and weight trends in one daily routine.",
       highlights: [
-        "Scan labels, barcodes or entire plates in seconds",
-        "Tailored suggestions for allergies, goals & cultural diets",
-        "Encrypted sync keeps your food history private",
+        "Spot nutrient gaps early and get practical meal swaps",
+        "Keep medication and hydration reminders aligned with your schedule",
+        "Track weight and metabolic trends without losing privacy",
       ],
       storeLabel: "Get Eatibo on",
       apple: {
@@ -327,6 +327,36 @@ const en: LocaleDictionary = {
           author: "Marco D.",
           role: "Restaurant consultant",
         },
+        {
+          quote:
+            "Medication reminders tied to my meals are the first thing that kept my thyroid routine consistent for 90 days.",
+          author: "Priya S.",
+          role: "Product manager & hypothyroid patient",
+        },
+        {
+          quote:
+            "The hydration nudges are subtle but effective. My afternoon headaches disappeared after two weeks.",
+          author: "Ethan K.",
+          role: "Remote software engineer",
+        },
+        {
+          quote:
+            "I run a halal kitchen and Eatibo catches hidden additives in new suppliers before they hit service.",
+          author: "Amina H.",
+          role: "Catering founder",
+        },
+        {
+          quote:
+            "My dad has diabetes and high blood pressure. The sugar and sodium warnings help us choose safer takeout in seconds.",
+          author: "Carlos V.",
+          role: "Family caregiver",
+        },
+        {
+          quote:
+            "As a night-shift nurse, the weekly nutrient-gap summary tells me exactly what to add instead of guessing.",
+          author: "Mia T.",
+          role: "ICU nurse",
+        },
       ],
     },
     faq: {
@@ -382,9 +412,9 @@ const en: LocaleDictionary = {
       },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
-      { icon: "fa-brands fa-youtube", href: "https://youtube.com/@eatiboapp", label: "YouTube" },
+      { icon: "brand-bluesky", href: "https://bsky.app/profile/linaeatibo.bsky.social", label: "Bluesky" },
+      { icon: "fa-brands fa-instagram", href: "https://www.instagram.com/linaeatibo/", label: "Instagram" },
+      { icon: "brand-mastodon", href: "https://mastodon.social/@georgezou", label: "Mastodon" },
     ],
     navGroups: [
       {

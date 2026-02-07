@@ -27,24 +27,24 @@ const FancyBanner = ({ download }: FancyBannerProps) => {
         <Image src={shape} alt="Vibrant gradient shape" className="m-auto shape_01" />
         <div className="row">
           <div className="col-xxl-9 col-lg-8 m-auto text-center">
-            {download.badge ? (
+            {/* {download.badge ? (
               <p className="text-uppercase text-white-50 letter-spacing-2 mb-20">
                 {download.badge}
               </p>
-            ) : null}
+            ) : null} */}
             <div className="title-four mt-40 lg-mt-20">
               <h2>{download.title}</h2>
             </div>
             <p className="fs-28 mt-40 lg-mt-30 mb-40 lg-mb-30 text-white opacity-75">
               {download.subtitle}
             </p>
-            {download.highlights?.length ? (
+            {/* {download.highlights?.length ? (
               <ul className="style-none ps-0 mb-40 text-white-50">
                 {download.highlights.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
-            ) : null}
+            ) : null} */}
             <div className="d-flex align-items-center justify-content-center flex-wrap platform-button-group gap-3">
               <Link
                 href={download.apple.href}

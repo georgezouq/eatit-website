@@ -7,6 +7,8 @@ import logo_1 from "@/assets/images/logo/logo_10.svg";
 import icon_1 from "@/assets/images/icon/icon_57.svg";
 import icon_2 from "@/assets/images/icon/icon_58.svg";
 import icon_3 from "@/assets/images/icon/icon_59.svg";
+import blueskyIcon from "@/assets/images/icon/social-bluesky.svg";
+import mastodonIcon from "@/assets/images/icon/social-mastodon.svg";
 // import shape from "@/assets/images/shape/shape_82.svg";
 
 import type { Locale } from "@/i18n/config";
@@ -24,6 +26,7 @@ type FooterEightProps = {
     faq: string;
   };
   blogHref: string;
+  onLocaleChange?: (locale: Locale) => void;
 };
 
 const supportIconMap: Record<string, typeof icon_1> = {
@@ -32,7 +35,12 @@ const supportIconMap: Record<string, typeof icon_1> = {
   chat: icon_3,
 };
 
-const FooterEight = ({ footer, nav, locale, anchors, blogHref }: FooterEightProps) => {
+const socialIconMap: Record<string, typeof blueskyIcon> = {
+  "brand-bluesky": blueskyIcon,
+  "brand-mastodon": mastodonIcon,
+};
+
+const FooterEight = ({ footer, nav, locale, anchors, blogHref, onLocaleChange }: FooterEightProps) => {
   const navLinks = [
     { label: nav.home, href: `#${anchors.home}` },
     { label: nav.blog.label, href: blogHref, external: true },
@@ -93,14 +101,24 @@ const FooterEight = ({ footer, nav, locale, anchors, blogHref }: FooterEightProp
                   <ul className="style-none d-flex align-items-center social-icon m-0 gap-2">
                     {footer.socialLinks?.map((link) => (
                       <li key={link.href}>
-                        <a href={link.href} target="_blank" rel="noreferrer">
-                          <i className={link.icon}></i>
+                        <a href={link.href} target="_blank" rel="noreferrer" aria-label={link.label}>
+                          {socialIconMap[link.icon] ? (
+                            <Image
+                              src={socialIconMap[link.icon]}
+                              alt={link.label}
+                              width={18}
+                              height={18}
+                              className="social-brand-icon"
+                            />
+                          ) : (
+                            <i className={link.icon}></i>
+                          )}
                         </a>
                       </li>
                     ))}
                   </ul>
                 </div>
-                <LanguageSwitcher currentLocale={locale} label={nav.language} />
+                <LanguageSwitcher currentLocale={locale} label={nav.language} onLocaleChange={onLocaleChange} />
               </div>
             </div>
           </div>

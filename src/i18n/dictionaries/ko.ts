@@ -217,13 +217,13 @@ const ko: LocaleDictionary = {
     download: {
       id: "download",
       badge: "Eatibo 다운로드",
-      title: "더 똑똑하게 스캔하고, 자신 있게 먹어요.",
+      title: "식단 건강을 오래 가는 습관으로",
       subtitle:
-        "Eatibo만 있으면 언제 어디서나 음식과 라벨을 몇 초 만에 해석할 수 있습니다.",
+        "Eatibo는 영양 균형, 복약 알림, 수분 관리, 체중 추세를 하나의 일상 루틴으로 묶어줍니다.",
       highlights: [
-        "라벨·바코드·음식 사진을 순식간에 분석",
-        "알레르기, 목표, 문화적 식단에 맞춘 추천",
-        "암호화된 동기화로 식단 기록을 안전하게 보호",
+        "영양 결핍을 조기에 발견하고 바로 실천 가능한 식단 대안을 제안",
+        "복약·수분 알림을 내 생활 리듬에 맞춰 놓치지 않게 관리",
+        "체중·대사 추세를 꾸준히 추적하면서 개인정보는 안전하게 보호",
       ],
       storeLabel: "Eatibo 받기",
       apple: {
@@ -315,6 +315,31 @@ const ko: LocaleDictionary = {
           author: "Marco D.",
           role: "레스토랑 컨설턴트",
         },
+        {
+          quote: "복약 알림을 식사와 묶은 뒤로 갑상선 약을 90일 연속으로 놓치지 않았어요.",
+          author: "Priya S.",
+          role: "프로덕트 매니저 / 갑상선저하증 사용자",
+        },
+        {
+          quote: "수분 알림이 과하지 않아서 좋아요. 2주 만에 오후 두통이 거의 사라졌습니다.",
+          author: "Ethan K.",
+          role: "원격 소프트웨어 엔지니어",
+        },
+        {
+          quote: "할랄 케이터링을 운영하는데, 새 공급처의 숨은 첨가물을 서비스 전에 잡아줘요.",
+          author: "Amina H.",
+          role: "케이터링 창업자",
+        },
+        {
+          quote: "아버지가 당뇨와 고혈압이 있는데, 당·나트륨 경고 덕분에 배달 메뉴를 훨씬 안전하게 고릅니다.",
+          author: "Carlos V.",
+          role: "가족 돌봄자",
+        },
+        {
+          quote: "야간 ICU 간호사인데 주간 영양 결핍 요약이 뭘 보충해야 하는지 딱 알려줘요.",
+          author: "Mia T.",
+          role: "ICU 간호사",
+        },
       ],
     },
     faq: {
@@ -358,9 +383,9 @@ const ko: LocaleDictionary = {
       { type: "chat", label: "라이브 챗", value: "www.eatibo.com" },
     ],
     socialLinks: [
-      { icon: "fa-brands fa-instagram", href: "https://instagram.com/eatiboapp", label: "Instagram" },
-      { icon: "fa-brands fa-twitter", href: "https://twitter.com/eatiboapp", label: "Twitter" },
-      { icon: "fa-brands fa-youtube", href: "https://youtube.com/@eatiboapp", label: "YouTube" },
+      { icon: "brand-bluesky", href: "https://bsky.app/profile/linaeatibo.bsky.social", label: "Bluesky" },
+      { icon: "fa-brands fa-instagram", href: "https://www.instagram.com/linaeatibo/", label: "Instagram" },
+      { icon: "brand-mastodon", href: "https://mastodon.social/@georgezou", label: "Mastodon" },
     ],
     navGroups: [
       {

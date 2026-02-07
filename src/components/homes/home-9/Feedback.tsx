@@ -11,11 +11,11 @@ import shape from "@/assets/images/shape/shape_81.svg";
 const setting = {
   slidesPerView: 3,
   spaceBetween: 30,
-  loop: true,
-  centeredSlides: true,
+  speed: 700,
   autoplay: {
-    delay: 4000,
+    delay: 5200,
     disableOnInteraction: false,
+    pauseOnMouseEnter: true,
   },
   navigation: {
     nextEl: ".next_b",
@@ -46,6 +46,12 @@ const Feedback = ({ reviews }: FeedbackProps) => {
       role: reviews.role,
     },
   ];
+  // Swiper docs: loop with centeredSlides requires slides >= slidesPerView + slidesPerGroup + 1.
+  // Here max slidesPerView is 3 and slidesPerGroup is 1, so at least 5 slides are needed.
+  const minSlidesForLoop = 5;
+  const canUseLoop = items.length >= minSlidesForLoop;
+  const canCenterSlides = items.length > 1;
+  const defaultSlideIndex = items.length > 1 ? 1 : 0;
 
   return (
     <section
@@ -59,7 +65,24 @@ const Feedback = ({ reviews }: FeedbackProps) => {
         </div>
       </div>
       <div className="wrapper">
-        <Swiper {...setting} modules={[Autoplay, Navigation]} className="feedback-slider-six">
+        <Swiper
+          {...setting}
+          modules={[Autoplay, Navigation]}
+          loop={canUseLoop}
+          centeredSlides={canCenterSlides}
+          centerInsufficientSlides={!canUseLoop}
+          initialSlide={defaultSlideIndex}
+          onSwiper={(swiper) => {
+            if (items.length > 1) {
+              if (canUseLoop) {
+                swiper.slideToLoop(defaultSlideIndex, 0, false);
+              } else {
+                swiper.slideTo(defaultSlideIndex, 0, false);
+              }
+            }
+          }}
+          className="feedback-slider-six"
+        >
           {items.map((item) => (
             <SwiperSlide key={`${item.author}-${item.quote}`} className="item">
               <div className="feedback-block">

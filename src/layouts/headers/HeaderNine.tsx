@@ -8,6 +8,7 @@ import UseSticky from "@/hooks/UseSticky";
 import LanguageSwitcher from "@/components/hairwow/LanguageSwitcher";
 
 import logo_1 from "@/assets/images/logo/logo_09.svg";
+import { buildAppEntryUrl } from "@/lib/marketing";
 
 import type { Locale } from "@/i18n/config";
 import type { LocaleDictionary } from "@/i18n/dictionaries/types";
@@ -29,11 +30,12 @@ type HeaderNineProps = {
 
 const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNineProps) => {
   const { sticky } = UseSticky();
+  const appHref = buildAppEntryUrl("header_start_for_free");
 
   const navLinks = [
     { label: nav.home, href: `/#${anchors.home}` },
     { label: nav.features, href: `/#${anchors.features}` },
-    { label: nav.pricing, href: `/#${anchors.pricing}` },
+    { label: "Showcase", href: `/#${anchors.pricing}` },
     { label: nav.download, href: `/#${anchors.download}` },
     { label: nav.faq, href: `/#${anchors.faq}` },
   ];
@@ -143,8 +145,11 @@ const HeaderNine = ({ locale, nav, anchors, blogHref, onLocaleChange }: HeaderNi
                   onLocaleChange={onLocaleChange}
                 />
               </div>
-              <a href={`#${anchors.download}`} className="btn-eighteen d-none d-lg-block">
-                {nav.download}
+              <a href={appHref} className="btn-eighteen d-none d-lg-block">
+                Start for Free
+              </a>
+              <a href={`#${anchors.download}`} className="btn-eighteen-secondary d-none d-lg-block">
+                Download APP
               </a>
             </div>
           </div>
